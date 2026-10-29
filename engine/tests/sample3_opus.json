@@ -1,0 +1,782 @@
+[
+ {
+  "name": "쥐꼬리 낚시대",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 32.1,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "쥐꼬리 낚시대",
+    "price": ""
+   },
+   "headline": "흔들면 우리집냥이가 흥분하는 쥐꼬리 낚시대",
+   "body": [
+    "우리집냥이가 제일 좋아하는 쥐꼬리 낚시대예요. 실리콘이라서 엄청 부드러워요. 진짜 쥐꼬리 같은지, 흔들면 우리집냥이가 흥분하면서 좋아하는 게 보이거든요.",
+    "고객님들 고양이들도 한번 보면 반할 거예요. 이걸 보면 고양이가 사냥한다는 게 무슨 의미인지 아시게 될걸요. 거실 바닥에서 살랑살랑 흔들어 주면, 몸을 납작 낮추고 엉덩이를 씰룩이는 모습이 그려지죠.",
+    "궁금한 점 물어보시면 바로 알려 드릴게요."
+   ]
+  },
+  "stats": {
+   "rid": "4f8a7b30",
+   "model": "claude-opus-5-5",
+   "check_mode": "report",
+   "effort": [
+    "medium",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 155,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 14788,
+     "in": 226,
+     "out": 1746,
+     "cache_w": 0,
+     "cache_r": 7578,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 17295,
+     "in": 1235,
+     "out": 1800,
+     "cache_w": 0,
+     "cache_r": 8573,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "deleted": {
+    "UNGROUNDED": 1
+   },
+   "signals": [
+    "STEM_REPEAT"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "UNGROUNDED": 1
+    },
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 7,
+   "roles": {
+    "fact": 4,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 0
+   },
+   "status": "READY",
+   "ms": 32093,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1461,
+   "out": 3546,
+   "cache_w": 0,
+   "cache_r": 16151
+  },
+  "krw": 116.5,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "오늘은 쥐꼬리 낚시대를 홍보해볼까해"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리집 고양이가 제일 좋아하는",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "쥐꼬리 낚시대를",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "실리콘이라서 엄청 부드러워서",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "진짜 쥐꼬리 같은지 흔들면 우리집냥이가 흥분하면서 좋아하는게 보이는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "우리 고객님들의 고양이들도 한번 보면 엄청 좋아할꺼야.",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "이걸 보면 고양이가 진짜 사냥한다는게 무슨 의미인지 알껄",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "쥐꼬리 낚시대",
+     "name_fact_id": "F2",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "진짜 쥐꼬리 같은지",
+      "fact_id": "F4"
+     },
+     {
+      "id": "D2",
+      "phrase": "엄청 부드러워서",
+      "fact_id": "F3"
+     },
+     {
+      "id": "D3",
+      "phrase": "우리집냥이가",
+      "fact_id": "F4"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F3",
+      "F4"
+     ],
+     "note": "실리콘이라 부드러워 진짜 쥐꼬리처럼 흔들려 고양이가 흥분하며 좋아함"
+    },
+    "common_knowledge": [
+     {
+      "about": "낚시대",
+      "note": "막대 끝에 달린 장난감을 흔들어 고양이와 놀아 주는 장난감"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F1",
+      "F4"
+     ],
+     "note": "사장님이 낚시대를 흔들면 집 고양이가 흥분하며 좋아하는 모습"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F1",
+      "F3",
+      "F4"
+     ],
+     "note": "사장님 집 고양이가 제일 좋아하는, 진짜 쥐꼬리처럼 부드러운 장난감",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "낚시대를 흔들자 집 고양이가 흥분해 달려드는 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": "D2",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "쥐꼬리 낚시대",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "우리집냥이가 제일 좋아하는 쥐꼬리 낚시대예요.",
+      "fact_ids": [
+       "F1",
+       "F2",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "실리콘이라서 엄청 부드러워요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "진짜 쥐꼬리 같은지, 흔들면 우리집냥이가 흥분하면서 좋아하는 게 보이거든요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "고객님들 고양이들도 한번 보면 반할 거예요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "이걸 보면 고양이가 사냥한다는 게 무슨 의미인지 아시게 될걸요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "거실 바닥에서 살랑살랑 흔들어 주면, 몸을 납작 낮추고 엉덩이를 씰룩이는 모습이 그려지죠.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "궁금한 점 물어보시면 바로 알려 드릴게요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     }
+    ],
+    "headline": "흔들면 우리집냥이가 흥분하는 쥐꼬리 낚시대",
+    "headline_fact_ids": [
+     "F4",
+     "F2"
+    ]
+   }
+  }
+ },
+ {
+  "name": "잉어킹",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 18.2,
+  "result": {
+   "status": "NEED_MORE_INFO",
+   "questions": [
+    "잉어킹 액막이를 뽑은 뒤 어디에 걸어 두거나 어떻게 곁에 두셨나요? 한 줄이면 충분해요."
+   ]
+  },
+  "stats": {
+   "rid": "15ddf4b6",
+   "model": "claude-opus-5-5",
+   "check_mode": "report",
+   "effort": [
+    "medium",
+    "medium"
+   ],
+   "mode": "DEMO_SELLER",
+   "memo_len": 121,
+   "additions": 1,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 18246,
+     "in": 234,
+     "out": 2137,
+     "cache_w": 0,
+     "cache_r": 7578,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 8,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 2,
+   "ck_dropped": 0,
+   "readiness": "NEED_MORE_INFO",
+   "status": "NEED_MORE_INFO",
+   "ms": 18249,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 234,
+   "out": 2137,
+   "cache_w": 0,
+   "cache_r": 7578
+  },
+  "krw": 65.4,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [
+     "이런 글귀도 있으면 좋지"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "남편이랑 포켓몬팝업이 있다고 해서 놀러갔더니",
+      "kind": "buyer_action",
+      "convertible_to": "포켓몬 팝업에서 만나실 수 있어요"
+     },
+     {
+      "id": "F2",
+      "quote": "잉어킹액막이가",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "가챠로밖에 안팔아서",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "만원이라는 큰 금액이어도",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "한번 도전해봤더니 성공해서 한번에 뽑았어",
+      "kind": "buyer_action",
+      "convertible_to": "한 번 도전해 보셔도 좋아요"
+     },
+     {
+      "id": "F6",
+      "quote": "몇달뒤에 이사 예정이어서 가지고 싶었는데",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "좋은 추억이었어",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "잉어킹액막이",
+     "name_fact_id": "F2",
+     "price_fact_id": "F4"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "작은 액막이",
+      "fact_id": "F8"
+     },
+     {
+      "id": "D2",
+      "phrase": "별일 없이 잘 지나가자는",
+      "fact_id": "F8"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F8"
+     ],
+     "note": "별일 없이 잘 지나가자는 마음을 걸어 두는 작은 잉어킹 액막이"
+    },
+    "common_knowledge": [
+     {
+      "about": "잉어킹",
+      "note": "잉어킹은 힘없는 캐릭터지만 버티다 보면 아주 센 캐릭터가 된다"
+     },
+     {
+      "about": "액막이",
+      "note": "나쁜 일이 비켜 가길 바라는 마음으로 걸어 두는 것"
+     }
+    ],
+    "season": null,
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [
+      "F6",
+      "F8"
+     ],
+     "note": "새 출발을 앞두고 별일 없이 지나가자는 마음을 담아 두고 싶을 때",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [
+      "F8"
+     ],
+     "note": "새집 현관이나 가방에 작은 잉어킹 액막이를 걸어 두는 장면"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "NEED_MORE_INFO",
+    "questions": [
+     "잉어킹 액막이를 뽑은 뒤 어디에 걸어 두거나 어떻게 곁에 두셨나요? 한 줄이면 충분해요."
+    ]
+   }
+  }
+ },
+ {
+  "name": "무화과 찹쌀떡",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 52.3,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "무화과 찹쌀떡",
+    "price": "4500원"
+   },
+   "headline": "팥찹쌀떡만 하던 떡집에 찾아온 무화과 철",
+   "body": [
+    "무화과 철이라 무화과 찹쌀떡을 만들어요. 원래 팥찹쌀떡만 했는데, 딸이 해보자고 해서 시작했어요. 떡은 아침에 만들어 두죠.",
+    "무화과가 비싸서 첨엔 더 받으려다가, 동네 어르신들 사가시라고 맞췄어요. 출출한 오후, 차 한 잔 옆에 하나 놓아두면 좋겠네요. 무화과 철 끝나는 11월 중순까지만 해요. 다 팔리면 끝이라, 오시면 있는 대로 챙겨 드릴게요.",
+    "무화과 찹쌀떡 4500원 · 11월 중순까지 · 아침에 만들어 다 팔리면 끝"
+   ]
+  },
+  "stats": {
+   "rid": "034ea92e",
+   "model": "claude-opus-5-5",
+   "check_mode": "report",
+   "effort": [
+    "medium",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 162,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 23012,
+     "in": 223,
+     "out": 2641,
+     "cache_w": 0,
+     "cache_r": 7578,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 29327,
+     "over_prod": true,
+     "in": 1257,
+     "out": 2828,
+     "cache_w": 0,
+     "cache_r": 8573,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 9,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": true,
+   "ck": 0,
+   "ck_dropped": 1,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 8,
+   "roles": {
+    "fact": 4,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 52347,
+   "over_prod": true
+  },
+  "tokens": {
+   "in": 1480,
+   "out": 5469,
+   "cache_w": 0,
+   "cache_r": 16151
+  },
+  "krw": 170.5,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리 떡집은 원래 팥찹쌀떡만 했는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "과일찹쌀떡",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "해보자고 해서 시작함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "무화과가 비싸서 첨엔 6천원 받으려다가",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "동네 어르신들 사가시라고",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "4500원으로 맞췄음",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "무화과 철 끝나는 11월 중순까지만 함",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "아침에 만들어서",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "다 팔리면 끝",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "무화과 찹쌀떡",
+     "name_fact_id": "F2",
+     "price_fact_id": "F6"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "다 팔리면 끝",
+      "fact_id": "F9"
+     },
+     {
+      "id": "D2",
+      "phrase": "동네 어르신들",
+      "fact_id": "F5"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F4",
+      "F8"
+     ],
+     "note": "값나가는 무화과를 넣은 과일찹쌀떡을 그날 아침에 만들어 냄"
+    },
+    "common_knowledge": [],
+    "season": {
+     "fact_id": "F7",
+     "note": "무화과 철, 11월 중순까지만"
+    },
+    "seller_scene": {
+     "fact_ids": [
+      "F1",
+      "F3",
+      "F4",
+      "F5",
+      "F8"
+     ],
+     "note": "팥찹쌀떡만 하던 떡집이 딸과 무화과 떡을 시작하고, 6천원을 받으려다 동네 어르신들 생각에 값을 낮춘 결정"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F6",
+      "F7"
+     ],
+     "note": "동네 어르신들도 사 가시게 값을 맞췄고, 무화과 철에만 맛볼 수 있음",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4",
+      "F5",
+      "F8"
+     ],
+     "note": "아침에 떡을 빚으며 값을 정하던 떡집 사장님의 결정"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "무화과 찹쌀떡",
+     "price_display": "4500원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "무화과 철이라 무화과 찹쌀떡을 만들어요.",
+      "fact_ids": [
+       "F2",
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "원래 팥찹쌀떡만 했는데, 딸이 해보자고 해서 시작했어요.",
+      "fact_ids": [
+       "F1",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "떡은 아침에 만들어 두죠.",
+      "fact_ids": [
+       "F8",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과가 비싸서 첨엔 더 받으려다가, 동네 어르신들 사가시라고 맞췄어요.",
+      "fact_ids": [
+       "F4",
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "출출한 오후, 차 한 잔 옆에 하나 놓아두면 좋겠네요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과 철 끝나는 11월 중순까지만 해요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "다 팔리면 끝이라, 오시면 있는 대로 챙겨 드릴게요.",
+      "fact_ids": [
+       "F9"
+      ],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과 찹쌀떡 4500원 · 11월 중순까지 · 아침에 만들어 다 팔리면 끝",
+      "fact_ids": [
+       "F6",
+       "F7",
+       "F8",
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "팥찹쌀떡만 하던 떡집에 찾아온 무화과 철",
+    "headline_fact_ids": [
+     "F1",
+     "F7"
+    ]
+   }
+  }
+ }
+]

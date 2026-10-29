@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>레피 | 메모 몇 줄로 쓰는 상품 스토리</title>
+  <meta name="description" content="사장님 메모에서 이 상품만의 이야기를 찾아, 손님에게 건네는 글로 정리해드려요. 없는 이야기는 만들지 않아요. 베타 신청 받는 중." />
+
+  <!-- 카톡·슬랙 링크 미리보기용. 크롤러는 상대 경로를 못 읽으므로 절대 주소로 적는다.
+       배포 루트가 mission_A1-3라 og-image.png는 도메인 바로 아래에 놓인다. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="레피(Lepi)" />
+  <meta property="og:url" content="https://ia-codyssey-two.vercel.app/" />
+  <meta property="og:title" content="레피 — 물건은 흔해도, 고른 이유는 저마다." />
+  <meta property="og:description" content="사장님 메모에서 이 상품만의 이야기를 찾아, 손님에게 건네는 글로 정리해드려요. 없는 이야기는 만들지 않아요. 베타 신청 받는 중." />
+  <meta property="og:image" content="https://ia-codyssey-two.vercel.app/og-image.png?v=2" />
+  <!-- 카톡은 크기를 명시하지 않으면 큰 카드 대신 작은 섬네일로 떨어뜨릴 때가 있다. -->
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="물건은 흔해도, 고른 이유는 저마다. 그 이유를 담아, 레피가 상품에 이야기를 입혀드려요." />
+  <!-- 이미지가 바뀌면 ?v= 를 올려 카톡·슬랙 캐시를 비운다. -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="레피 — 물건은 흔해도, 고른 이유는 저마다." />
+  <meta name="twitter:description" content="사장님 메모에서 이 상품만의 이야기를 찾아, 손님에게 건네는 글로 정리해드려요. 없는 이야기는 만들지 않아요. 베타 신청 받는 중." />
+  <meta name="twitter:image" content="https://ia-codyssey-two.vercel.app/og-image.png?v=2" />
+  <!-- 파비콘: 로고의 씨앗(오커 점)에서 새싹이 돋는 모양. 외부 파일 없이 SVG 인라인. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23283618%22%2F%3E%3Cpath%20d%3D%22M16%2024%20V13%22%20stroke%3D%22%239BC53D%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M16%2014.5%20C%2010.5%2014.5%207.5%2011.5%207%207%20C%2011.5%207%2015.5%209.5%2016%2014.5%20Z%22%20fill%3D%22%239BC53D%22%2F%3E%3Cpath%20d%3D%22M16%2012.5%20C%2020.5%2012.5%2024.5%209.5%2025%205%20C%2020%205%2016.5%208%2016%2012.5%20Z%22%20fill%3D%22%23B5D45A%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2224.5%22%20r%3D%224%22%20fill%3D%22%23DDA15E%22%2F%3E%3C%2Fsvg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFDE5}
+a{color:#283618}a:hover{color:#BC6C25}
+.wrap{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px;box-sizing:border-box}
+.sec{padding-top:112px;padding-bottom:112px;border-top:1px solid #E0DEC4}
+.sl{display:flex;align-items:center;gap:16px;margin:0 0 28px;font-size:12px;letter-spacing:.2em;color:#283618}
+.sl-line{width:32px;height:1px;background:#283618;display:inline-block}
+.sh{font-family:'Noto Serif KR',serif;font-weight:300;font-size:clamp(28px,3.6vw,44px);line-height:1.32;letter-spacing:-.015em;margin:0}
+.lead{font-size:16px;line-height:1.85;color:#606C38;max-width:640px;margin:20px 0 0}
+.label{font-size:12px;letter-spacing:.08em;color:#606C38}
+.stack{display:grid}
+.stack > *{grid-area:1/1;position:relative;z-index:0}
+img.ov{z-index:1}
+.logo{font-family:'Noto Serif KR',serif;font-weight:600;font-size:32px;letter-spacing:-.02em;text-decoration:none;color:#283618;display:inline-flex;align-items:baseline;line-height:1.3;padding-top:14px}
+.logo:hover{color:#283618}
+.logo .lt{padding:.08em 0 .34em;background-image:linear-gradient(90deg,var(--c) 0 50%,#283618 50% 100%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;transition:background-position 520ms cubic-bezier(.16,1,.3,1) var(--d)}
+.logo:hover .lt,.logo:focus-visible .lt{background-position:0 0}
+.logo .seed{position:relative;display:inline-block;width:.19em;height:.19em;border-radius:50%;background:#BC6C25;margin-left:.13em}
+.logo:hover .seed,.logo:focus-visible .seed{animation:lepiPop 480ms cubic-bezier(.34,1.56,.64,1) 420ms both}
+@keyframes lepiPop{0%{transform:none}40%{transform:translateY(-5px) scale(1.3)}100%{transform:none}}
+.logo .sprout{position:absolute;left:50%;bottom:62%;width:18px;height:20px;margin-left:-9px;overflow:visible;pointer-events:none}
+.sprout .stem,.sprout .leaf{transform-box:fill-box;transition:transform 220ms ease}
+.sprout .stem{transform-origin:50% 100%;transform:scaleY(0)}
+.sprout .leaf-l{transform-origin:100% 100%;transform:scale(0)}
+.sprout .leaf-r{transform-origin:0 100%;transform:scale(0)}
+.logo:hover .sprout .stem,.logo:focus-visible .sprout .stem{transform:scaleY(1);transition:transform 420ms cubic-bezier(.16,1,.3,1) 820ms}
+.logo:hover .sprout .leaf-l,.logo:focus-visible .sprout .leaf-l{transform:scale(1);transition:transform 520ms cubic-bezier(.34,1.56,.64,1) 1080ms}
+.logo:hover .sprout .leaf-r,.logo:focus-visible .sprout .leaf-r{transform:scale(1);transition:transform 520ms cubic-bezier(.34,1.56,.64,1) 1200ms}
+.draw{background-image:linear-gradient(#BC6C25,#BC6C25);background-repeat:no-repeat;background-position:0 92%;background-size:0% 2px;animation:lepiDraw 1100ms cubic-bezier(.16,1,.3,1) 700ms forwards}
+@keyframes lepiDraw{to{background-size:100% 2px}}
+.rise{opacity:0;transform:translateY(8px);animation:lepiRise 900ms cubic-bezier(.16,1,.3,1) forwards}
+@keyframes lepiRise{to{opacity:1;transform:none}}
+.hint-touch{display:none}
+.bw{filter:grayscale(1) contrast(0.92)}
+.ov{opacity:0}
+@media (hover:none){.hint-touch{display:inline}.hint-mouse{display:none}}
+.btn{font:inherit;font-size:16px;cursor:pointer;border-radius:999px;min-height:48px;padding:0 24px;transition:background-color 300ms ease,color 300ms ease,border-color 300ms ease;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box}
+.btn:focus-visible,.textbtn:focus-visible,.tab:focus-visible,.faq-q:focus-visible{outline:2px solid #BC6C25;outline-offset:3px}
+.btn-solid{background:#283618;color:#FFFDE5;border:1px solid #283618}
+.btn-solid:hover{background:#1B2510;color:#FFFDE5}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-line{background:transparent;color:#283618;border:1px solid #93987C}
+.btn-line:hover{border-color:#283618;color:#283618}
+.textbtn{font:inherit;font-size:13px;background:none;border:0;padding:8px 0;min-height:44px;color:#606C38;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#93987C}
+.textbtn:hover{color:#283618}
+.navlink{font-size:13px;color:#606C38;text-decoration:none;padding:12px 4px}
+.navlink:hover{color:#283618}
+.tab{font:inherit;font-size:15px;background:transparent;border:0;border-bottom:1px solid transparent;padding:10px 2px;min-height:44px;color:#606C38;cursor:pointer;transition:color 300ms ease,border-color 300ms ease}
+.tab:hover{color:#283618}
+.faq-q{font:inherit;width:100%;background:none;border:0;padding:26px 0;display:flex;align-items:center;gap:20px;text-align:left;cursor:pointer;color:#283618}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:13px;color:#283618}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:#283618;background:#FFFFFF;border:1px solid #CFCCB0;border-radius:4px;padding:12px 14px;min-height:48px;box-sizing:border-box;transition:border-color 300ms ease}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#283618}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}.draw{background-size:100% 2px}.rise{opacity:1;transform:none}}
+
+
+/* PC 게시물 만들기 창 + 레피 확장 프로그램 시연. 모든 이름은 pd- 로 시작해 홈페이지와 섞이지 않게 함 */
+.pd-root{--bg:#FFFDE5;--surface:#F7F0D2;--card:#FFFFFF;--fg:#283618;--muted:#606C38;--rule:#E0DEC4;--line:#93987C;--accent:#BC6C25;--ochre:#DDA15E;--dim:rgba(40,54,24,.42);--on:#FFFDE5;
+  --serif:'Noto Serif KR','Apple SD Gothic Neo',serif;--sans:'Noto Sans KR','Apple SD Gothic Neo',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);
+  font-family:var(--sans);color:var(--fg);word-break:keep-all}
+.pd-stage{display:flex;flex-wrap:wrap;gap:40px 48px;align-items:center}
+.pd-side{flex:0 1 300px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.pd-label{font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.pd-steps{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.pd-steps li{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--rule);transition:opacity 500ms var(--ease)}
+.pd-n{font-family:var(--serif);color:var(--accent);font-size:15px;width:18px;flex:0 0 auto}
+.pd-t{font-size:15px;line-height:1.55;background-image:linear-gradient(var(--muted),var(--muted));background-repeat:no-repeat;background-position:0 55%;background-size:0% 1px;transition:background-size 500ms var(--ease)}
+.pd-steps li.pd-done{opacity:.45}
+.pd-steps li.pd-done .pd-t{background-size:100% 1px}
+.pd-steps li.pd-mine .pd-t{color:var(--accent);font-weight:500}
+.pd-time{display:flex;gap:14px;align-items:baseline;padding:16px 18px;background:var(--bg);border:1px solid var(--rule);border-radius:4px}
+.pd-timer{font-family:var(--serif);font-size:22px;color:var(--accent);font-variant-numeric:tabular-nums;flex:0 0 auto}
+.pd-time span:last-child{font-size:14px;line-height:1.6}
+.pd-note{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+
+.pd-main{flex:1 1 600px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.pd-browser{position:relative;background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:hidden;box-shadow:0 18px 44px rgba(40,54,24,.12)}
+.pd-chrome{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--surface);border-bottom:1px solid var(--rule)}
+.pd-dots{display:flex;gap:6px}.pd-dots i{width:10px;height:10px;border-radius:50%;background:var(--line);opacity:.5}
+.pd-addr{flex:1;min-width:0;font-size:12px;color:var(--muted);background:var(--card);border-radius:999px;padding:6px 14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pd-ext{width:26px;height:26px;border-radius:6px;display:grid;place-items:center;transition:background-color 300ms ease}
+.pd-ext.pd-on{background:var(--rule)}
+.pd-web{position:relative;background:var(--dim);padding:22px;display:flex;gap:0;min-height:430px}
+.pd-modal{flex:1;min-width:0;background:var(--card);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:margin-right 500ms var(--ease)}
+.pd-mhead{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:12px 16px;border-bottom:1px solid var(--rule);font-size:15px;font-weight:500}
+.pd-mhead .pd-back{font-size:20px;color:var(--fg);line-height:1}
+.pd-share{justify-self:end;font:inherit;font-size:14px;font-weight:500;color:var(--accent);background:none;border:0;padding:6px 4px;cursor:pointer;border-radius:4px}
+.pd-share:disabled{color:var(--line);cursor:default}
+.pd-share.pd-pulse{animation:pdPulse 1.4s ease-in-out infinite}
+@keyframes pdPulse{50%{background:rgba(188,108,37,.14)}}
+.pd-mbody{display:flex;flex-wrap:wrap;flex:1;min-height:0}
+.pd-photo{flex:1 1 300px;min-width:0;display:grid;background:var(--surface)}
+.pd-photo > *{grid-area:1/1;position:relative;z-index:0}
+.pd-photo img{width:100%;height:100%;min-height:260px;object-fit:cover;display:block;max-width:100%}
+.pd-bw{filter:grayscale(1) contrast(.92)}
+.pd-ov{z-index:1!important;opacity:0;transition:opacity 1400ms var(--ease)}
+.pd-colored .pd-ov{opacity:1}
+.pd-capcol{flex:1 1 240px;min-width:0;display:flex;flex-direction:column;border-left:1px solid var(--rule)}
+.pd-acct{display:flex;align-items:center;gap:10px;padding:14px 16px 8px;font-size:14px;font-weight:500}
+.pd-avatar{width:28px;height:28px;border-radius:50%;background:var(--surface);display:grid;place-items:center;flex:0 0 auto}
+.pd-capwrap{position:relative;flex:1;padding:4px 16px 12px;display:grid}
+.pd-capwrap > *{grid-area:1/1;transition:opacity 500ms var(--ease),transform 600ms var(--ease)}
+.pd-cap{font-size:14px;line-height:1.75;margin:0;cursor:text;user-select:text}
+.pd-cap mark{background:transparent;color:inherit;transition:background-color 300ms ease}
+.pd-cap.pd-sel mark{background:rgba(188,108,37,.22)}
+.pd-cap.pd-hint{outline:1px dashed var(--line);outline-offset:6px;border-radius:2px;animation:pdHint 1.8s ease-in-out infinite}
+@keyframes pdHint{50%{outline-color:var(--accent)}}
+.pd-story h4{font-family:var(--serif);font-weight:400;font-size:15px;line-height:1.55;margin:0}
+.pd-story p{font-size:14px;line-height:1.75;margin:6px 0 0}
+.pd-count{font-size:12px;color:var(--line);text-align:right;padding:0 16px 12px;font-variant-numeric:tabular-nums}
+.pd-hide{opacity:0;transform:translateY(6px);pointer-events:none}
+
+.pd-menu{position:absolute;z-index:6;min-width:210px;background:var(--card);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 26px rgba(40,54,24,.16);padding:4px 0;font-size:13px;opacity:0;transform:scale(.97);transform-origin:0 0;pointer-events:none;transition:opacity 180ms ease,transform 180ms ease}
+.pd-menu.pd-show{opacity:1;transform:none;pointer-events:auto}
+.pd-menu div{padding:8px 14px;color:var(--muted)}
+.pd-menu hr{border:0;border-top:1px solid var(--rule);margin:4px 0}
+.pd-menu button{font:inherit;font-size:13px;width:100%;text-align:left;background:var(--surface);border:0;padding:9px 14px;color:var(--fg);display:flex;align-items:center;gap:8px;cursor:pointer}
+.pd-menu button:hover,.pd-menu button:focus-visible{background:var(--rule);outline:none}
+
+.pd-panel{position:absolute;top:0;right:0;bottom:0;width:300px;max-width:85%;background:var(--bg);border-left:1px solid var(--rule);display:flex;flex-direction:column;gap:14px;padding:18px;box-sizing:border-box;transform:translateX(105%);transition:transform 550ms var(--ease);z-index:4;box-shadow:-12px 0 30px rgba(40,54,24,.10)}
+.pd-panel.pd-show{transform:none}
+.pd-phead{display:flex;align-items:baseline;justify-content:space-between}
+.pd-logo{font-family:var(--serif);font-weight:600;font-size:20px}
+.pd-logo b{color:var(--accent)}
+.pd-tag{font-size:12px;color:var(--muted)}
+.pd-bar{height:2px;background:var(--rule);position:relative;overflow:hidden}
+.pd-bar i{position:absolute;inset:0 auto 0 0;width:0;background:var(--accent);transition:width 900ms var(--ease)}
+.pd-pbody{flex:1;min-height:0;overflow-y:auto;display:grid}
+.pd-pbody > *{grid-area:1/1;transition:opacity 450ms var(--ease),transform 600ms var(--ease)}
+.pd-stagetext{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px;align-self:start}
+.pd-stagetext i{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.pd-result h4{font-family:var(--serif);font-weight:400;font-size:16px;line-height:1.55;margin:0}
+.pd-result p{font-size:13px;line-height:1.75;margin:6px 0 0}
+.pd-pbtns{display:flex;gap:8px}
+.pd-btn{font:inherit;font-size:14px;flex:1;min-height:42px;border-radius:999px;cursor:pointer;border:1px solid var(--fg);background:var(--fg);color:var(--on)}
+.pd-btn.pd-line{background:transparent;color:var(--fg);border-color:var(--line)}
+.pd-btn:disabled{opacity:.35;cursor:default}
+.pd-btn:focus-visible,.pd-share:focus-visible,.pd-text:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.pd-posted{position:absolute;inset:22px;background:var(--card);border-radius:10px;display:flex;flex-wrap:wrap;overflow:hidden;opacity:0;pointer-events:none;transition:opacity 500ms var(--ease);z-index:3}
+.pd-posted.pd-show{opacity:1;pointer-events:auto}
+.pd-posted .pd-photo img{min-height:200px}
+.pd-postcol{flex:1 1 240px;min-width:0;display:flex;flex-direction:column;gap:8px;padding:14px 16px;border-left:1px solid var(--rule);overflow-y:auto;max-height:100%;box-sizing:border-box}
+.pd-comments{list-style:none;margin:6px 0 0;padding:10px 0 0;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:8px}
+.pd-comments li{font-size:13px;line-height:1.6;transition:opacity 500ms var(--ease),transform 500ms var(--ease)}
+.pd-comments li b{font-weight:500;margin-right:6px}
+.pd-comments li.pd-reply{padding-left:18px;color:var(--muted)}
+.pd-comments li.pd-reply b{color:var(--fg)}
+.pd-heart{width:24px;height:24px;display:block}
+.pd-heart path{fill:transparent;stroke:var(--fg);stroke-width:1.6;transition:fill 250ms ease,stroke 250ms ease}
+.pd-liked .pd-heart path{fill:var(--accent);stroke:var(--accent)}
+.pd-liked .pd-heart{animation:pdPop 520ms cubic-bezier(.34,1.56,.64,1)}
+@keyframes pdPop{40%{transform:scale(1.35)}}
+.pd-likes{font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+.pd-postcap{font-size:13px;line-height:1.7;margin:0}
+.pd-postcap b{font-weight:500;margin-right:6px}
+.pd-toast{position:absolute;left:50%;top:58px;transform:translate(-50%,-10px);background:var(--fg);color:var(--on);font-size:13px;padding:9px 16px;border-radius:999px;opacity:0;transition:opacity 400ms var(--ease),transform 500ms var(--ease);white-space:nowrap;z-index:7;pointer-events:none}
+.pd-toast.pd-show{opacity:1;transform:translate(-50%,0)}
+.pd-guide{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;min-height:44px}
+.pd-guide p{margin:0;font-size:14px;color:var(--fg);display:flex;gap:10px;align-items:baseline}
+.pd-guide b{font-family:var(--serif);font-weight:400;color:var(--accent)}
+.pd-text{font:inherit;font-size:13px;background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:10px 4px;min-height:44px}
+@media (max-width:640px){.pd-web{padding:12px;min-height:0}.pd-posted{inset:12px}.pd-capcol,.pd-postcol{border-left:0;border-top:1px solid var(--rule)}.pd-panel{width:88%}}
+@media (prefers-reduced-motion:reduce){.pd-root *,.pd-root *::before,.pd-root *::after{transition-duration:1ms!important;transition-delay:0ms!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n(exports):"function"==typeof define&&define.amd?define(["exports"],n):n(e.htmPreact={})}(this,function(e){var n,_,t,o,r,u,l,i={},c=[],f=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;function s(e,n){for(var _ in n)e[_]=n[_];return e}function a(e){var n=e.parentNode;n&&n.removeChild(e)}function p(e,_,t){var o,r,u,l={};for(u in _)"key"==u?o=_[u]:"ref"==u?r=_[u]:l[u]=_[u];if(arguments.length>2&&(l.children=arguments.length>3?n.call(arguments,2):t),"function"==typeof e&&null!=e.defaultProps)for(u in e.defaultProps)void 0===l[u]&&(l[u]=e.defaultProps[u]);return h(e,l,o,r,null)}function h(e,n,o,r,u){var l={type:e,props:n,key:o,ref:r,__k:null,__:null,__b:0,__e:null,__d:void 0,__c:null,__h:null,constructor:void 0,__v:null==u?++t:u};return null!=_.vnode&&_.vnode(l),l}function d(e){return e.children}function v(e,n){this.props=e,this.context=n}function y(e,n){if(null==n)return e.__?y(e.__,e.__.__k.indexOf(e)+1):null;for(var _;n<e.__k.length;n++)if(null!=(_=e.__k[n])&&null!=_.__e)return _.__e;return"function"==typeof e.type?y(e):null}function m(e){var n,_;if(null!=(e=e.__)&&null!=e.__c){for(e.__e=e.__c.base=null,n=0;n<e.__k.length;n++)if(null!=(_=e.__k[n])&&null!=_.__e){e.__e=e.__c.base=_.__e;break}return m(e)}}function g(e){(!e.__d&&(e.__d=!0)&&o.push(e)&&!k.__r++||u!==_.debounceRendering)&&((u=_.debounceRendering)||r)(k)}function k(){for(var e;k.__r=o.length;)e=o.sort(function(e,n){return e.__v.__b-n.__v.__b}),o=[],e.some(function(e){var n,_,t,o,r,u;e.__d&&(r=(o=(n=e).__v).__e,(u=n.__P)&&(_=[],(t=s({},o)).__v=o.__v+1,D(u,o,t,n.__n,void 0!==u.ownerSVGElement,null!=o.__h?[r]:null,_,null==r?y(o):r,o.__h),w(_,o),o.__e!=r&&m(o)))})}function b(e,n,_,t,o,r,u,l,f,s){var a,p,v,m,g,k,b,H=t&&t.__k||c,E=H.length;for(_.__k=[],a=0;a<n.length;a++)if(null!=(m=_.__k[a]=null==(m=n[a])||"boolean"==typeof m?null:"string"==typeof m||"number"==typeof m||"bigint"==typeof m?h(null,m,null,null,m):Array.isArray(m)?h(d,{children:m},null,null,null):m.__b>0?h(m.type,m.props,m.key,null,m.__v):m)){if(m.__=_,m.__b=_.__b+1,null===(v=H[a])||v&&m.key==v.key&&m.type===v.type)H[a]=void 0;else for(p=0;p<E;p++){if((v=H[p])&&m.key==v.key&&m.type===v.type){H[p]=void 0;break}v=null}D(e,m,v=v||i,o,r,u,l,f,s),g=m.__e,(p=m.ref)&&v.ref!=p&&(b||(b=[]),v.ref&&b.push(v.ref,null,m),b.push(p,m.__c||g,m)),null!=g?(null==k&&(k=g),"function"==typeof m.type&&null!=m.__k&&m.__k===v.__k?m.__d=f=C(m,f,e):f=x(e,m,v,H,g,f),s||"option"!==_.type?"function"==typeof _.type&&(_.__d=f):e.value=""):f&&v.__e==f&&f.parentNode!=e&&(f=y(v))}for(_.__e=k,a=E;a--;)null!=H[a]&&("function"==typeof _.type&&null!=H[a].__e&&H[a].__e==_.__d&&(_.__d=y(t,a+1)),A(H[a],H[a]));if(b)for(a=0;a<b.length;a++)U(b[a],b[++a],b[++a])}function C(e,n,_){var t,o;for(t=0;t<e.__k.length;t++)(o=e.__k[t])&&(o.__=e,n="function"==typeof o.type?C(o,n,_):x(_,o,o,e.__k,o.__e,n));return n}function x(e,n,_,t,o,r){var u,l,i;if(void 0!==n.__d)u=n.__d,n.__d=void 0;else if(null==_||o!=r||null==o.parentNode)e:if(null==r||r.parentNode!==e)e.appendChild(o),u=null;else{for(l=r,i=0;(l=l.nextSibling)&&i<t.length;i+=2)if(l==o)break e;e.insertBefore(o,r),u=r}return void 0!==u?u:o.nextSibling}function H(e,n,_){"-"===n[0]?e.setProperty(n,_):e[n]=null==_?"":"number"!=typeof _||f.test(n)?_:_+"px"}function E(e,n,_,t,o){var r;e:if("style"===n)if("string"==typeof _)e.style.cssText=_;else{if("string"==typeof t&&(e.style.cssText=t=""),t)for(n in t)_&&n in _||H(e.style,n,"");if(_)for(n in _)t&&_[n]===t[n]||H(e.style,n,_[n])}else if("o"===n[0]&&"n"===n[1])r=n!==(n=n.replace(/Capture$/,"")),n=n.toLowerCase()in e?n.toLowerCase().slice(2):n.slice(2),e.l||(e.l={}),e.l[n+r]=_,_?t||e.addEventListener(n,r?S:P,r):e.removeEventListener(n,r?S:P,r);else if("dangerouslySetInnerHTML"!==n){if(o)n=n.replace(/xlink[H:h]/,"h").replace(/sName$/,"s");else if("href"!==n&&"list"!==n&&"form"!==n&&"tabIndex"!==n&&"download"!==n&&n in e)try{e[n]=null==_?"":_;break e}catch(e){}"function"==typeof _||(null!=_&&(!1!==_||"a"===n[0]&&"r"===n[1])?e.setAttribute(n,_):e.removeAttribute(n))}}function P(e){this.l[e.type+!1](_.event?_.event(e):e)}function S(e){this.l[e.type+!0](_.event?_.event(e):e)}function D(e,n,t,o,r,u,l,i,c){var f,a,p,h,y,m,g,k,C,x,H,E=n.type;if(void 0!==n.constructor)return null;null!=t.__h&&(c=t.__h,i=n.__e=t.__e,n.__h=null,u=[i]),(f=_.__b)&&f(n);try{e:if("function"==typeof E){if(k=n.props,C=(f=E.contextType)&&o[f.__c],x=f?C?C.props.value:f.__:o,t.__c?g=(a=n.__c=t.__c).__=a.__E:("prototype"in E&&E.prototype.render?n.__c=a=new E(k,x):(n.__c=a=new v(k,x),a.constructor=E,a.render=M),C&&C.sub(a),a.props=k,a.state||(a.state={}),a.context=x,a.__n=o,p=a.__d=!0,a.__h=[]),null==a.__s&&(a.__s=a.state),null!=E.getDerivedStateFromProps&&(a.__s==a.state&&(a.__s=s({},a.__s)),s(a.__s,E.getDerivedStateFromProps(k,a.__s))),h=a.props,y=a.state,p)null==E.getDerivedStateFromProps&&null!=a.componentWillMount&&a.componentWillMount(),null!=a.componentDidMount&&a.__h.push(a.componentDidMount);else{if(null==E.getDerivedStateFromProps&&k!==h&&null!=a.componentWillReceiveProps&&a.componentWillReceiveProps(k,x),!a.__e&&null!=a.shouldComponentUpdate&&!1===a.shouldComponentUpdate(k,a.__s,x)||n.__v===t.__v){a.props=k,a.state=a.__s,n.__v!==t.__v&&(a.__d=!1),a.__v=n,n.__e=t.__e,n.__k=t.__k,n.__k.forEach(function(e){e&&(e.__=n)}),a.__h.length&&l.push(a);break e}null!=a.componentWillUpdate&&a.componentWillUpdate(k,a.__s,x),null!=a.componentDidUpdate&&a.__h.push(function(){a.componentDidUpdate(h,y,m)})}a.context=x,a.props=k,a.state=a.__s,(f=_.__r)&&f(n),a.__d=!1,a.__v=n,a.__P=e,f=a.render(a.props,a.state,a.context),a.state=a.__s,null!=a.getChildContext&&(o=s(s({},o),a.getChildContext())),p||null==a.getSnapshotBeforeUpdate||(m=a.getSnapshotBeforeUpdate(h,y)),H=null!=f&&f.type===d&&null==f.key?f.props.children:f,b(e,Array.isArray(H)?H:[H],n,t,o,r,u,l,i,c),a.base=n.__e,n.__h=null,a.__h.length&&l.push(a),g&&(a.__E=a.__=null),a.__e=!1}else null==u&&n.__v===t.__v?(n.__k=t.__k,n.__e=t.__e):n.__e=T(t.__e,n,t,o,r,u,l,c);(f=_.diffed)&&f(n)}catch(e){n.__v=null,(c||null!=u)&&(n.__e=i,n.__h=!!c,u[u.indexOf(i)]=null),_.__e(e,n,t)}}function w(e,n){_.__c&&_.__c(n,e),e.some(function(n){try{e=n.__h,n.__h=[],e.some(function(e){e.call(n)})}catch(e){_.__e(e,n.__v)}})}function T(e,_,t,o,r,u,l,c){var f,s,p,h=t.props,d=_.props,v=_.type,m=0;if("svg"===v&&(r=!0),null!=u)for(;m<u.length;m++)if((f=u[m])&&(f===e||(v?f.localName==v:3==f.nodeType))){e=f,u[m]=null;break}if(null==e){if(null===v)return document.createTextNode(d);e=r?document.createElementNS("http://www.w3.org/2000/svg",v):document.createElement(v,d.is&&d),u=null,c=!1}if(null===v)h===d||c&&e.data===d||(e.data=d);else{if(u=u&&n.call(e.childNodes),s=(h=t.props||i).dangerouslySetInnerHTML,p=d.dangerouslySetInnerHTML,!c){if(null!=u)for(h={},m=0;m<e.attributes.length;m++)h[e.attributes[m].name]=e.attributes[m].value;(p||s)&&(p&&(s&&p.__html==s.__html||p.__html===e.innerHTML)||(e.innerHTML=p&&p.__html||""))}if(function(e,n,_,t,o){var r;for(r in _)"children"===r||"key"===r||r in n||E(e,r,null,_[r],t);for(r in n)o&&"function"!=typeof n[r]||"children"===r||"key"===r||"value"===r||"checked"===r||_[r]===n[r]||E(e,r,n[r],_[r],t)}(e,d,h,r,c),p)_.__k=[];else if(m=_.props.children,b(e,Array.isArray(m)?m:[m],_,t,o,r&&"foreignObject"!==v,u,l,u?u[0]:t.__k&&y(t,0),c),null!=u)for(m=u.length;m--;)null!=u[m]&&a(u[m]);c||("value"in d&&void 0!==(m=d.value)&&(m!==e.value||"progress"===v&&!m)&&E(e,"value",m,h.value,!1),"checked"in d&&void 0!==(m=d.checked)&&m!==e.checked&&E(e,"checked",m,h.checked,!1))}return e}function U(e,n,t){try{"function"==typeof e?e(n):e.current=n}catch(e){_.__e(e,t)}}function A(e,n,t){var o,r;if(_.unmount&&_.unmount(e),(o=e.ref)&&(o.current&&o.current!==e.__e||U(o,null,n)),null!=(o=e.__c)){if(o.componentWillUnmount)try{o.componentWillUnmount()}catch(e){_.__e(e,n)}o.base=o.__P=null}if(o=e.__k)for(r=0;r<o.length;r++)o[r]&&A(o[r],n,"function"!=typeof e.type);t||null==e.__e||a(e.__e),e.__e=e.__d=void 0}function M(e,n,_){return this.constructor(e,_)}n=c.slice,_={__e:function(e,n){for(var _,t,o;n=n.__;)if((_=n.__c)&&!_.__)try{if((t=_.constructor)&&null!=t.getDerivedStateFromError&&(_.setState(t.getDerivedStateFromError(e)),o=_.__d),null!=_.componentDidCatch&&(_.componentDidCatch(e),o=_.__d),o)return _.__E=_}catch(n){e=n}throw e}},t=0,v.prototype.setState=function(e,n){var _;_=null!=this.__s&&this.__s!==this.state?this.__s:this.__s=s({},this.state),"function"==typeof e&&(e=e(s({},_),this.props)),e&&s(_,e),null!=e&&this.__v&&(n&&this.__h.push(n),g(this))},v.prototype.forceUpdate=function(e){this.__v&&(this.__e=!0,e&&this.__h.push(e),g(this))},v.prototype.render=d,o=[],r="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,k.__r=0,l=0;var F,L,N,W=0,R=[],I=_.__b,O=_.__r,V=_.diffed,q=_.__c,B=_.unmount;function $(e,n){_.__h&&_.__h(L,e,W||n),W=0;var t=L.__H||(L.__H={__:[],__h:[]});return e>=t.__.length&&t.__.push({}),t.__[e]}function j(e){return W=1,G(ee,e)}function G(e,n,_){var t=$(F++,2);return t.t=e,t.__c||(t.__=[_?_(n):ee(void 0,n),function(e){var n=t.t(t.__[0],e);t.__[0]!==n&&(t.__=[n,t.__[1]],t.__c.setState({}))}],t.__c=L),t.__}function z(e,n){var t=$(F++,4);!_.__s&&Z(t.__H,n)&&(t.__=e,t.__H=n,L.__h.push(t))}function J(e,n){var _=$(F++,7);return Z(_.__H,n)&&(_.__=e(),_.__H=n,_.__h=e),_.__}function K(){R.forEach(function(e){if(e.__P)try{e.__H.__h.forEach(X),e.__H.__h.forEach(Y),e.__H.__h=[]}catch(n){e.__H.__h=[],_.__e(n,e.__v)}}),R=[]}_.__b=function(e){L=null,I&&I(e)},_.__r=function(e){O&&O(e),F=0;var n=(L=e.__c).__H;n&&(n.__h.forEach(X),n.__h.forEach(Y),n.__h=[])},_.diffed=function(e){V&&V(e);var n=e.__c;n&&n.__H&&n.__H.__h.length&&(1!==R.push(n)&&N===_.requestAnimationFrame||((N=_.requestAnimationFrame)||function(e){var n,_=function(){clearTimeout(t),Q&&cancelAnimationFrame(n),setTimeout(e)},t=setTimeout(_,100);Q&&(n=requestAnimationFrame(_))})(K)),L=void 0},_.__c=function(e,n){n.some(function(e){try{e.__h.forEach(X),e.__h=e.__h.filter(function(e){return!e.__||Y(e)})}catch(t){n.some(function(e){e.__h&&(e.__h=[])}),n=[],_.__e(t,e.__v)}}),q&&q(e,n)},_.unmount=function(e){B&&B(e);var n=e.__c;if(n&&n.__H)try{n.__H.__.forEach(X)}catch(e){_.__e(e,n.__v)}};var Q="function"==typeof requestAnimationFrame;function X(e){var n=L;"function"==typeof e.__c&&e.__c(),L=n}function Y(e){var n=L;e.__c=e.__(),L=n}function Z(e,n){return!e||e.length!==n.length||n.some(function(n,_){return n!==e[_]})}function ee(e,n){return"function"==typeof n?n(e):n}var ne=function(e,n,_,t){var o;n[0]=0;for(var r=1;r<n.length;r++){var u=n[r++],l=n[r]?(n[0]|=u?1:2,_[n[r++]]):n[++r];3===u?t[0]=l:4===u?t[1]=Object.assign(t[1]||{},l):5===u?(t[1]=t[1]||{})[n[++r]]=l:6===u?t[1][n[++r]]+=l+"":u?(o=e.apply(l,ne(e,l,_,["",null])),t.push(o),l[0]?n[0]|=2:(n[r-2]=0,n[r]=o)):t.push(l)}return t},_e=new Map,te=function(e){var n=_e.get(this);return n||(n=new Map,_e.set(this,n)),(n=ne(this,n.get(e)||(n.set(e,n=function(e){for(var n,_,t=1,o="",r="",u=[0],l=function(e){1===t&&(e||(o=o.replace(/^\s*\n\s*|\s*\n\s*$/g,"")))?u.push(0,e,o):3===t&&(e||o)?(u.push(3,e,o),t=2):2===t&&"..."===o&&e?u.push(4,e,0):2===t&&o&&!e?u.push(5,0,!0,o):t>=5&&((o||!e&&5===t)&&(u.push(t,0,o,_),t=6),e&&(u.push(t,e,0,_),t=6)),o=""},i=0;i<e.length;i++){i&&(1===t&&l(),l(i));for(var c=0;c<e[i].length;c++)n=e[i][c],1===t?"<"===n?(l(),u=[u],t=3):o+=n:4===t?"--"===o&&">"===n?(t=1,o=""):o=n+o[0]:r?n===r?r="":o+=n:'"'===n||"'"===n?r=n:">"===n?(l(),t=1):t&&("="===n?(t=5,_=o,o=""):"/"===n&&(t<5||">"===e[i][c+1])?(l(),3===t&&(u=u[0]),t=u,(u=u[0]).push(2,0,t),t=0):" "===n||"\t"===n||"\n"===n||"\r"===n?(l(),t=2):o+=n),3===t&&"!--"===o&&(t=4,u=u[0])}return l(),u}(e)),n),arguments,[])).length>1?n:n[0]}.bind(p);e.h=p,e.html=te,e.render=function(e,t,o){var r,u,l;_.__&&_.__(e,t),u=(r="function"==typeof o)?null:o&&o.__k||t.__k,l=[],D(t,e=(!r&&o||t).__k=p(d,null,[e]),u||i,i,void 0!==t.ownerSVGElement,!r&&o?[o]:u?null:t.firstChild?n.call(t.childNodes):null,l,!r&&o?o:u?u.__e:t.firstChild,r),w(l,e)},e.Component=v,e.createContext=function(e,n){var _={__c:n="__cC"+l++,__:e,Consumer:function(e,n){return e.children(n)},Provider:function(e){var _,t;return this.getChildContext||(_=[],(t={})[n]=this,this.getChildContext=function(){return t},this.shouldComponentUpdate=function(e){this.props.value!==e.value&&_.some(g)},this.sub=function(e){_.push(e);var n=e.componentWillUnmount;e.componentWillUnmount=function(){_.splice(_.indexOf(e),1),n&&n.call(e)}}),e.children}};return _.Provider.__=_.Consumer.contextType=_},e.useState=j,e.useReducer=G,e.useEffect=function(e,n){var t=$(F++,3);!_.__s&&Z(t.__H,n)&&(t.__=e,t.__H=n,L.__H.__h.push(t))},e.useLayoutEffect=z,e.useRef=function(e){return W=5,J(function(){return{current:e}},[])},e.useImperativeHandle=function(e,n,_){W=6,z(function(){"function"==typeof e?e(n()):e&&(e.current=n())},null==_?_:_.concat(e))},e.useMemo=J,e.useCallback=function(e,n){return W=8,J(function(){return e},n)},e.useContext=function(e){var n=L.context[e.__c],_=$(F++,9);return _.c=e,n?(null==_.__&&(_.__=!0,n.sub(L)),n.props.value):e.__},e.useDebugValue=function(e,n){_.useDebugValue&&_.useDebugValue(n?n(e):e)},e.useErrorBoundary=function(e){var n=$(F++,10),_=j();return n.__=e,L.componentDidCatch||(L.componentDidCatch=function(e){n.__&&n.__(e),_[1](e)}),[_[0],function(){_[1](void 0)}]}});
+</script>
+<script>
+(function(){
+const { html, render, Component } = window.htmPreact;
+const PD = { __html: "<div class=\"pd-root\">\n<div class=\"pd-stage\">\n  <div class=\"pd-side\">\n    <span class=\"pd-label\">지금까지 사장님이 하던 방법<\/span>\n    <ol class=\"pd-steps\" id=\"pdsteps\">\n      <li><span class=\"pd-n\">1<\/span><span class=\"pd-t\">상품 메모를 따로 정리해요<\/span><\/li>\n      <li><span class=\"pd-n\">2<\/span><span class=\"pd-t\">ChatGPT를 열고 어떻게 써달라고 설명해요<\/span><\/li>\n      <li><span class=\"pd-n\">3<\/span><span class=\"pd-t\">어색한 말, 없는 내용을 다시 고쳐요<\/span><\/li>\n      <li><span class=\"pd-n\">4<\/span><span class=\"pd-t\">나온 글을 복사해서 글쓰기 칸에 붙여 넣어요<\/span><\/li>\n      <li><span class=\"pd-n\">5<\/span><span class=\"pd-t\" id=\"pdstep5\">공유하기를 눌러 올려요<\/span><\/li>\n    <\/ol>\n    <div class=\"pd-time\"><span class=\"pd-timer\" id=\"pdtimer\">0.0초<\/span><span>레피가 일한 시간. 정리하고 본문에 넣는 데까지 레피가 해요.<\/span><\/div>\n    <p class=\"pd-note\">시연 화면이에요. 실제 SNS에 게시하지 않으며, 가게 이름, 좋아요와 댓글은 예시예요. 레피 크롬 확장 프로그램은 개발 중이에요.<\/p>\n  <\/div>\n\n  <div class=\"pd-main\">\n    <div class=\"pd-browser\" id=\"pdbrowser\">\n      <div class=\"pd-chrome\">\n        <span class=\"pd-dots\" aria-hidden=\"true\"><i><\/i><i><\/i><i><\/i><\/span>\n        <span class=\"pd-addr\">SNS 웹 · 새 게시물 만들기<\/span>\n        <span class=\"pd-ext\" id=\"pdext\" title=\"레피 확장 프로그램\" aria-hidden=\"true\"><svg width=\"16\" height=\"18\" viewBox=\"0 0 22 24\"><path d=\"M11 20 V10\" stroke=\"#6E8F2A\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"><\/path><path d=\"M11 11.5 C 6.5 11.5 3.5 9 3 5 C 7 5 10.5 7 11 11.5 Z\" fill=\"#9BC53D\"><\/path><path d=\"M11 9.5 C 14.5 9.5 18.5 7 19 2.5 C 14.5 2.5 11.5 5 11 9.5 Z\" fill=\"#8DB33A\"><\/path><circle cx=\"11\" cy=\"20.5\" r=\"3\" fill=\"#BC6C25\"><\/circle><\/svg><\/span>\n      <\/div>\n      <div class=\"pd-web\">\n        <div class=\"pd-modal\">\n          <div class=\"pd-mhead\"><span class=\"pd-back\" aria-hidden=\"true\">‹<\/span><span>새 게시물 만들기<\/span><button class=\"pd-share\" id=\"pdshare\" type=\"button\" disabled>공유하기<\/button><\/div>\n          <div class=\"pd-mbody\">\n            <div class=\"pd-photo\" id=\"pdphoto\">\n              <img class=\"pd-bw\" src=\"images/lepi/hat.jpg\" alt=\"밀짚모자를 쓴 두 사람이 강과 산이 보이는 전망대에서 웃는 셀카\">\n              <img class=\"pd-ov\" src=\"images/lepi/hat-ov.webp\" alt=\"\" aria-hidden=\"true\">\n            <\/div>\n            <div class=\"pd-capcol\">\n              <div class=\"pd-acct\"><span class=\"pd-avatar\" aria-hidden=\"true\"><svg width=\"16\" height=\"18\" viewBox=\"0 0 22 24\"><circle cx=\"11\" cy=\"20.5\" r=\"3\" fill=\"#BC6C25\"><\/circle><\/svg><\/span>철원 여행 소품점<\/div>\n              <div class=\"pd-capwrap\">\n                <p class=\"pd-cap pd-hint\" id=\"pdcap\" tabindex=\"0\" role=\"button\" aria-label=\"메모를 선택하고 레피 부르기\"><mark>못생긴 밀짚모자인데 철원 주상절리입장료내면 한사람당 5천원 상품권주는데 그걸 이용하면 주변상점에서 살수 있거든 너무 햇볕이 뜨거워서 어쩔수 없이 샀는데 국내 여행갈때마다 필요할때 들고갔더니 추억템이 됐어<\/mark><\/p>\n                <div class=\"pd-story pd-hide\" id=\"pdstory\">\n                  <h4>예쁘진 않아도, 여행마다 따라다니면 추억이 되는 모자.<\/h4>\n                  <p>주상절리를 걷다 햇볕에 지치셨다면, 입장할 때 받으신 5천 원 상품권을 들고 오세요. 저희 가게에서 바로 바꿔 드려요.<\/p>\n                  <p>솔직히 좀 못생겼어요. 그래도 여기에는 철원에서 보낸 그 더운 하루가 담겨요. 다른 곳으로 떠날 때 챙겨 쓰면, 그날 이야기가 덤으로 함께 가는 셈이죠.<\/p>\n                <\/div>\n              <\/div>\n              <div class=\"pd-count\" id=\"pdcount\">108/2,200<\/div>\n            <\/div>\n          <\/div>\n        <\/div>\n\n        <aside class=\"pd-panel\" id=\"pdpanel\" aria-label=\"레피 에디터\">\n          <div class=\"pd-phead\"><span class=\"pd-logo\">lepi<b>.<\/b><\/span><span class=\"pd-tag\" id=\"pdtag\">호출됨<\/span><\/div>\n          <div class=\"pd-bar\"><i id=\"pdbar\"><\/i><\/div>\n          <div class=\"pd-pbody\">\n            <p class=\"pd-stagetext\" id=\"pdstagetext\"><i><\/i><span>메모를 읽고 있어요<\/span><\/p>\n            <div class=\"pd-result pd-hide\" id=\"pdresult\">\n              <h4>예쁘진 않아도, 여행마다 따라다니면 추억이 되는 모자.<\/h4>\n              <p>주상절리를 걷다 햇볕에 지치셨다면, 입장할 때 받으신 5천 원 상품권을 들고 오세요. 저희 가게에서 바로 바꿔 드려요.<\/p>\n                  <p>솔직히 좀 못생겼어요. 그래도 여기에는 철원에서 보낸 그 더운 하루가 담겨요. 다른 곳으로 떠날 때 챙겨 쓰면, 그날 이야기가 덤으로 함께 가는 셈이죠.<\/p>\n            <\/div>\n          <\/div>\n          <div class=\"pd-pbtns\"><button class=\"pd-btn pd-line\" id=\"pdcopy\" type=\"button\" disabled>복사하기<\/button><button class=\"pd-btn\" id=\"pdinsert\" type=\"button\" disabled>본문에 삽입<\/button><\/div>\n        <\/aside>\n\n        <div class=\"pd-posted\" id=\"pdposted\">\n          <div class=\"pd-photo pd-colored\"><img class=\"pd-bw\" src=\"images/lepi/hat.jpg\" alt=\"\"><img class=\"pd-ov\" src=\"images/lepi/hat-ov.webp\" alt=\"\" aria-hidden=\"true\"><\/div>\n          <div class=\"pd-postcol\" id=\"pdlikerow\">\n            <div class=\"pd-acct\" style=\"padding:0\"><span class=\"pd-avatar\" aria-hidden=\"true\"><svg width=\"16\" height=\"18\" viewBox=\"0 0 22 24\"><circle cx=\"11\" cy=\"20.5\" r=\"3\" fill=\"#BC6C25\"><\/circle><\/svg><\/span>철원 여행 소품점<\/div>\n            <svg class=\"pd-heart\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 20.5s-7.5-4.6-9.2-9.4C1.7 7.8 3.9 4.5 7.3 4.5c2 0 3.5 1.1 4.7 2.7 1.2-1.6 2.7-2.7 4.7-2.7 3.4 0 5.6 3.3 4.5 6.6-1.7 4.8-9.2 9.4-9.2 9.4z\"><\/path><\/svg>\n            <span class=\"pd-likes\">좋아요 <span id=\"pdlikes\">0<\/span>개<\/span>\n            <p class=\"pd-postcap\"><b>철원 여행 소품점<\/b>예쁘진 않아도, 여행마다 따라다니면 추억이 되는 모자. 주상절리를 걷다 햇볕에 지치셨다면, 입장할 때 받으신 5천 원 상품권을 들고 오세요…<\/p>\n            <ul class=\"pd-comments\" id=\"pdcomments\">\n              <li class=\"pd-hide\"><b>여행가는_곰<\/b>저도 주상절리 갔다가 이거 샀어요 ㅋㅋ<\/li>\n              <li class=\"pd-hide\"><b>모자수집가<\/b>못생겼다면서 너무 귀여운데요<\/li>\n              <li class=\"pd-hide\"><b>주말엔캠핑<\/b>상품권으로 살 수 있는 거 처음 알았어요!<\/li>\n              <li class=\"pd-hide pd-reply\"><b>철원 여행 소품점<\/b>@주말엔캠핑 의외로 모르시는 분들 많더라고요 ㅎㅎ 철원 오시면 꼭 들러 주세요!<\/li>\n            <\/ul>\n          <\/div>\n        <\/div>\n      <\/div>\n      <div class=\"pd-menu\" id=\"pdmenu\" role=\"menu\">\n        <div>뒤로<\/div><div>복사<\/div><div>검색<\/div><hr>\n        <button type=\"button\" id=\"pdlepi\" role=\"menuitem\"><svg width=\"14\" height=\"16\" viewBox=\"0 0 22 24\" aria-hidden=\"true\"><path d=\"M11 20 V10\" stroke=\"#6E8F2A\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"><\/path><path d=\"M11 11.5 C 6.5 11.5 3.5 9 3 5 C 7 5 10.5 7 11 11.5 Z\" fill=\"#9BC53D\"><\/path><path d=\"M11 9.5 C 14.5 9.5 18.5 7 19 2.5 C 14.5 2.5 11.5 5 11 9.5 Z\" fill=\"#8DB33A\"><\/path><circle cx=\"11\" cy=\"20.5\" r=\"3\" fill=\"#BC6C25\"><\/circle><\/svg>Lepi: 상품설명<\/button>\n      <\/div>\n      <div class=\"pd-toast\" id=\"pdtoast\" role=\"status\">게시됐어요<\/div>\n    <\/div>\n    <div class=\"pd-guide\"><p><b id=\"pdgnum\">1<\/b><span id=\"pdguide\">글쓰기 칸의 메모를 드래그하거나 눌러보세요.<\/span><\/p><button class=\"pd-text\" id=\"pdreset\" type=\"button\">처음부터 다시 보기<\/button><\/div>\n  <\/div>\n<\/div>\n<\/div>" };
+
+function initBeta(){
+  const WEBHOOK = "https://oclc-consisting-jenny-return.trycloudflare.com/webhook/d8fb407a-3c06-4358-a882-5a150d5672eb";
+  document.addEventListener('click', async (e) => {
+    const btn = e.target.closest && e.target.closest('#betaBtn');
+    if (!btn || btn.disabled) return;
+    const $ = (id) => document.getElementById(id);
+    const msg = $('betaMsg');
+    const name = $('nm').value.trim(), category = $('biz').value, email = $('em').value.trim(), agree = $('agree').checked;
+    if (!name || !category || !email || !agree) { msg.textContent = '이름, 업종, 이메일을 적고 참여 동의에 체크해 주세요.'; return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = '이메일 주소를 다시 확인해 주세요.'; return; }
+    btn.disabled = true; btn.textContent = '신청 중…'; msg.textContent = '';
+    try {
+      const r = await fetch(WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, category, sns: '', email, recent_post: '', agree }) });
+      if (!r.ok) throw new Error('send failed');
+      btn.textContent = '신청되었어요. 감사합니다';
+      ['nm','biz','em','agree'].forEach((id) => { $(id).disabled = true; });
+      msg.textContent = '정식으로 열리면 가장 먼저 알려드릴게요.';
+    } catch (err) {
+      btn.disabled = false; btn.textContent = '베타 신청하기';
+      msg.textContent = '신청을 보내지 못했어요. 잠시 후 다시 시도해 주세요.';
+    }
+  });
+}
+
+function initPD(){
+  const $ = (id) => document.getElementById(id);
+  if (!$('pdcap') || $('pdcap').dataset.ready) return;
+  $('pdcap').dataset.ready = '1';
+  const steps = [...$('pdsteps').children];
+  const cap = $('pdcap'), menu = $('pdmenu'), panel = $('pdpanel'), browser = $('pdbrowser');
+  const resText = '예쁘진 않아도, 여행마다 따라다니면 추억이 되는 모자.\n\n주상절리를 걷다 햇볕에 지치셨다면, 입장할 때 받으신 5천 원 상품권을 들고 오세요. 저희 가게에서 바로 바꿔 드려요.\n\n솔직히 좀 못생겼어요. 그래도 여기에는 철원에서 보낸 그 더운 하루가 담겨요. 다른 곳으로 떠날 때 챙겨 쓰면, 그날 이야기가 덤으로 함께 가는 셈이죠.';
+  let phase = 'idle', timers = [], acc = 0, t0 = 0, tick = null;
+  const later = (fn, ms) => timers.push(setTimeout(fn, ms));
+  const show = (ms) => { $('pdtimer').textContent = (ms / 1000).toFixed(1) + '초'; };
+  const go = () => { t0 = performance.now(); clearInterval(tick); tick = setInterval(() => show(acc + performance.now() - t0), 100); };
+  const stop = () => { clearInterval(tick); acc += performance.now() - t0; show(acc); };
+  const guide = (n, t) => { $('pdgnum').textContent = n; $('pdguide').textContent = t; };
+  const stage = (t) => { $('pdstagetext').querySelector('span').textContent = t; };
+
+  function openMenu(x, y){
+    if (phase !== 'idle' && phase !== 'menu') return;
+    cap.classList.remove('pd-hint'); cap.classList.add('pd-sel');
+    try { const r = document.createRange(); r.selectNodeContents(cap); const s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+    const b = browser.getBoundingClientRect();
+    const left = Math.min(Math.max(8, x - b.left), b.width - 220), top = Math.min(Math.max(8, y - b.top), b.height - 175);
+    menu.style.left = left + 'px'; menu.style.top = top + 'px';
+    menu.classList.add('pd-show'); phase = 'menu';
+    steps[0].classList.add('pd-done');
+    guide(2, '오른쪽 클릭 메뉴에서 "Lepi: 상품설명"을 눌러보세요.');
+    $('pdlepi').focus({ preventScroll: true });
+  }
+  cap.addEventListener('mouseup', (e) => openMenu(e.clientX, e.clientY));
+  cap.addEventListener('contextmenu', (e) => { e.preventDefault(); openMenu(e.clientX, e.clientY); });
+  cap.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); const r = cap.getBoundingClientRect(); openMenu(r.left + 40, r.top + 40); } });
+
+  $('pdlepi').addEventListener('click', () => {
+    if (phase !== 'menu') return;
+    phase = 'working'; menu.classList.remove('pd-show');
+    try { window.getSelection().removeAllRanges(); } catch (e) {}
+    $('pdext').classList.add('pd-on'); panel.classList.add('pd-show'); go();
+    guide(3, '레피가 메모 속 이야기를 찾아 정리하고 있어요.');
+    $('pdtag').textContent = '정리 중'; $('pdbar').style.width = '30%'; stage('메모를 읽고 있어요');
+    later(() => { $('pdbar').style.width = '62%'; stage('이야기를 찾고 있어요'); steps[1].classList.add('pd-done'); }, 1100);
+    later(() => { $('pdbar').style.width = '88%'; stage('글로 정리하고 있어요'); }, 2200);
+    later(() => {
+      stop(); $('pdbar').style.width = '100%'; $('pdtag').textContent = '정리 완료';
+      $('pdstagetext').classList.add('pd-hide'); $('pdresult').classList.remove('pd-hide');
+      steps[2].classList.add('pd-done');
+      $('pdcopy').disabled = false; $('pdinsert').disabled = false; phase = 'result';
+      guide(4, '"본문에 삽입"을 누르면 글쓰기 칸에 바로 들어가요.');
+    }, 3300);
+  });
+
+  $('pdcopy').addEventListener('click', () => {
+    const done = () => { $('pdcopy').textContent = '복사했어요'; later(() => { $('pdcopy').textContent = '복사하기'; }, 2000); };
+    try { navigator.clipboard.writeText(resText).then(done, done); } catch (e) { done(); }
+  });
+
+  $('pdinsert').addEventListener('click', () => {
+    if (phase !== 'result') return;
+    phase = 'inserting'; go(); $('pdinsert').disabled = true;
+    later(() => {
+      stop();
+      cap.classList.add('pd-hide'); $('pdstory').classList.remove('pd-hide'); $('pdphoto').classList.add('pd-colored');
+      $('pdcount').textContent = '214/2,200'; $('pdtag').textContent = '본문에 넣었어요';
+      steps[3].classList.add('pd-done'); steps[4].classList.add('pd-mine'); $('pdstep5').textContent = '공유하기만 사장님이 눌러요';
+      panel.classList.remove('pd-show'); $('pdext').classList.remove('pd-on');
+      $('pdshare').disabled = false; $('pdshare').classList.add('pd-pulse'); phase = 'review';
+      guide(5, '레피는 여기까지. 확인하고 "공유하기"를 눌러 직접 올려요.');
+    }, 500);
+  });
+
+  $('pdshare').addEventListener('click', () => {
+    if (phase !== 'review') return;
+    phase = 'posted'; $('pdshare').classList.remove('pd-pulse'); $('pdshare').disabled = true;
+    $('pdposted').classList.add('pd-show'); $('pdtoast').classList.add('pd-show');
+    guide('✓', '사장님이 올린 게시물이에요. 메모 몇 줄이 이야기가 됐어요.');
+    later(() => $('pdtoast').classList.remove('pd-show'), 2200);
+    later(() => $('pdlikerow').classList.add('pd-liked'), 900);
+    let n = 0; later(() => { const iv = setInterval(() => { n++; $('pdlikes').textContent = n; if (n >= 24) clearInterval(iv); }, 70); timers.push(iv); }, 1000);
+    const col = $('pdlikerow');
+    [...$('pdcomments').children].forEach((li, i) => later(() => { li.classList.remove('pd-hide'); col.scrollTo({ top: col.scrollHeight, behavior: 'smooth' }); }, 2000 + i * 900));
+  });
+
+  document.addEventListener('mousedown', (e) => { if (phase === 'menu' && !menu.contains(e.target) && e.target !== cap && !cap.contains(e.target)) { menu.classList.remove('pd-show'); phase = 'idle'; cap.classList.remove('pd-sel'); cap.classList.add('pd-hint'); steps[0].classList.remove('pd-done'); guide(1, '글쓰기 칸의 메모를 드래그하거나 눌러보세요.'); } });
+
+  $('pdreset').addEventListener('click', () => {
+    timers.forEach((t) => { clearTimeout(t); clearInterval(t); }); timers = []; clearInterval(tick); acc = 0; show(0); phase = 'idle';
+    steps.forEach((s) => s.classList.remove('pd-done', 'pd-mine')); $('pdstep5').textContent = '공유하기를 눌러 올려요';
+    menu.classList.remove('pd-show'); panel.classList.remove('pd-show'); $('pdext').classList.remove('pd-on');
+    cap.classList.remove('pd-hide', 'pd-sel'); cap.classList.add('pd-hint'); $('pdstory').classList.add('pd-hide'); $('pdphoto').classList.remove('pd-colored');
+    $('pdcount').textContent = '108/2,200'; $('pdtag').textContent = '호출됨'; $('pdbar').style.width = '0';
+    $('pdstagetext').classList.remove('pd-hide'); stage('메모를 읽고 있어요'); $('pdresult').classList.add('pd-hide');
+    $('pdcopy').disabled = true; $('pdcopy').textContent = '복사하기'; $('pdinsert').disabled = true;
+    $('pdshare').disabled = true; $('pdshare').classList.remove('pd-pulse');
+    $('pdposted').classList.remove('pd-show'); $('pdtoast').classList.remove('pd-show'); $('pdlikerow').classList.remove('pd-liked'); $('pdlikes').textContent = '0';
+    [...$('pdcomments').children].forEach((li) => li.classList.add('pd-hide')); $('pdlikerow').scrollTop = 0;
+    guide(1, '글쓰기 칸의 메모를 드래그하거나 눌러보세요.');
+  });
+}
+
+class Page extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { revealed: false, phase: 'idle', copied: false, ci: 0, cshown: true, crev: false, faq: 0, busy: false, wait: 0, res: null };
+    this.timers = [];
+    this.tryT = [];
+  }
+  componentDidMount() {
+    try {
+      ['images/lepi/hat-ov.webp','images/lepi/bell-ov.webp','images/lepi/karp-ov.webp','images/lepi/knicks-ov.webp'].forEach((u) => { const im = new Image(); im.decoding = 'async'; im.src = u; });
+    } catch (e) {}
+    try {
+      if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+        this.timers.push(setTimeout(() => this.setState({ revealed: true }), 3000));
+      }
+    } catch (e) {}
+  }
+  componentWillUnmount() { this.timers.forEach((t) => clearTimeout(t)); this.tryT.forEach((t) => clearTimeout(t)); }
+  async tryIt() {
+    if (this.inFlight) return;
+    const el = document.getElementById('memo');
+    const text = ((el && el.value) || '').trim();
+    if (!text) { this.setState({ res: { error: '상품 메모를 입력해 주세요.' } }); return; }
+    const payload = { text };
+    try { if (new URLSearchParams(location.search).has('test')) payload.mode = 'demo'; } catch (e) {}
+    const ctrl = new AbortController();
+    let timedOut = false;
+    this.tryT = [
+      setTimeout(() => this.setState({ wait: 1 }), 5000),
+      setTimeout(() => this.setState({ wait: 2 }), 10000),
+      setTimeout(() => { timedOut = true; ctrl.abort(); }, 45000)
+    ];
+    this.inFlight = true;
+    this.setState({ busy: true, wait: 0, res: null });
+    let res;
+    try {
+      const r = await fetch('/api', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: ctrl.signal });
+      const data = await r.json().catch(() => ({}));
+      res = r.ok && data.status ? data : { error: data.error || '이야기를 입히는 중 오류가 발생했어요. 잠시 뒤 다시 시도해 주세요.' };
+    } catch (e) {
+      res = { error: timedOut ? '시간이 너무 오래 걸리고 있어요. 잠시 뒤 다시 시도해 주세요.' : '연결이 잠시 끊겼어요. 잠시 뒤 다시 시도해 주세요.' };
+    }
+    this.tryT.forEach((t) => clearTimeout(t)); this.tryT = [];
+    this.inFlight = false;
+    this.setState({ busy: false, res });
+  }
+  reduced() {
+    try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
+  }
+  later(fn, ms) { this.timers.push(setTimeout(fn, ms)); }
+  fade(on, delay, dur) {
+    const ease = 'cubic-bezier(0.16,1,0.3,1)';
+    const d = dur || 800;
+    return 'opacity: ' + (on ? 1 : 0) + '; transform: translateY(' + (on ? 0 : 8) + 'px); transition: opacity ' + d + 'ms ' + ease + ' ' + delay + 'ms, transform ' + d + 'ms ' + ease + ' ' + delay + 'ms;';
+  }
+  run(steps) {
+    let acc = 0;
+    steps.forEach(([phase, wait]) => { acc += wait; this.later(() => this.setState({ phase }), acc); });
+  }
+  pickCase(i) {
+    if (i === this.state.ci) return;
+    if (this.reduced()) { this.setState({ ci: i, crev: false }); return; }
+    this.setState({ cshown: false });
+    this.later(() => this.setState({ ci: i, crev: false }), 280);
+    this.later(() => this.setState({ cshown: true }), 330);
+  }
+  renderVals() {
+    const s = this.state;
+    const r = s.revealed;
+    const serifH = "margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 400; font-size: 22px; line-height: 1.5; color: #283618; ";
+    const body = 'margin: 12px 0 0; font-size: 16px; line-height: 1.85; color: #283618; ';
+
+    const heroParas = [
+      '주상절리를 걷다 햇볕에 지치셨다면, 입장할 때 받으신 5천 원 상품권을 들고 오세요. 저희 가게에서 바로 바꿔 드려요.',
+      '솔직히 좀 못생겼어요. 그래도 여기에는 철원에서 보낸 그 더운 하루가 담겨요. 다른 곳으로 떠날 때 챙겨 쓰면, 그날 이야기가 덤으로 함께 가는 셈이죠.'
+    ];
+    const hero = {
+      closed: !r, open: r,
+      hintShow: r ? 'display: none' : 'display: inline', hideShow: r ? 'display: inline' : 'display: none',
+      imgStyle: 'filter: grayscale(1) contrast(0.92);',
+      cutStyle: 'opacity: ' + (r ? 1 : 0) + '; transition: opacity ' + (r ? '1400ms cubic-bezier(0.16,1,0.3,1) 0ms' : '1200ms ease-in-out 0ms') + ';',
+      memoStyle: 'opacity: ' + (r ? 0 : 1) + '; transition: opacity ' + (r ? 450 : 700) + 'ms cubic-bezier(0.16,1,0.3,1) ' + (r ? 0 : 380) + 'ms; pointer-events: ' + (r ? 'none' : 'auto') + ';',
+      resultWrap: 'visibility: ' + (r ? 'visible' : 'hidden') + '; transition: visibility 0s ' + (r ? 0 : 380) + 'ms;',
+      h: serifH + (r ? this.fade(true, 350) : this.fade(false, 0, 320)),
+      paras: heroParas.map((text, i) => ({ text, style: body + (r ? this.fade(true, 600 + i * 250) : this.fade(false, 0, 320)) }))
+    };
+
+    const order = ['idle', 'select', 'menu', 'w1', 'w2', 'w3', 'result', 'inserted'];
+    const p = s.phase;
+    const at = (name) => order.indexOf(p) >= order.indexOf(name);
+    const working = p === 'w1' || p === 'w2' || p === 'w3';
+    const bar = { idle: 0, select: 0, menu: 0, w1: 30, w2: 62, w3: 88, result: 100, inserted: 100 }[p];
+    const resParas = [
+      '우리집 고양이가 제일 좋아하는 장난감이에요.',
+      '실리콘이라 엄청 부드럽고, 흔들면 진짜 쥐꼬리 같은 느낌이 나요. 그래서인지 다른 장난감이랑은 반응이 달라요. 흔들기만 해도 흥분하면서 좋아하거든요.',
+      '고양이랑 놀아줄 때 반응 확 오는 낚시대를 찾고 계셨다면, 한번 흔들어 보세요.'
+    ];
+    const showRes = at('result');
+    const inserted = p === 'inserted';
+    const demo = {
+      windowNote: inserted ? '레피가 정리한 글이 들어갔어요' : (at('select') ? '메모 선택됨' : '작성 중'),
+      panelTag: p === 'idle' ? '대기 중' : (working ? '정리 중' : (inserted ? '완료' : (showRes ? '정리 완료' : '호출됨'))),
+      memoStyle: 'margin: 0; font-size: 16px; line-height: 1.85; opacity: ' + (inserted ? 0 : 1) + '; transition: opacity 700ms cubic-bezier(0.16,1,0.3,1);',
+      selStyle: 'background-image: linear-gradient(rgba(188,108,37,0.18), rgba(188,108,37,0.18)); background-repeat: no-repeat; background-size: ' + (at('select') && !inserted ? '100% 100%' : '0% 100%') + '; transition: background-size 900ms cubic-bezier(0.16,1,0.3,1);',
+      insertedWrap: 'visibility: ' + (inserted ? 'visible' : 'hidden') + ';',
+      insH: serifH + this.fade(inserted, 350),
+      insParas: resParas.map((text, i) => ({ text, style: body + this.fade(inserted, 600 + i * 250) })),
+      menuStyle: 'position: absolute; top: 120px; left: 46%; min-width: 200px; background: #FFFFFF; border: 1px solid #93987C; border-radius: 4px; box-shadow: 0 8px 24px rgba(40,54,24,0.08); ' + this.fade(p === 'menu' || p === 'w1', 0) + ' pointer-events: none;',
+      barStyle: 'position: absolute; left: 0; top: 0; height: 1px; background: #BC6C25; width: ' + bar + '%; transition: width 1100ms cubic-bezier(0.16,1,0.3,1);',
+      idleStyle: 'margin: 0; font-size: 16px; line-height: 1.85; color: #606C38; ' + this.fade(p === 'idle', 0),
+      stageStyle: 'margin: 0; font-size: 16px; ' + this.fade(working, 0),
+      stageText: { w1: '메모를 읽고 있어요', w2: '이야기를 찾고 있어요', w3: '글로 정리하고 있어요' }[p] || '',
+      resultWrap: 'visibility: ' + (showRes ? 'visible' : 'hidden') + ';',
+      resH: serifH + this.fade(showRes, 100),
+      resParas: resParas.map((text, i) => ({ text, style: body + this.fade(showRes, 350 + i * 250) })),
+      showStart: p === 'idle', showResultBtns: p === 'result', showReset: inserted,
+      copyLabel: s.copied ? '복사했어요' : '복사하기'
+    };
+
+    const K = (t) => ({ t, k: true });
+    const N = (t) => ({ t, k: false });
+    const cases = [
+      { name: '선운사 소원의 종', price: '10,000원', src: 'images/lepi/bell.jpg', cut: 'images/lepi/bell-ov.webp', alt: '선운사 소원나무에 걸린 색색의 작은 도자기 종과 소원을 적은 나무 패',
+        memo: [N('선운사 종은 만원인데 소원나무에 저렇게 대부분 '), K('가족의 건강과 성공을 기원하는'), N(' 거라 나도 시댁어른이랑 남편이랑 '), K('간 김에'), N(' 구매했어. 사서 '), K('몸에 지니지 않더라도'), N(' 저렇게 바람에 '), K('풍경처럼 흔들리면서'), N(' '), K('촤르르'), N(' 소리나니까 '), K('마음이 평안해지면서 꼭 소원이 이루어진것 같더라')],
+        headline: '가족과 함께 온 날, 소원 하나 바람에 걸어두는 종.',
+        paras: ['촤르르.', '선운사 소원나무 아래 서면 이 소리부터 들려요. 가지가 살랑이면 방울들이 풍경처럼 흔들리거든요.', '저마다 적힌 사연은 대부분 비슷해요. 식구들이 건강하기를, 하는 일이 잘되기를.', '들고 다니지 않아도 돼요. 한 번 달아 두면 알아서 울려주니까요. 가만히 귀 기울이고 있으면 괜스레 편안해지고, 소망이 벌써 이루어진 것 같더라고요.', '소중한 사람들과 나선 길이라면, 그 마음 여기 남기고 가세요.'] },
+      { name: '잉어킹 액막이', price: '가챠 1회 10,000원', src: 'images/lepi/karp.jpg', cut: 'images/lepi/karp-ov.webp', alt: '팝업 매장 천장에 밧줄로 매달린 빨간 잉어킹 액막이 장식',
+        memo: [N('남편이랑 포켓몬팝업이 있다고 해서 놀러갔더니 잉어킹액막이가 있더라고 그런데 '), K('가챠로밖에'), N(' 안팔아서 '), K('만원이라는 큰 금액'), N('이어도 '), K('한번 도전해'), N('봤더니 성공해서 한번에 뽑았어 몇달뒤에 '), K('이사 예정이어서 가지고 싶었는데'), N(' 좋은 추억이었어')],
+        addKept: '별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이', addRest: ' 이런 글귀도 있으면 좋지',
+        headline: '별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이.',
+        paras: ['이사를 앞두고 있으면, 새 보금자리에 무엇부터 들일지 괜히 신경 쓰이잖아요. 그럴 때 첫 짐으로 이 잉어킹을 챙겨 보세요. 저희 팝업에서만 만날 수 있는 녀석이에요.', '낯선 곳이라도 현관에 익숙한 얼굴 하나 달려 있으면, 앞으로의 날들이 한결 든든해지거든요.'] },
+      { name: '닉스고 인형 키링', price: '8,000원', src: 'images/lepi/knicks.jpg', cut: 'images/lepi/knicks-ov.webp', alt: '보라색 굴레와 10번 안장을 두른 회색 닉스고 말 인형 키링과 한국마사회 상자',
+        memo: [N('저는 '), K('현역 시절'), N(' 닉스고를 '), K('응원했'), N('습니다. '), K('세계적인 무대에서 좋은 성적을 거두던 한국마사회 소유의 말'), N('이라는 점도 특별하게 느껴졌고요. 지금은 경주에서 은퇴해 '), K('씨수말'), N('로 지내고 있지만, 마사회 공식 굿즈에서 실제 닉스고의 외형을 본떠 만든 인형을 발견했습니다. 여러 마사회 굿즈 중에서도 '), K('가장 실제 말처럼 생겼고, 무엇보다 귀여웠'), N('습니다. 가격은 8천 원. 그래서 하나 '), K('데려'), N('왔습니다.')],
+        headline: '응원하던 말의 경주는 끝나도, 그때의 기억은 곁에 둘 수 있으니까.',
+        paras: ['세계적인 무대에서 좋은 성적을 거두던, 한국마사회 소유의 닉스고. 현역 시절을 지켜본 팬이라면 그 이름만 들어도 가슴이 먼저 달려갑니다.', '지금은 은퇴해 씨수말로 지내고 있지만, 그 모습은 생김새를 고스란히 본뜬 이 인형 안에, 무엇보다 귀엽게 남아 있습니다.', '그 질주가 그리운 분이라면, 하나 데려가세요.'] }
+    ];
+    const c = cases[s.ci];
+    const shown = s.cshown;
+    const on = s.cshown && s.crev;
+    const underline = (kept, idx) => kept
+      ? 'background-image: linear-gradient(#BC6C25, #BC6C25); background-repeat: no-repeat; background-position: 0 100%; background-size: ' + (on ? '100%' : '0%') + ' 2px; transition: background-size 700ms cubic-bezier(0.16,1,0.3,1) ' + (on ? 500 + idx * 140 : 0) + 'ms; padding-bottom: 2px;'
+      : '';
+    let ki = 0;
+    const cs = {
+      name: c.name, price: c.price, headline: c.headline,
+      hasAdd: !!c.addKept, addKept: c.addKept || '', addRest: c.addRest || '',
+      headStyle: shown ? this.fade(true, 0, 600) : this.fade(false, 0, 260),
+      closed: !s.crev, open: s.crev,
+      hintShow: s.crev ? 'display: none' : 'display: inline', hideShow: s.crev ? 'display: inline' : 'display: none',
+      memo: c.memo.map((seg) => ({ t: seg.t, style: underline(seg.k, seg.k ? ki++ : 0) })),
+      addStyle: underline(true, c.memo.filter((x) => x.k).length),
+      labelStyle: on ? this.fade(true, 900, 600) : this.fade(false, 0, 260),
+      hStyle: serifH + (on ? this.fade(true, 1100) : this.fade(false, 0, 260)),
+      paras: c.paras.map((text, i) => ({ text, style: body + (on ? this.fade(true, 1300 + i * 220) : this.fade(false, 0, 260)) }))
+    };
+    const tabs = cases.map((x, i) => ({
+      name: x.name,
+      pressed: i === s.ci ? 'true' : 'false',
+      style: i === s.ci ? 'color: #283618; border-bottom-color: #283618;' : '',
+      pick: () => this.pickCase(i)
+    }));
+    const imgBase = 'width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; display: block; ';
+    const photos = cases.map((x, i) => {
+      const active = i === s.ci;
+      const colored = active && on;
+      return {
+        src: x.src, alt: x.alt, cut: x.cut || '', hasCut: !!x.cut,
+        wrapStyle: 'opacity: ' + (active ? 1 : 0) + '; transition: opacity 500ms cubic-bezier(0.16,1,0.3,1);',
+        style: imgBase + 'filter: grayscale(' + (x.cut || !colored ? 1 : 0) + '); transition: filter 1400ms cubic-bezier(0.16,1,0.3,1) 150ms;',
+        cutStyle: 'opacity: ' + (colored ? 1 : 0) + '; transition: opacity ' + (colored ? '1400ms cubic-bezier(0.16,1,0.3,1) 150ms' : '1200ms ease-in-out 0ms') + ';'
+      };
+    });
+
+    const problems = [
+      { n: '01', t: '쓰다 보면 설명서가 돼요', d: '상품명, 가격, 크기. 사실만 적다 보면 흔한 물건처럼 보여요.' },
+      { n: '02', t: '좋은 이유는 말로 꺼내기 어려워요', d: '왜 좋은지는 아는데, 막상 글로 옮기면 뻔한 말이 돼요.' },
+      { n: '03', t: 'AI에 맡기면 광고가 돼요', d: '‘특별한 순간’, ‘작은 행복’. 내 가게 말투가 아닌 문장이 돌아와요.' },
+      { n: '04', t: '없는 이야기가 끼어들어요', d: '하지 않은 약속, 없는 효능까지. 다시 읽고 지우는 몫이 남아요.' }
+    ];
+    const promises = [
+      { t: '없는 이야기는 보태지 않아요', d: '메모에 없는 장면, 효능, 손님 반응은 쓰지 않아요. 재료가 모자라면 글 대신 질문을 드려요.' },
+      { t: '틀리면 안 되는 건 그대로', d: '가격, 날짜, 메뉴명, 조건처럼 틀리면 안 되는 정보는 적어주신 그대로 지켜요.' },
+      { t: '사장님 말은 살려요', d: '‘못생긴’, ‘촤르르’처럼 그 상품에만 있는 말은 광고 문구로 바꾸지 않아요.' },
+      { t: '마지막은 사장님이 정해요', d: '올리기 전에 한 번 읽어봐 주세요. 레피는 결정을 대신하지 않아요.' }
+    ];
+    const faqData = [
+      ['레피는 ChatGPT나 Gemini와 무엇이 다른가요?', 'ChatGPT나 Gemini도 글을 써줘요. 다만 매번 무엇을 어떻게 써달라고 설명하고, 결과를 복사해 붙여 넣고, 없는 내용이 섞이진 않았는지 다시 확인해야 해요. 레피는 메모를 넣으면 메모 속 이야기만으로 정리하고, 쓰던 자리에 바로 넣을 수 있게 만들고 있어요.'],
+      ['레피가 글을 대신 새로 써주나요?', '문장은 새로 써요. 다만 내용은 사장님 메모에 있는 것만 써요. 메모에 없는 경험이나 효과를 지어내지 않고, 재료가 부족하면 먼저 물어봐요.'],
+      ['어떤 업종에 적합한가요?', '공방, 핸드메이드, 디저트·카페, 온라인 셀러, 네일숍, 꽃집처럼 SNS가 곧 손님을 만나는 창구인 작은 가게에 특히 잘 맞아요.'],
+      ['무료인가요? 나중에 유료로 바뀌나요?', '지금은 홈페이지에서 무료로 체험할 수 있어요. 요금이 생긴다면 미리 알려드릴게요.'],
+      ['레피를 쓰면 매출이 늘어나나요?', '늘어난다고 약속드릴 수는 없어요. 레피가 하는 일은 상품을 고른 이유를 글로 꺼내는 부담을 덜어드리는 것까지예요.'],
+      ['AI가 잘못된 정보를 만들지는 않나요?', '메모에 없는 내용은 쓰지 않도록 만들고 있어요. 그래도 올리기 전에 가격, 날짜 같은 사실은 꼭 한 번 직접 확인해주세요.'],
+      ['내가 쓴 글이나 데이터는 어떻게 처리되나요?', '베타 기간에는 동의해주신 범위 안에서 원문, 결과, 고치신 내용을 서비스 개선에 활용할 수 있어요. 무엇을 어떻게 다루는지는 베타 참여에 동의하실 때 안내드릴게요.']
+    ];
+    const faqs = faqData.map(([q, a], i) => {
+      const open = s.faq === i;
+      return {
+        n: String(i + 1).padStart(2, '0'), q, a,
+        expanded: open ? 'true' : 'false',
+        iconStyle: 'font-size: 22px; font-weight: 300; line-height: 1; color: #606C38; width: 24px; text-align: center; flex: 0 0 auto; display: inline-block; transform: rotate(' + (open ? 45 : 0) + 'deg); transition: transform 500ms cubic-bezier(0.16,1,0.3,1);',
+        bodyStyle: 'display: grid; grid-template-rows: ' + (open ? '1fr' : '0fr') + '; opacity: ' + (open ? 1 : 0) + '; transition: grid-template-rows 600ms cubic-bezier(0.16,1,0.3,1), opacity 500ms ease;',
+        toggle: () => this.setState({ faq: this.state.faq === i ? -1 : i })
+      };
+    });
+
+    return {
+      revealCase: () => { clearTimeout(this.caseT); if (!this.state.crev) this.setState({ crev: true }); },
+      hideCase: () => this.setState({ crev: false }),
+      hero, demo, cs, tabs, photos, problems, promises, faqs,
+      tryOut: (() => {
+        const x = s.res || {};
+        const card = x.product_card || {};
+        const known = ['READY', 'NEED_MORE_INFO', 'NO_STORY_FOUND'].indexOf(x.status) >= 0;
+        return {
+          busy: s.busy,
+          waitText: ['메모를 읽고 있어요', '이야기를 찾고 있어요', '글을 다듬고 있어요'][s.wait] + '…',
+          ready: !s.busy && x.status === 'READY',
+          ask: !s.busy && x.status === 'NEED_MORE_INFO',
+          none: !s.busy && x.status === 'NO_STORY_FOUND',
+          error: !s.busy && s.res && !known ? (x.error || '이야기를 입히는 중 오류가 발생했어요. 잠시 뒤 다시 시도해 주세요.') : '',
+          name: typeof card.name === 'string' ? card.name : '',
+          price: typeof card.price === 'string' ? card.price : '',
+          headline: typeof x.headline === 'string' ? x.headline : '',
+          paras: Array.isArray(x.body) ? x.body.filter((t) => typeof t === 'string').map((text) => ({ text, style: body })) : [],
+          questions: Array.isArray(x.questions) ? x.questions.filter((q) => typeof q === 'string') : [],
+          hStyle: serifH,
+          noteStyle: 'margin: 0; font-size: 13px; line-height: 1.7; color: #606C38; ' + this.fade(true, 0, 500)
+        };
+      })(),
+      tryIt: () => this.tryIt(),
+      reveal: () => { clearTimeout(this.heroT); if (!this.state.revealed) this.setState({ revealed: true }); },
+      hide: () => this.setState({ revealed: false }),
+      heroToggle: () => { clearTimeout(this.heroT); this.setState({ revealed: !this.state.revealed }); },
+      caseToggle: () => { clearTimeout(this.caseT); this.setState({ crev: !this.state.crev }); },
+      start: () => {
+        if (this.reduced()) { this.setState({ phase: 'result' }); return; }
+        this.run([['select', 50], ['menu', 950], ['w1', 900], ['w2', 1300], ['w3', 1300], ['result', 1300]]);
+      },
+      copy: () => {
+        const text = '흔들기만 해도 사냥 모드, 쥐꼬리 낚시대\n\n' + resParas.join('\n\n');
+        try { navigator.clipboard && navigator.clipboard.writeText(text); } catch (e) {}
+        this.setState({ copied: true });
+        this.later(() => this.setState({ copied: false }), 2000);
+      },
+      insert: () => this.setState({ phase: 'inserted' }),
+      reset: () => { this.timers.forEach((t) => clearTimeout(t)); this.timers = []; this.setState({ phase: 'idle', copied: false }); }
+    };
+  }
+
+  render() {
+    const { hero, demo, cs, tabs, photos, problems, promises, faqs, tryOut, tryIt, reveal, revealCase, heroToggle, caseToggle, start, copy, insert, reset } = this.renderVals();
+    return html`<div style="font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; color: #283618; background: #FFFDE5; word-break: keep-all">
+
+<header class="wrap" style="padding-top: 22px; padding-bottom: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px">
+<a href="#top" class="logo" aria-label="lepi 처음으로"><span class="lt" style="--c: #BC6C25; --d: 0ms">l</span><span class="lt" style="--c: #DDA15E; --d: 90ms">e</span><span class="lt" style="--c: #606C38; --d: 180ms">p</span><span class="lt" style="--c: #BC6C25; --d: 270ms">i</span><span class="seed"><svg class="sprout" viewBox="0 0 18 20" aria-hidden="true"><path class="stem" d="M9 20 V9" stroke="#6E8F2A" stroke-width="1.8" stroke-linecap="round" fill="none"></path><path class="leaf leaf-l" d="M9 10.5 C 4.5 10.5 1.5 8 1 4 C 5 4 8.5 6 9 10.5 Z" fill="#9BC53D"></path><path class="leaf leaf-r" d="M9 8.5 C 12.5 8.5 16.5 6 17 1.5 C 12.5 1.5 9.5 4 9 8.5 Z" fill="#8DB33A"></path></svg></span></a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px">
+<a class="navlink" href="#how">사용 방법</a>
+<a class="navlink" href="#cases">사례</a>
+<a class="navlink" href="#faq">FAQ</a>
+<a class="btn btn-line" href="#try" style="min-height: 44px; font-size: 13px; padding: 0 18px">무료로 체험하기</a>
+</nav>
+</header>
+
+<section id="top" class="wrap" style="padding-top: 64px; padding-bottom: 112px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center; border-top: 1px solid #E0DEC4">
+<div style="flex: 1 1 520px; min-width: 0">
+<a href="#try" class="rise" style="display: inline-block; font-size: 12px; letter-spacing: 0.08em; text-decoration: none; border: 1px solid #93987C; border-radius: 999px; padding: 7px 14px; animation-delay: 100ms">무료 체험 운영 중</a>
+<h1 class="rise" style="font-family: 'Noto Serif KR', serif; font-weight: 300; font-size: clamp(32px, 4.6vw, 60px); line-height: 1.28; letter-spacing: -0.015em; margin: 28px 0 0; animation-delay: 250ms"><span style="white-space: nowrap">물건은 흔해도,</span><br /><span style="white-space: nowrap">고른 이유는 저마다.</span></h1>
+<p class="rise" style="font-family: 'Noto Serif KR', serif; font-weight: 300; font-size: clamp(21px, 2.1vw, 27px); line-height: 1.6; letter-spacing: -0.01em; margin: 24px 0 0; animation-delay: 380ms">그 이유를 담아,<br />레피가 상품에 <span class="draw">이야기를</span> 입혀드려요.</p>
+<p class="rise" style="font-size: 16px; line-height: 1.85; color: #606C38; margin: 28px 0 0; animation-delay: 500ms">없는 이야기는 만들지 않아요.<br />내용은 사장님 메모에서, 표현은 더 선명하게.</p>
+<div class="rise" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; animation-delay: 620ms">
+<a class="btn btn-solid" href="#try">내 메모로 체험하기</a>
+<a class="btn btn-line" href="#how">어떻게 쓰나요</a>
+</div>
+</div>
+
+<div style="flex: 1 1 440px; min-width: 0" onMouseEnter=${reveal}>
+<div style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E0DEC4; border-radius: 4px; overflow: hidden">
+<div class="stack">
+<img src="images/lepi/hat.jpg" alt="밀짚모자를 쓴 두 사람이 강과 산이 보이는 전망대에서 웃는 셀카" class="bw" style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block" />
+<img src="images/lepi/hat-ov.webp" alt="" aria-hidden="true" class="ov" style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; ${hero.cutStyle}" />
+</div>
+<div style="padding: 28px 32px 16px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box">
+<div class="label">밀짚모자 · 철원 주상절리 상품권으로 구매</div>
+<div class="stack">
+<div style=${hero.memoStyle}>
+<div class="label" style="margin-bottom: 12px">사장님 메모</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.85; background: #F7F0D2; padding: 18px 20px">못생긴 밀짚모자인데 철원 주상절리입장료내면 한사람당 5천원 상품권주는데 그걸 이용하면 주변상점에서 살수 있거든 너무 햇볕이 뜨거워서 어쩔수 없이 샀는데 국내 여행갈때마다 필요할때 들고갔더니 추억템이 됐어</p>
+</div>
+<div style=${hero.resultWrap}>
+<div class="label" style="margin-bottom: 12px; color: #283618; display: flex; align-items: center; gap: 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #BC6C25; display: inline-block"></span>레피가 정리한 글</div>
+<p style=${hero.h}>예쁘진 않아도,<br />여행마다 따라다니면 추억이 되는 모자.</p>
+${(hero.paras).map((p) => html`
+<p style=${p.style}>${p.text}</p>
+`)}
+</div>
+</div>
+<div style="border-top: 1px solid #E0DEC4; padding-top: 4px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<button type="button" class="textbtn" onClick=${heroToggle}><span style=${hero.hintShow}><span class="hint-mouse">마우스를 올리면 레피가 정리해요</span><span class="hint-touch">눌러보면 레피가 정리해요</span></span><span style=${hero.hideShow}>메모 다시 보기</span></button>
+<a class="textbtn" href="#cases" style="color: #606C38">사례 더 보기</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" style="background: #FFFDE5">
+<div class="wrap">
+<p class="sl"><span class="sl-line"></span>문제</p>
+<h2 class="sh">설명은 했는데,<br />왜 사야 하는지가 없어요.</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 40px; margin-top: 64px">
+${(problems).map((it) => html`
+<div style="border-top: 1px solid #E0DEC4; padding: 28px 0 36px">
+<div style="font-family: 'Noto Serif KR', serif; font-size: 22px; color: #BC6C25">${it.n}</div>
+<h3 style="font-size: 16px; font-weight: 500; margin: 16px 0 10px; line-height: 1.5">${it.t}</h3>
+<p style="font-size: 16px; line-height: 1.8; color: #606C38; margin: 0">${it.d}</p>
+</div>
+`)}
+</div>
+<p style="font-family: 'Noto Serif KR', serif; font-weight: 300; font-size: clamp(21px, 2.1vw, 27px); line-height: 1.6; margin: 48px 0 0">물건이 평범해서가 아니에요.<br />손님이 왜 이걸 골라야 하는지, 그 한 문장이 빠져 있을 뿐이에요.</p>
+</div>
+</section>
+
+<section id="how" class="sec" style="background: #F7F0D2">
+<div class="wrap">
+<p class="sl"><span class="sl-line"></span>사용 방법</p>
+<h2 class="sh">복사하고, 붙여 넣고, 다시 고치던 일.<br />이제 쓰던 자리에서 버튼 하나로.</h2>
+<p class="lead" style="margin-bottom: 48px">게시물 글쓰기 칸에 메모를 적고, 드래그한 뒤 오른쪽 클릭으로 레피를 부르세요. 정리된 글이 그 자리에 들어갑니다.</p>
+<div dangerouslySetInnerHTML=${PD}></div>
+</div>
+</section>
+
+<section id="cases" class="sec" style="background: #FFFDE5">
+<div class="wrap">
+<p class="sl"><span class="sl-line"></span>사례</p>
+<h2 class="sh">메모 몇 줄이,<br />올릴 수 있는 글이 됐어요.</h2>
+<p class="lead">메모에서 이야기를 찾고, 그중 가장 사장님다운 한마디를 앞에 세워요. <span style="text-decoration: underline; text-decoration-color: #BC6C25; text-decoration-thickness: 2px; text-underline-offset: 5px; color: #283618">밑줄</span>은 레피가 메모에서 찾아 글에 쓴 재료예요.</p>
+<div role="group" aria-label="사례 고르기" style="display: flex; flex-wrap: wrap; gap: 8px 32px; margin: 48px 0 32px; border-bottom: 1px solid #E0DEC4">
+${(tabs).map((t) => html`
+<button type="button" class="tab" aria-pressed=${t.pressed} onClick=${t.pick} style=${t.style}>${t.name}</button>
+`)}
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start" onMouseEnter=${revealCase}>
+<div class="stack" style="flex: 1 1 320px; min-width: 0; max-width: 460px; border-radius: 4px; overflow: hidden; background: #F7F0D2">
+${(photos).map((ph) => html`
+<div class="stack ov" style=${ph.wrapStyle}>
+<img src=${ph.src} alt=${ph.alt} class="bw" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; display: block" />
+${(ph.hasCut) ? html`
+<img src=${ph.cut} alt="" aria-hidden="true" class="ov" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; display: block; ${ph.cutStyle}" />
+` : null}
+</div>
+`)}
+</div>
+<div style="flex: 1 1 440px; min-width: 0">
+<div style=${cs.headStyle}>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px">
+<span style="font-size: 16px; font-weight: 500">${cs.name}</span>
+<span style="font-size: 13px; color: #606C38">${cs.price}</span>
+</div>
+<div class="label" style="margin: 28px 0 12px">사장님 메모</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.85; background: #F7F0D2; padding: 18px 20px">${(cs.memo).map((seg) => html`<span style=${seg.style}>${seg.t}</span>`)}</p>
+${(cs.hasAdd) ? html`
+<div class="label" style="margin: 16px 0 12px">결과를 보고 덧붙인 말</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.85; background: #F7F0D2; padding: 18px 20px"><span style=${cs.addStyle}>${cs.addKept}</span>${cs.addRest}</p>
+` : null}
+</div>
+<div style="border-top: 1px solid #E0DEC4; margin-top: 20px; padding-top: 4px; display: flex">
+<span style="font-size: 13px; color: #606C38; padding: 12px 0; display: inline-block" onClick=${revealCase}><span class="hint-mouse">마우스를 올리면 레피가 정리해요</span><span class="hint-touch">눌러보면 레피가 정리해요</span></span>
+</div>
+<div style="border-left: 1px solid #283618; padding-left: 24px; margin-top: 28px">
+<div class="label" style="color: #283618; margin-bottom: 12px; ${cs.labelStyle}">레피가 정리한 글</div>
+<p style=${cs.hStyle}>${cs.headline}</p>
+${(cs.paras).map((p) => html`
+<p style=${p.style}>${p.text}</p>
+`)}
+</div>
+</div>
+</div>
+<p style="font-size: 13px; line-height: 1.7; color: #606C38; margin: 48px 0 0">위 글은 실제 구매 경험을 바탕으로, 판매하는 입장이 되어 정리한 시연 예시예요. 제조사나 판매처의 공식 문구가 아니에요.</p>
+</div>
+</section>
+
+<section id="try" class="sec" style="background: #F7F0D2">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 360px; min-width: 0">
+<p class="sl"><span class="sl-line"></span>직접 체험</p>
+<h2 class="sh">내 메모로<br />직접 해보세요.</h2>
+<p class="lead">상품 메모를 적어주세요. 그 안의 이야기를 찾아 상품 글로 정리해드려요. 메모에 있는 이야기로만 쓰니까, 이 상품을 고른 이유나 있었던 일을 한두 줄 꼭 넣어주세요.</p>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E0DEC4; border-radius: 4px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+<div class="field">
+<label for="memo">상품 메모</label>
+<textarea id="memo" rows="6" placeholder="예: 못생긴 밀짚모자인데, 햇볕이 너무 뜨거워서 어쩔 수 없이 샀어요. 그 뒤로 여행 갈 때마다 들고 다녔더니 추억템이 됐어요." style="resize: vertical; line-height: 1.8"></textarea>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 13px; color: #606C38">횟수 제한 없이 써볼 수 있어요.</span>
+<button type="button" class="btn btn-solid" onClick=${tryIt} disabled=${tryOut.busy} aria-busy=${tryOut.busy ? 'true' : 'false'}>이야기 입히기</button>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.7; color: #606C38">레피는 AI로 글을 써요. 적은 메모는 글을 쓰기 위해 미국의 AI 회사(Anthropic)로 보내지고, 레피는 저장하지 않아요. 이름이나 전화번호 같은 개인정보는 넣지 말아 주세요. <a href="/privacy" style="color: #606C38; text-underline-offset: 3px">개인정보처리방침</a></p>
+<div aria-live="polite">
+${(tryOut.busy) ? html`<p style=${tryOut.noteStyle}>${tryOut.waitText}</p>` : null}
+${(tryOut.error) ? html`<p style=${tryOut.noteStyle + ' color: #BC6C25;'}>${tryOut.error}</p>` : null}
+${(tryOut.none) ? html`<p style=${tryOut.noteStyle}>메모에서 아직 이야기를 찾지 못했어요. 이 상품을 고른 이유나 있었던 일을 한두 줄 덧붙여 다시 눌러 주세요.</p>` : null}
+${(tryOut.ask) ? html`
+<div style=${tryOut.noteStyle}>
+<p style="margin: 0 0 8px">이야기를 쓰려면 조금만 더 알려주세요. 메모에 답을 덧붙여 다시 눌러 주세요.</p>
+<ul style="margin: 0; padding-left: 20px; color: #283618; font-size: 16px; line-height: 1.85">${(tryOut.questions).map((q) => html`<li>${q}</li>`)}</ul>
+</div>
+` : null}
+${(tryOut.ready) ? html`
+<div style="border-left: 1px solid #283618; padding-left: 24px; margin-top: 8px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 12px">
+<div class="label" style="color: #283618; margin: 0">레피가 정리한 글</div>
+<span style="font-size: 12px; line-height: 1; color: #BC6C25; border: 1px solid #BC6C25; border-radius: 999px; padding: 5px 10px">AI가 쓴 글</span>
+</div>
+${(tryOut.name || tryOut.price) ? html`
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 12px">
+${(tryOut.name) ? html`<span style="font-size: 16px; font-weight: 500">${tryOut.name}</span>` : null}
+${(tryOut.price) ? html`<span style="font-size: 13px; color: #606C38">${tryOut.price}</span>` : null}
+</div>
+` : null}
+<p style=${tryOut.hStyle}>${tryOut.headline}</p>
+${(tryOut.paras).map((p) => html`<p style=${p.style}>${p.text}</p>`)}
+</div>
+` : null}
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" style="background: #FFFDE5">
+<div class="wrap">
+<p class="sl"><span class="sl-line"></span>레피의 약속</p>
+<h2 class="sh">내용은 사장님 것으로,<br />표현은 더 선명하게.</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 40px; margin-top: 64px">
+${(promises).map((it) => html`
+<div style="border-top: 1px solid #E0DEC4; padding: 28px 0 36px">
+<h3 style="font-family: 'Noto Serif KR', serif; font-weight: 400; font-size: 22px; margin: 0 0 14px; line-height: 1.45">${it.t}</h3>
+<p style="font-size: 16px; line-height: 1.8; color: #606C38; margin: 0">${it.d}</p>
+</div>
+`)}
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px">
+<span style="font-size: 13px; color: #606C38; border: 1px solid #CFCCB0; border-radius: 999px; padding: 8px 16px">곧 만나요 · 말로 남기면 글로 정리</span>
+<span style="font-size: 13px; color: #606C38; border: 1px solid #CFCCB0; border-radius: 999px; padding: 8px 16px">곧 만나요 · 쓸수록 쌓이는 우리 가게 말투</span>
+</div>
+</div>
+</section>
+
+<section id="faq" class="sec" style="background: #FFFDE5">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 300px; min-width: 0">
+<p class="sl"><span class="sl-line"></span>FAQ</p>
+<h2 class="sh">혹시, 이런 게<br />궁금하셨나요?</h2>
+</div>
+<div style="flex: 999 1 560px; min-width: 0; border-top: 1px solid #E0DEC4">
+${(faqs).map((f) => html`
+<div style="border-bottom: 1px solid #E0DEC4">
+<button type="button" class="faq-q" aria-expanded=${f.expanded} onClick=${f.toggle}>
+<span style="font-family: 'Noto Serif KR', serif; font-size: 16px; color: #BC6C25; width: 28px; flex: 0 0 auto">${f.n}</span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6; flex: 1">${f.q}</span>
+<span aria-hidden="true" style=${f.iconStyle}>+</span>
+</button>
+<div style=${f.bodyStyle}>
+<div style="overflow: hidden">
+<p style="margin: 0; padding: 0 44px 28px 48px; font-size: 16px; line-height: 1.85; color: #606C38">${f.a}</p>
+</div>
+</div>
+</div>
+`)}
+</div>
+</div>
+</section>
+
+<section id="join" class="sec" style="background: #283618; color: #FFFDE5; border-top: 0">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 380px; min-width: 0">
+<p class="sl" style="color: #FFFDE5"><span class="sl-line" style="background: #FFFDE5"></span>베타 신청</p>
+<h2 class="sh" style="color: #FFFDE5">설명만 적어둔 상품,<br />레피에게 먼저 보여주세요.</h2>
+<p class="lead" style="color: #E0DEC4">상품 하나, 메모 몇 줄이면 충분해요. 정식으로 열리면 가장 먼저 알려드릴게요.</p>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; background: #FFFDE5; color: #283618; border-radius: 4px; padding: 32px; box-sizing: border-box; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px 20px">
+<div class="field"><label for="nm">이름 또는 닉네임</label><input id="nm" type="text" /></div>
+<div class="field"><label for="biz">업종</label><select id="biz"><option value="">업종을 선택해주세요</option><option value="cafe">카페·디저트</option><option value="craft">공방·핸드메이드</option><option value="nail">네일샵·미용실</option><option value="flower">꽃집</option><option value="online">온라인 셀러</option><option value="etc">기타 소규모 업장</option></select></div>
+<div class="field" style="grid-column: 1 / -1"><label for="em">연락 가능한 이메일</label><input id="em" type="email" /></div>
+<label style="grid-column: 1 / -1; display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.7; color: #606C38"><input id="agree" type="checkbox" style="width: 18px; height: 18px; margin: 3px 0 0; accent-color: #283618" />베타 참여에 동의합니다. 입력한 내용은 서비스 개선과 사용성 검증에 활용될 수 있어요.</label>
+<button type="button" id="betaBtn" class="btn btn-solid" style="grid-column: 1 / -1">베타 신청하기</button>
+<p id="betaMsg" role="status" style="grid-column: 1 / -1; margin: 0; font-size: 13px; line-height: 1.7; color: #606C38; min-height: 1.7em"></p>
+</div>
+</div>
+</section>
+
+<footer class="wrap" style="padding-top: 48px; padding-bottom: 56px; display: flex; flex-wrap: wrap; gap: 16px 48px; justify-content: space-between">
+<div style="font-family: 'Noto Serif KR', serif; font-size: 22px">lepi<span style="color: #BC6C25">.</span></div>
+<p style="flex: 1 1 480px; max-width: 640px; margin: 0; font-size: 13px; line-height: 1.8; color: #606C38">레피는 사장님이 적은 메모를 바탕으로 AI가 상품 글을 정리하는 서비스예요. 가격·일정·조건 같은 사실 정보와 최종 게시 여부는 사장님이 직접 확인해주세요. 문의 sujinpark50@gmail.com · <a href="/privacy" style="color: #606C38; text-underline-offset: 3px">개인정보처리방침</a></p>
+</footer>
+</div>`;
+  }
+}
+render(html`<${Page} />`, document.getElementById('app'));
+initPD();
+initBeta();
+})();
+</script>
+</body>
+</html>

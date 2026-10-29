@@ -1,0 +1,435 @@
+[
+ {
+  "name": "쥐꼬리 낚시대",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 24.1,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "쥐꼬리 낚시대",
+    "price": ""
+   },
+   "headline": "엄청 부드러워서 진짜 쥐꼬리 같은지, 냥이가 흥분해요",
+   "body": [
+    "흔들면 우리집 냥이가 흥분하면서 좋아하는 게 보여요. 우리집 고양이가 제일 좋아하는 쥐꼬리 낚시대예요. 실리콘이라서 엄청 부드러워서, 진짜 쥐꼬리 같은지 몰라요.",
+    "고객님들의 고양이들도 한번 보면 엄청 좋아할 거예요."
+   ]
+  },
+  "stats": {
+   "rid": "d725cbf5",
+   "model": "claude-opus-5-5",
+   "mode": "REAL_SELLER",
+   "memo_len": 155,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 14026,
+     "in": 226,
+     "out": 952,
+     "cache_w": 7578,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 10025,
+     "in": 1217,
+     "out": 614,
+     "cache_w": 7934,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [
+    "ENDING_INVITE"
+   ],
+   "rewrite": false,
+   "rewrite_codes": [
+    "RATIO"
+   ],
+   "rewrite_skipped": "time",
+   "deleted_final": {
+    "RATIO_TRIM": 2
+   },
+   "sentences": 4,
+   "headline_fallback": false,
+   "product_gaps": [],
+   "roles": {
+    "fact": 2,
+    "charm": 1,
+    "scene": 1,
+    "ending": 0
+   },
+   "role_fix": 1,
+   "ending_fix": 0,
+   "status": "READY",
+   "ms": 24059
+  },
+  "tokens": {
+   "in": 1443,
+   "out": 1566,
+   "cache_w": 15512,
+   "cache_r": 0
+  },
+  "krw": 160.5,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "오늘은 ... 홍보해볼까해"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리집 고양이가 제일 좋아하는 쥐꼬리 낚시대를",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "실리콘이라서 엄청 부드러워서",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "진짜 쥐꼬리 같은지",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "흔들면 우리집냥이가 흥분하면서 좋아하는게 보이는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "우리 고객님들의 고양이들도 한번 보면 엄청 좋아할꺼야.",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "이걸 보면 고양이가 진짜 사냥한다는게 무슨 의미인지 알껄",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "쥐꼬리 낚시대",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "엄청 부드러워서",
+      "fact_id": "F2"
+     },
+     {
+      "id": "D2",
+      "phrase": "진짜 쥐꼬리 같은지",
+      "fact_id": "F3"
+     },
+     {
+      "id": "D3",
+      "phrase": "흥분하면서",
+      "fact_id": "F4"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F3",
+      "F4"
+     ],
+     "note": "부드러운 실리콘 꼬리가 진짜 쥐꼬리처럼 흔들려 고양이를 흥분시킴"
+    },
+    "common_knowledge": [
+     {
+      "about": "낚시대",
+      "note": "막대 끝에 장난감을 달아 흔들며 고양이와 노는 장난감"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F1",
+      "F4"
+     ],
+     "note": "사장님이 흔들어 주면 집 고양이가 흥분하며 좋아하는 모습"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F1",
+      "F2",
+      "F4"
+     ],
+     "note": "집 고양이가 제일 좋아하는 장난감, 부드러운 실리콘 꼬리",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "낚시대를 흔들자 집 고양이가 흥분해 달려드는 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "쥐꼬리 낚시대",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "흔들면 우리집 냥이가 흥분하면서 좋아하는 게 보여요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 1,
+      "text": "우리집 고양이가 제일 좋아하는 쥐꼬리 낚시대예요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "실리콘이라서 엄청 부드러워서, 진짜 쥐꼬리 같은지 몰라요.",
+      "fact_ids": [
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "고객님들의 고양이들도 한번 보면 엄청 좋아할 거예요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "꼬리 끝을 살랑 흔들면 엉덩이를 씰룩이며 노려보는 얼굴이 그려지죠.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "오늘 저녁엔 냥이랑 신나게 한판 놀아 보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     }
+    ],
+    "headline": "엄청 부드러워서 진짜 쥐꼬리 같은지, 냥이가 흥분해요",
+    "headline_fact_ids": [
+     "F2",
+     "F3",
+     "F4"
+    ]
+   }
+  }
+ },
+ {
+  "name": "잉어킹",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 10.3,
+  "result": {
+   "status": "NEED_MORE_INFO",
+   "questions": [
+    "뽑은 잉어킹액막이를 어디에 걸어 두거나 어떻게 들고 다니셨나요? 한 줄이면 충분해요."
+   ]
+  },
+  "stats": {
+   "rid": "63324459",
+   "model": "claude-opus-5-5",
+   "mode": "DEMO_SELLER",
+   "memo_len": 121,
+   "additions": 1,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 10256,
+     "in": 234,
+     "out": 1121,
+     "cache_w": 0,
+     "cache_r": 7578,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 8,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 1,
+   "readiness": "NEED_MORE_INFO",
+   "status": "NEED_MORE_INFO",
+   "ms": 10259
+  },
+  "tokens": {
+   "in": 234,
+   "out": 1121,
+   "cache_w": 0,
+   "cache_r": 7578
+  },
+  "krw": 36.9,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [
+     "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이 이런 글귀도 있으면 좋지"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "남편이랑 포켓몬팝업이 있다고 해서 놀러갔더니",
+      "kind": "buyer_action",
+      "convertible_to": "포켓몬 팝업에서 만나실 수 있어요"
+     },
+     {
+      "id": "F2",
+      "quote": "잉어킹액막이가 있더라고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "가챠로밖에 안팔아서",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "만원이라는 큰 금액이어도",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "한번 도전해봤더니 성공해서 한번에 뽑았어",
+      "kind": "buyer_action",
+      "convertible_to": "한 번 도전해 보셔도 좋아요"
+     },
+     {
+      "id": "F6",
+      "quote": "몇달뒤에 이사 예정이어서 가지고 싶었는데",
+      "kind": "buyer_action",
+      "convertible_to": "이사를 앞두고 있다면"
+     },
+     {
+      "id": "F7",
+      "quote": "좋은 추억이었어",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "잉어킹액막이",
+     "name_fact_id": "F2",
+     "price_fact_id": "F4"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "잉어킹액막이",
+      "fact_id": "F2"
+     },
+     {
+      "id": "D2",
+      "phrase": "마음을 걸어두는 작은 액막이",
+      "fact_id": "F8"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F8"
+     ],
+     "note": "잉어킹 모양에 별일 없이 지나가자는 마음을 걸어 두는 작은 액막이"
+    },
+    "common_knowledge": [
+     {
+      "about": "잉어킹",
+      "note": "잉어킹은 힘없는 캐릭터지만 버티다 보면 아주 센 캐릭터가 된다"
+     }
+    ],
+    "season": null,
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [
+      "F6",
+      "F8"
+     ],
+     "note": "이사 같은 새 출발 앞에 무탈을 바라는 마음을 걸어 둘 수 있음",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [
+      "F8"
+     ],
+     "note": "새 집 현관에 잉어킹액막이를 걸어 두는 장면"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "NEED_MORE_INFO",
+    "questions": [
+     "뽑은 잉어킹액막이를 어디에 걸어 두거나 어떻게 들고 다니셨나요? 한 줄이면 충분해요."
+    ]
+   }
+  }
+ }
+]

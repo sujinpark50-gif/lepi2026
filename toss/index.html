@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<!-- 앱인토스 비게임 가이드: 핀치 줌을 끈다 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>레피</title>
+<link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+<main id="app">
+<section class="intro">
+<h1>메모 몇 줄을<br />올릴 수 있는 상품 글로</h1>
+<p class="lead">상품 메모를 적어 주세요. 메모 속 이야기를 찾아 인스타그램에 올릴 글로 정리해 드려요.</p>
+</section>
+
+<section class="card">
+<label for="memo" class="label">상품 메모</label>
+<textarea id="memo" rows="7" maxlength="500" placeholder="예: 못생긴 밀짚모자인데, 햇볕이 너무 뜨거워서 어쩔 수 없이 샀어요. 그 뒤로 여행 갈 때마다 들고 다녔더니 추억템이 됐어요."></textarea>
+<div class="row">
+<span id="count" class="muted">0 / 500</span>
+<button type="button" id="go" class="btn">이야기 입히기</button>
+</div>
+<p class="notice">레피는 AI로 글을 써요. 적은 메모는 글을 쓰기 위해 미국의 AI 회사(Anthropic)로 보내지고, 레피는 저장하지 않아요. 이름이나 전화번호 같은 개인정보는 넣지 말아 주세요. <button type="button" id="privacy" class="link">개인정보처리방침</button></p>
+</section>
+
+<section id="out" aria-live="polite"></section>
+</main>
+
+<!-- 처음 쓸 때 한 번 보여 주는 AI 사용 안내 -->
+<div id="sheet" class="sheet" hidden>
+<div class="sheet-body" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+<h2 id="sheet-title">레피는 AI를 활용해요</h2>
+<ul>
+<li>적은 메모를 바탕으로 AI가 상품 글을 써요.</li>
+<li>메모는 글을 쓰기 위해 미국의 AI 회사(Anthropic)로 보내지고, 레피는 저장하지 않아요.</li>
+<li>AI가 쓴 글이라 틀린 내용이 있을 수 있어요. 가격이나 날짜 같은 사실은 올리기 전에 꼭 확인해 주세요.</li>
+</ul>
+<div class="sheet-actions">
+<button type="button" id="sheet-cancel" class="btn btn-ghost">닫기</button>
+<button type="button" id="sheet-ok" class="btn">확인하고 시작하기</button>
+</div>
+</div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

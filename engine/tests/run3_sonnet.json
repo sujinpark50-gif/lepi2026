@@ -1,0 +1,3453 @@
+[
+ {
+  "name": "쥐꼬리 낚시대",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 11.3,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "쥐꼬리 낚시대",
+    "price": ""
+   },
+   "headline": "흔들면 진짜 쥐꼬리 같은 쥐꼬리 낚시대",
+   "body": [
+    "우리집 고양이가 제일 좋아하는 쥐꼬리 낚시대예요. 실리콘이라서 엄청 부드러워서 흔들면 진짜 쥐꼬리 같아요. 흔들면 우리집냥이가 흥분하면서 좋아하는게 보여요.",
+    "저녁에 불을 끄고 낚시대를 살살 흔들면, 거실 바닥이 금세 작은 사냥터가 될 거예요. 고양이가 진짜 사냥한다는게 무슨 의미인지 알껄요. 궁금한 건 편하게 물어보세요."
+   ]
+  },
+  "stats": {
+   "rid": "c4af77aa",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 155,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 6956,
+     "in": 226,
+     "out": 864,
+     "cache_w": 8026,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 4307,
+     "in": 1123,
+     "out": 596,
+     "cache_w": 9467,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 5,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [
+    "STEM_REPEAT"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 6,
+   "roles": {
+    "fact": 3,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 0
+   },
+   "status": "READY",
+   "ms": 11274,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1349,
+   "out": 1460,
+   "cache_w": 17493,
+   "cache_r": 0
+  },
+  "krw": 85.4,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "홍보해볼까해"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "쥐꼬리 낚시대",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "실리콘이라서 엄청 부드러워서",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "우리집 고양이가 제일 좋아하는",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "진짜 쥐꼬리 같은지 흔들면 우리집냥이가 흥분하면서 좋아하는게 보이는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "고양이가 진짜 사냥한다는게 무슨 의미인지 알껄",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "쥐꼬리 낚시대",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "쥐꼬리 낚시대",
+      "fact_id": "F1"
+     },
+     {
+      "id": "D2",
+      "phrase": "엄청 부드러워서",
+      "fact_id": "F2"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F4"
+     ],
+     "note": "실리콘이라 부드럽고, 흔들면 진짜 쥐꼬리처럼 움직여 고양이가 흥분하며 좋아함"
+    },
+    "common_knowledge": [
+     {
+      "about": "낚시대",
+      "note": "고양이 장난감으로 흔들며 놀아 주는 막대형 장난감"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F3",
+      "F4"
+     ],
+     "note": "판매자 집 고양이가 쥐꼬리 낚시대를 흔들 때 흥분하며 좋아하는 모습"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F2",
+      "F3",
+      "F4"
+     ],
+     "note": "부드러운 실리콘이라 진짜 쥐꼬리처럼 움직이고, 판매자 집 고양이가 제일 좋아하는 장난감",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "낚시대를 흔들자 집 고양이가 흥분하며 좋아하는 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": "D2",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "쥐꼬리 낚시대",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "우리집 고양이가 제일 좋아하는 쥐꼬리 낚시대예요.",
+      "fact_ids": [
+       "F1",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "실리콘이라서 엄청 부드러워서 흔들면 진짜 쥐꼬리 같아요.",
+      "fact_ids": [
+       "F2",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "흔들면 우리집냥이가 흥분하면서 좋아하는게 보여요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "저녁에 불을 끄고 낚시대를 살살 흔들면, 거실 바닥이 금세 작은 사냥터가 될 거예요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "고양이가 진짜 사냥한다는게 무슨 의미인지 알껄요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "궁금한 건 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     }
+    ],
+    "headline": "흔들면 진짜 쥐꼬리 같은 쥐꼬리 낚시대",
+    "headline_fact_ids": [
+     "F1",
+     "F4"
+    ]
+   }
+  }
+ },
+ {
+  "name": "밀짚모자",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 20.8,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "밀짚모자",
+    "price": ""
+   },
+   "headline": "여행 때마다 들고 가다 추억템이 된 밀짚모자",
+   "body": [
+    "국내 여행 갈 때마다 필요할 때 들고 갔더니 추억템이 됐어요. 밀짚모자예요. 햇볕이 뜨거울 때 쓰기 좋아요.",
+    "햇볕 쨍한 여행길에 챙이 만들어 주는 그늘 아래서 잠깐 숨을 돌리게 될 거예요. 여름 여행을 계획하셨다면 가방 한쪽에 넣어 두셔도 좋겠죠. 철원 주상절리 입장료를 내면 상품권을 주는데, 그걸 이용하면 주변상점에서 살 수 있거든요.",
+    "철원 주상절리 입장료 내면 한사람당 5천원 상품권 · 주변상점에서 살 수 있음"
+   ]
+  },
+  "stats": {
+   "rid": "6405e786",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "DEMO_SELLER",
+   "memo_len": 113,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 4945,
+     "in": 170,
+     "out": 769,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 15836,
+     "in": 970,
+     "out": 2044,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {
+    "INFO_UNGROUNDED": 1
+   },
+   "signals": [
+    "CTA",
+    "STEM_REPEAT"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "INFO_UNGROUNDED": 1
+    },
+    "rewrite_reasons": [
+     "H"
+    ],
+    "ratio_over": true,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 7,
+   "roles": {
+    "fact": 2,
+    "charm": 1,
+    "scene": 2,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 20787,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1140,
+   "out": 2813,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 47.5,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "밀짚모자인데",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "철원 주상절리입장료내면 한사람당 5천원 상품권주는데",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "그걸 이용하면 주변상점에서 살수 있거든",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "너무 햇볕이 뜨거워서 어쩔수 없이 샀는데",
+      "kind": "buyer_action",
+      "convertible_to": "햇볕이 뜨거울 때 쓰기 좋아요"
+     },
+     {
+      "id": "F5",
+      "quote": "국내 여행갈때마다 필요할때 들고갔더니",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "추억템이 됐어",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "밀짚모자",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "추억템",
+      "fact_id": "F6"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "여행 때마다 들고 다니다 보니 추억템이 된 밀짚모자"
+    },
+    "common_knowledge": [
+     {
+      "about": "밀짚모자",
+      "note": "햇볕을 가리려고 쓰는 모자"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F5"
+     ],
+     "note": "국내 여행 갈 때마다 필요할 때 들고 다닌 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "뜨거운 햇볕을 가리려고 필요했던 모자",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F5"
+     ],
+     "note": "여행길마다 밀짚모자를 들고 다니는 모습"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F2",
+      "F3"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "밀짚모자",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "국내 여행 갈 때마다 필요할 때 들고 갔더니 추억템이 됐어요.",
+      "fact_ids": [
+       "F5",
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "밀짚모자예요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "햇볕이 뜨거울 때 쓰기 좋아요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "햇볕 쨍한 여행길에 챙이 만들어 주는 그늘 아래서 잠깐 숨을 돌리게 될 거예요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "여름 여행을 계획하셨다면 가방 한쪽에 넣어 두셔도 좋겠죠.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "철원 주상절리 입장료를 내면 상품권을 주는데, 그걸 이용하면 주변상점에서 살 수 있거든요.",
+      "fact_ids": [
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 2,
+      "text": "철원 주상절리 입장료 내면 한사람당 5천원 상품권 · 주변상점에서 살 수 있음",
+      "fact_ids": [
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "여행 때마다 들고 가다 추억템이 된 밀짚모자",
+    "headline_fact_ids": [
+     "F1",
+     "F5",
+     "F6"
+    ]
+   }
+  }
+ },
+ {
+  "name": "닉스고",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 19.1,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "닉스고 인형",
+    "price": "8천 원"
+   },
+   "headline": "실제 말처럼 생긴 닉스고 인형",
+   "body": [
+    "마사회 공식 굿즈에서 실제 닉스고의 외형을 본떠 만든 인형을 발견했습니다. 여러 마사회 굿즈 중에서도 가장 실제 말처럼 생겼고, 무엇보다 귀여웠어요. 지금은 경주에서 은퇴해 씨수말로 지내고 있지만요.",
+    "저는 현역 시절 닉스고를 응원했습니다. 세계적인 무대에서 좋은 성적을 거두던 한국마사회 소유의 말이라는 점도 특별하게 느껴졌고요.",
+    "책상 한쪽에 두고 가끔 눈이 마주치면, 달리던 그 시절이 슬며시 떠오를 거예요. 닉스고를 좋아하셨다면, 마사회 공식 굿즈에서 찾아보세요.",
+    "닉스고 인형 8천 원 · 마사회 공식 굿즈에서"
+   ]
+  },
+  "stats": {
+   "rid": "aa83f53a",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "DEMO_SELLER",
+   "memo_len": 209,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 13820,
+     "in": 271,
+     "out": 1000,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 5319,
+     "in": 1289,
+     "out": 792,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 9,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "story_buy",
+   "deleted": {
+    "DEMO_BUYER": 1
+   },
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "DEMO_BUYER": 1
+    },
+    "rewrite_reasons": [
+     "NO_PRODUCT_BODY"
+    ],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [
+     "product"
+    ],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 8,
+   "roles": {
+    "fact": 4,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 19146,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1560,
+   "out": 1792,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 34.4,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "저는 현역 시절 닉스고를 응원했습니다.",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "세계적인 무대에서 좋은 성적을 거두던 한국마사회 소유의 말이라는 점도 특별하게 느껴졌고요.",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "지금은 경주에서 은퇴해 씨수말로 지내고 있지만",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "마사회 공식 굿즈에서 실제 닉스고의 외형을 본떠 만든 인형을 발견했습니다.",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "여러 마사회 굿즈 중에서도 가장 실제 말처럼 생겼고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "무엇보다 귀여웠습니다.",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "가격은 8천 원.",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "그래서 하나 데려왔습니다.",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "마사회 공식 굿즈에서",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "닉스고 인형",
+     "name_fact_id": "F4",
+     "price_fact_id": "F7"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "실제 말처럼",
+      "fact_id": "F5"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F4",
+      "F5",
+      "F6"
+     ],
+     "note": "실제 닉스고의 외형을 본떠 마사회 굿즈 중 가장 실제 말처럼 생기고 귀여운 인형"
+    },
+    "common_knowledge": [
+     {
+      "about": "닉스고",
+      "note": "경주마로 활약한 뒤 은퇴해 지금은 씨수말로 지내는 말"
+     }
+    ],
+    "season": null,
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [
+      "F4",
+      "F5",
+      "F6"
+     ],
+     "note": "실제 닉스고를 본떠 굿즈 중 가장 실제 말처럼 생기고 귀여움",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "좋아하는 경주마를 본뜬 인형을 곁에 두고 보는 순간"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F9",
+      "F7"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "닉스고 인형",
+     "price_display": "8천 원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "마사회 공식 굿즈에서 실제 닉스고의 외형을 본떠 만든 인형을 발견했습니다.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "여러 마사회 굿즈 중에서도 가장 실제 말처럼 생겼고, 무엇보다 귀여웠어요.",
+      "fact_ids": [
+       "F5",
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "지금은 경주에서 은퇴해 씨수말로 지내고 있지만요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "저는 현역 시절 닉스고를 응원했습니다.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "세계적인 무대에서 좋은 성적을 거두던 한국마사회 소유의 말이라는 점도 특별하게 느껴졌고요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 3,
+      "text": "책상 한쪽에 두고 가끔 눈이 마주치면, 달리던 그 시절이 슬며시 떠오를 거예요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "닉스고를 좋아하셨다면, 마사회 공식 굿즈에서 찾아보세요.",
+      "fact_ids": [
+       "F9"
+      ],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "닉스고 인형 8천 원 · 마사회 공식 굿즈에서",
+      "fact_ids": [
+       "F7",
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "실제 말처럼 생긴 닉스고 인형",
+    "headline_fact_ids": [
+     "F5",
+     "F4"
+    ]
+   }
+  }
+ },
+ {
+  "name": "잉어킹",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 23.4,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "잉어킹액막이",
+    "price": "만원"
+   },
+   "headline": "별일 없이 지나가자는 마음을 걸어두는 잉어킹",
+   "body": [
+    "포켓몬팝업에서 잉어킹액막이가 있더라고요. 잉어킹은 힘없어 보여도 버티다 보면 아주 센 모습이 되는 캐릭터잖아요. 별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이예요.",
+    "저는 몇달뒤에 이사 예정이어서 가지고 싶었어요. 현관 옆이나 가방 곁에 걸어두고 하루를 시작하는 아침을 떠올려 보세요. 오늘도 별일 없이 포근한 하루 보내세요.",
+    "잉어킹액막이 만원 · 가챠로밖에 안팔아서"
+   ]
+  },
+  "stats": {
+   "rid": "ffe3bebc",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "DEMO_SELLER",
+   "memo_len": 121,
+   "additions": 1,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 11659,
+     "in": 234,
+     "out": 1871,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 11784,
+     "in": 1146,
+     "out": 666,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 7,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "story_buy",
+   "deleted": {
+    "PROPER": 1,
+    "DEMO_BUYER": 1
+   },
+   "signals": [
+    "STEM_REPEAT",
+    "NO_CHARM"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "PROPER": 1,
+     "DEMO_BUYER": 1
+    },
+    "rewrite_reasons": [
+     "DELETED",
+     "NO_CHARM"
+    ],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 7,
+   "roles": {
+    "fact": 3,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 23449,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1380,
+   "out": 2537,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 44.3,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [
+     "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이 같은 글귀를 넣고 싶다는 요청"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "잉어킹액막이가 있더라고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "가챠로밖에 안팔아서",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "만원이라는",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "한번 도전해봤더니 성공해서 한번에 뽑았어",
+      "kind": "buyer_action",
+      "convertible_to": "한 번 도전해 보셔도 좋아요"
+     },
+     {
+      "id": "F5",
+      "quote": "몇달뒤에 이사 예정이어서 가지고 싶었는데",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "포켓몬팝업이 있다고 해서 놀러갔더니",
+      "kind": "buyer_action",
+      "convertible_to": "포켓몬 팝업에서 만나볼 수 있어요"
+     },
+     {
+      "id": "F7",
+      "quote": "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "잉어킹액막이",
+     "name_fact_id": "F1",
+     "price_fact_id": "F3"
+    },
+    "distinctive_phrases": [],
+    "charm": {
+     "fact_ids": [
+      "F7"
+     ],
+     "note": "별일 없이 잘 지나가길 바라는 마음을 걸어두는 작은 액막이"
+    },
+    "common_knowledge": [
+     {
+      "about": "잉어킹",
+      "note": "잉어킹은 힘없는 캐릭터지만 버티다 보면 아주 센 캐릭터가 된다"
+     }
+    ],
+    "season": null,
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F7"
+     ],
+     "note": "이사를 앞두고 별일 없이 지나가길 바라는 마음으로 곁에 두고 싶은 액막이",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [
+      "F5"
+     ],
+     "note": "이사를 앞둔 손님이 잉어킹액막이를 걸어두고 별일 없이 지나가길 바라는 순간"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "잉어킹액막이",
+     "price_display": "만원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "포켓몬팝업에서 잉어킹액막이가 있더라고요.",
+      "fact_ids": [
+       "F1",
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "잉어킹은 힘없어 보여도 버티다 보면 아주 센 모습이 되는 캐릭터잖아요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이예요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "저는 몇달뒤에 이사 예정이어서 가지고 싶었어요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "현관 옆이나 가방 곁에 걸어두고 하루를 시작하는 아침을 떠올려 보세요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "오늘도 별일 없이 포근한 하루 보내세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "잉어킹액막이 만원 · 가챠로밖에 안팔아서",
+      "fact_ids": [
+       "F1",
+       "F3",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "별일 없이 지나가자는 마음을 걸어두는 잉어킹",
+    "headline_fact_ids": [
+     "F7",
+     "F1"
+    ]
+   }
+  }
+ },
+ {
+  "name": "딸기 케이크",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 7.9,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "딸기 케이크",
+    "price": ""
+   },
+   "headline": "겨울 되면 먼저 찾는 딸기 케이크",
+   "body": [
+    "우리 가게 딸기 케이크는 제철 딸기만 써요. 겨울에만 나와서 그런지, 단골분들이 겨울 되면 먼저 물어보세요.",
+    "찬 바람 부는 겨울 저녁, 식탁 위에 딸기 케이크를 올려 두면 분위기가 한결 포근해질 거예요. 궁금한 건 편하게 물어보세요."
+   ]
+  },
+  "stats": {
+   "rid": "e0a404c1",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 59,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 4459,
+     "in": 106,
+     "out": 635,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 3425,
+     "in": 723,
+     "out": 417,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 4,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": true,
+   "ck": 0,
+   "ck_dropped": 1,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 4,
+   "roles": {
+    "fact": 1,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 0
+   },
+   "status": "READY",
+   "ms": 7887,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 829,
+   "out": 1052,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 21.9,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리 가게 딸기 케이크는",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "제철 딸기만 써요.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "겨울에만 나와서",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "단골분들이 겨울 되면 먼저 물어보세요.",
+      "kind": "customer_fact",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "딸기 케이크",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F4"
+     ],
+     "note": "제철 딸기만 쓰는 케이크라 겨울이 되면 단골들이 먼저 찾는다"
+    },
+    "common_knowledge": [],
+    "season": {
+     "fact_id": "F3",
+     "note": "겨울에만 나옴"
+    },
+    "seller_scene": {
+     "fact_ids": [
+      "F2"
+     ],
+     "note": "제철 딸기만 쓴다는 고정된 선택을 보여 준다"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F2",
+      "F4"
+     ],
+     "note": "제철 딸기만 써서 단골들이 겨울이면 먼저 찾는 케이크",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F2"
+     ],
+     "note": "제철 딸기만 쓰는 가게의 겨울 케이크"
+    },
+    "mood": "담백",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "딸기 케이크",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "우리 가게 딸기 케이크는 제철 딸기만 써요.",
+      "fact_ids": [
+       "F1",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "겨울에만 나와서 그런지, 단골분들이 겨울 되면 먼저 물어보세요.",
+      "fact_ids": [
+       "F3",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "찬 바람 부는 겨울 저녁, 식탁 위에 딸기 케이크를 올려 두면 분위기가 한결 포근해질 거예요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "궁금한 건 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     }
+    ],
+    "headline": "겨울 되면 먼저 찾는 딸기 케이크",
+    "headline_fact_ids": [
+     "F3",
+     "F4"
+    ]
+   }
+  }
+ },
+ {
+  "name": "단풍 네일",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 9.4,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "단풍 그라데이션 네일",
+    "price": ""
+   },
+   "headline": "손톱 끝만 살짝 물들인 단풍",
+   "body": [
+    "이번 달 시즌 네일은 단풍 그라데이션이에요. 손톱 끝만 살짝 물들인 느낌이라 부담이 덜해요. 회사 다니시는 분들도 부담 없이 많이 하세요.",
+    "저도 지금 하고 있는데, 손 볼 때마다 기분 좋아요. 커피잔을 감싸 쥔 아침, 손끝에 가을이 살짝 걸려 있을 거예요. 궁금한 건 편하게 물어보세요."
+   ]
+  },
+  "stats": {
+   "rid": "0f99e45f",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 96,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 5572,
+     "in": 146,
+     "out": 816,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 3791,
+     "in": 994,
+     "out": 548,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 5,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": true,
+   "ck": 2,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 6,
+   "roles": {
+    "fact": 3,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 0
+   },
+   "status": "READY",
+   "ms": 9368,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1140,
+   "out": 1364,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 27.2,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "이번 달 시즌 네일은 단풍 그라데이션이에요.",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "손톱 끝만 살짝 물들인 느낌이라",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "회사 다니시는 분들도 부담 없이 많이 하세요.",
+      "kind": "customer_fact",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "저도 지금 하고 있는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "손 볼 때마다 기분 좋아요",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "단풍 그라데이션 네일",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "살짝 물들인 느낌",
+      "fact_id": "F2"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F3"
+     ],
+     "note": "손톱 끝만 살짝 물든 단풍 그라데이션이라 회사에 다녀도 부담 없음"
+    },
+    "common_knowledge": [
+     {
+      "about": "단풍",
+      "note": "가을에 잎이 붉고 노랗게 물드는 것"
+     },
+     {
+      "about": "그라데이션",
+      "note": "색이 점점 번지듯 이어지는 표현"
+     }
+    ],
+    "season": {
+     "fact_id": "F1",
+     "note": "이번 달 시즌 네일"
+    },
+    "seller_scene": {
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "판매자도 지금 이 네일을 하고 있고 손을 볼 때마다 기분이 좋다는 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F2",
+      "F3"
+     ],
+     "note": "끝만 살짝 물들어 부담이 적어 직장인도 많이 선택함",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4",
+      "F5"
+     ],
+     "note": "판매자가 직접 하고 있는 단풍 네일을 손 볼 때마다 기분 좋게 바라보는 순간"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "단풍 그라데이션 네일",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "이번 달 시즌 네일은 단풍 그라데이션이에요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "손톱 끝만 살짝 물들인 느낌이라 부담이 덜해요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "회사 다니시는 분들도 부담 없이 많이 하세요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "저도 지금 하고 있는데, 손 볼 때마다 기분 좋아요.",
+      "fact_ids": [
+       "F4",
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "커피잔을 감싸 쥔 아침, 손끝에 가을이 살짝 걸려 있을 거예요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "궁금한 건 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     }
+    ],
+    "headline": "손톱 끝만 살짝 물들인 단풍",
+    "headline_fact_ids": [
+     "F2",
+     "F1"
+    ]
+   }
+  }
+ },
+ {
+  "name": "작약",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 9.6,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "작약 한 단",
+    "price": "3만5천원"
+   },
+   "headline": "봉오리로 와서 하루이틀이면 확 펴요",
+   "body": [
+    "작약 한 단이에요. 봉오리로 와서 집에서 하루이틀이면 확 펴요. 피는 거 보는 재미가 있어서 저는 일부러 봉오리로 들여요.",
+    "아침에 거실 꽃병을 보면 꽃잎이 겹겹이 열려 있을 거예요. 피는 모습이 궁금하셨다면 편하게 물어보세요.",
+    "작약 한 단 3만5천원"
+   ]
+  },
+  "stats": {
+   "rid": "c59ca09c",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 89,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 5791,
+     "in": 138,
+     "out": 774,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 3797,
+     "in": 945,
+     "out": 528,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {
+    "ENDING_INFO": 1
+   },
+   "signals": [
+    "NO_ADDRESS"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "ENDING_INFO": 1
+    },
+    "rewrite_reasons": [
+     "NO_ADDRESS"
+    ],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 6,
+   "roles": {
+    "fact": 2,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 9593,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1083,
+   "out": 1302,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 26.2,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "인스타에 올릴 거니까 짧게 써줘."
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "작약 한 단",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "3만5천원.",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "봉오리로 와서",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "집에서 하루이틀이면 확 펴요.",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "피는 거 보는 재미가 있어서",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "저는 일부러 봉오리로 들여요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "작약 한 단",
+     "name_fact_id": "F1",
+     "price_fact_id": "F2"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "확 펴요",
+      "fact_id": "F4"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F4",
+      "F5"
+     ],
+     "note": "봉오리로 받아 하루이틀이면 확 펴서, 피는 모습을 지켜보는 재미가 있다"
+    },
+    "common_knowledge": [
+     {
+      "about": "작약",
+      "note": "봄에서 초여름에 피는 꽃으로, 꽃잎이 겹겹이 풍성한 꽃"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F6"
+     ],
+     "note": "판매자가 일부러 봉오리 상태로 작약을 들여오는 선택"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "피는 걸 보는 재미가 있어서 판매자가 일부러 봉오리로 들인다",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F6"
+     ],
+     "note": "봉오리 상태로 작약을 들이는 판매자의 선택과, 집에서 하루이틀 만에 피어나는 모습"
+    },
+    "mood": "담백",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F2"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "작약 한 단",
+     "price_display": "3만5천원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "작약 한 단이에요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "봉오리로 와서 집에서 하루이틀이면 확 펴요.",
+      "fact_ids": [
+       "F3",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "피는 거 보는 재미가 있어서 저는 일부러 봉오리로 들여요.",
+      "fact_ids": [
+       "F5",
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "아침에 거실 꽃병을 보면 꽃잎이 겹겹이 열려 있을 거예요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "피는 모습이 궁금하셨다면 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 2,
+      "text": "작약 한 단 3만5천원",
+      "fact_ids": [
+       "F1",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "봉오리로 와서 하루이틀이면 확 펴요",
+    "headline_fact_ids": [
+     "F3",
+     "F4"
+    ]
+   }
+  }
+ },
+ {
+  "name": "쌀뜨물 비누",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 7.9,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "쌀뜨물 비누",
+    "price": ""
+   },
+   "headline": "엄마가 쌀뜨물로 세수하던 기억, 뽀득한 비누",
+   "body": [
+    "엄마가 예전에 쌀뜨물로 세수하던 게 생각나서 만들어봤어요. 그래서 나온 쌀뜨물 비누예요. 거품이 크진 않은데 뽀득하게 씻겨요.",
+    "아침에 세면대 앞에서 물을 틀고 손에 비누를 쥐면, 엄마가 세수하던 모습이 떠오를지도 몰라요. 궁금한 건 편하게 물어보세요."
+   ]
+  },
+  "stats": {
+   "rid": "5c63afb6",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 60,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 4339,
+     "in": 116,
+     "out": 658,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 3584,
+     "in": 795,
+     "out": 495,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 4,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [
+    "STEM_REPEAT"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 5,
+   "roles": {
+    "fact": 2,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 0
+   },
+   "status": "READY",
+   "ms": 7927,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 911,
+   "out": 1153,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 23.6,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "쌀뜨물 비누.",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "엄마가 예전에 쌀뜨물로 세수하던 게 생각나서 만들어봤어요.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "거품이 크진 않은데",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "뽀득하게 씻겨요",
+      "kind": "product",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "쌀뜨물 비누",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "뽀득하게",
+      "fact_id": "F4"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "거품은 크지 않지만 뽀득하게 씻기는 비누"
+    },
+    "common_knowledge": [
+     {
+      "about": "쌀뜨물",
+      "note": "쌀뜨물은 예전에 세수에 쓰던 것"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F2"
+     ],
+     "note": "엄마가 쌀뜨물로 세수하던 기억이 나서 비누로 만들어 본 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F2"
+     ],
+     "note": "엄마가 쌀뜨물로 세수하던 기억에서 시작해 만든 비누",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F2"
+     ],
+     "note": "엄마가 쌀뜨물로 세수하던 모습을 떠올리며 비누를 만든 순간"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "쌀뜨물 비누",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "엄마가 예전에 쌀뜨물로 세수하던 게 생각나서 만들어봤어요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "그래서 나온 쌀뜨물 비누예요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "거품이 크진 않은데 뽀득하게 씻겨요.",
+      "fact_ids": [
+       "F3",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "아침에 세면대 앞에서 물을 틀고 손에 비누를 쥐면, 엄마가 세수하던 모습이 떠오를지도 몰라요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "궁금한 건 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     }
+    ],
+    "headline": "엄마가 쌀뜨물로 세수하던 기억, 뽀득한 비누",
+    "headline_fact_ids": [
+     "F2",
+     "F4"
+    ]
+   }
+  }
+ },
+ {
+  "name": "아메리카노",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 4.0,
+  "result": {
+   "status": "NEED_MORE_INFO",
+   "questions": [
+    "이 아메리카노를 내리면서 직접 정하신 게 있나요? 원두나 내리는 방식 같은 것, 한 줄이면 충분해요."
+   ]
+  },
+  "stats": {
+   "rid": "0b4aee44",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 16,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 3950,
+     "in": 57,
+     "out": 514,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 3,
+   "facts_dropped": 0,
+   "charm": false,
+   "season": false,
+   "ck": 0,
+   "ck_dropped": 1,
+   "readiness": "NEED_MORE_INFO",
+   "gate": "none",
+   "status": "NEED_MORE_INFO",
+   "ms": 3951,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 57,
+   "out": 514,
+   "cache_w": 0,
+   "cache_r": 8026
+  },
+  "krw": 9.6,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "아메리카노",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "4500원",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "맛있어요",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "아메리카노",
+     "name_fact_id": "F1",
+     "price_fact_id": "F2"
+    },
+    "distinctive_phrases": [],
+    "charm": null,
+    "common_knowledge": [],
+    "season": null,
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [],
+     "note": null,
+     "missing_reason": "이 아메리카노를 고르거나 만든 이유, 원두나 내리는 방식 같은 판매자의 선택이 메모에 없음"
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [],
+     "note": "손님이 아메리카노 한 잔을 들고 잠깐 쉬는 순간"
+    },
+    "mood": "담백",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "NEED_MORE_INFO",
+    "questions": [
+     "이 아메리카노를 내리면서 직접 정하신 게 있나요? 원두나 내리는 방식 같은 것, 한 줄이면 충분해요."
+    ]
+   }
+  }
+ },
+ {
+  "name": "선운사 소원의 종",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 21.6,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "선운사 종",
+    "price": "만원"
+   },
+   "headline": "바람에 풍경처럼 촤르르",
+   "body": [
+    "바람에 풍경처럼 흔들리면서 촤르르 소리가 나는 선운사 종이에요. 저는 마음이 평안해지면서 꼭 소원이 이루어진 것 같더라고요.",
+    "바람 부는 오후, 창가에서 소리가 나면 하던 일을 잠깐 멈추게 될 거예요. 궁금한 건 편하게 물어보세요.",
+    "선운사 종 만원"
+   ]
+  },
+  "stats": {
+   "rid": "5a2bd8b4",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "DEMO_SELLER",
+   "memo_len": 142,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 11751,
+     "in": 197,
+     "out": 1901,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 9883,
+     "in": 1042,
+     "out": 1257,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 7,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "story_buy",
+   "deleted": {
+    "ENDING_INFO": 1
+   },
+   "signals": [
+    "STEM_REPEAT",
+    "NO_ADDRESS"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "ENDING_INFO": 1
+    },
+    "rewrite_reasons": [
+     "NO_ADDRESS"
+    ],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 5,
+   "roles": {
+    "fact": 1,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 21639,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1239,
+   "out": 3158,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 52.6,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "선운사 종은",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "만원인데",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "소원나무에 저렇게 대부분 가족의 건강과 성공을 기원하는 거라",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "나도 시댁어른이랑 남편이랑 간 김에 구매했어",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "바람에 풍경처럼 흔들리면서 촤르르 소리나니까",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "마음이 평안해지면서",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "꼭 소원이 이루어진것 같더라",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "선운사 종",
+     "name_fact_id": "F1",
+     "price_fact_id": "F2"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "촤르르",
+      "fact_id": "F5"
+     },
+     {
+      "id": "D2",
+      "phrase": "풍경처럼",
+      "fact_id": "F5"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "바람에 풍경처럼 흔들리며 촤르르 나는 소리에 마음이 평안해짐"
+    },
+    "common_knowledge": [
+     {
+      "about": "풍경",
+      "note": "바람에 흔들리며 소리를 내는 작은 종"
+     }
+    ],
+    "season": null,
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [
+      "F3",
+      "F4"
+     ],
+     "note": "가족의 건강과 성공을 바라는 마음을 담아 가족과 함께 들일 수 있는 종",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [
+      "F5"
+     ],
+     "note": "바람에 종이 흔들리며 촤르르 소리가 나는 순간, 마음이 평안해지는 장면"
+    },
+    "mood": "차분",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F2"
+     ]
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "선운사 종",
+     "price_display": "만원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "바람에 풍경처럼 흔들리면서 촤르르 소리가 나는 선운사 종이에요.",
+      "fact_ids": [
+       "F1",
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "저는 마음이 평안해지면서 꼭 소원이 이루어진 것 같더라고요.",
+      "fact_ids": [
+       "F6",
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "바람 부는 오후, 창가에서 소리가 나면 하던 일을 잠깐 멈추게 될 거예요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "궁금한 건 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 2,
+      "text": "선운사 종 만원",
+      "fact_ids": [
+       "F1",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "바람에 풍경처럼 촤르르",
+    "headline_fact_ids": [
+     "F5"
+    ]
+   }
+  }
+ },
+ {
+  "name": "무화과 찹쌀떡",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 11.3,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "무화과 찹쌀떡",
+    "price": "4500원"
+   },
+   "headline": "팥찹쌀떡만 하던 떡집의 무화과 찹쌀떡",
+   "body": [
+    "무화과 철이라 무화과 찹쌀떡을 만들었어요. 우리 떡집은 원래 팥찹쌀떡만 했어요. 딸이 요즘 과일찹쌀떡 유행이라고 해보자고 해서 시작했어요.",
+    "무화과는 달고 톡톡 씹히는 과일이죠. 무화과가 비싸서 처음엔 값을 더 받으려다가, 동네 어르신들 사가시라고 값을 낮춰 맞췄어요. 아침에 따끈한 차 옆에 한 입 베어 무는 모습을 그려 보세요.",
+    "궁금한 건 편하게 물어보세요.",
+    "무화과 찹쌀떡 4500원 · 무화과 철 끝나는 11월 중순까지만 · 아침에 만들어서 다 팔리면 끝"
+   ]
+  },
+  "stats": {
+   "rid": "1ffe968f",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 162,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 6116,
+     "in": 223,
+     "out": 864,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 5172,
+     "in": 1071,
+     "out": 763,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "charm": false,
+   "season": true,
+   "ck": 1,
+   "ck_dropped": 1,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {
+    "ENDING_INFO": 1
+   },
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "ENDING_INFO": 1
+    },
+    "rewrite_reasons": [],
+    "ratio_over": true,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 8,
+   "roles": {
+    "fact": 4,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 11295,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1294,
+   "out": 1627,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 31.3,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리 떡집은 원래 팥찹쌀떡만 했는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "딸이 요즘 과일찹쌀떡 유행이라고 해보자고 해서 시작함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "무화과가 비싸서 첨엔 6천원 받으려다가 동네 어르신들 사가시라고 4500원으로 맞췄음",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "4500원",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "무화과 철 끝나는 11월 중순까지만 함",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "그냥 아침에 만들어서 다 팔리면 끝",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "무화과 찹쌀떡",
+     "name_fact_id": null,
+     "price_fact_id": "F4"
+    },
+    "distinctive_phrases": [],
+    "charm": null,
+    "common_knowledge": [
+     {
+      "about": "무화과",
+      "note": "달고 톡톡 씹히는 과일"
+     }
+    ],
+    "season": {
+     "fact_id": "F5",
+     "note": "무화과 철, 11월 중순까지"
+    },
+    "seller_scene": {
+     "fact_ids": [
+      "F1",
+      "F2",
+      "F3"
+     ],
+     "note": "팥찹쌀떡만 하던 떡집이 딸의 제안으로 과일찹쌀떡을 시작하고, 동네 어르신을 생각해 가격을 4500원으로 맞춘 결정"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F2",
+      "F3"
+     ],
+     "note": "딸이 해보자고 해서 시작했고, 동네 어르신들이 사 가시기 좋게 가격을 맞춤",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F2",
+      "F3"
+     ],
+     "note": "가격을 6천원에서 4500원으로 조정하는 떡집 사장님"
+    },
+    "mood": "담백",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F5",
+      "F6"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "무화과 찹쌀떡",
+     "price_display": "4500원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "무화과 철이라 무화과 찹쌀떡을 만들었어요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "우리 떡집은 원래 팥찹쌀떡만 했어요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "딸이 요즘 과일찹쌀떡 유행이라고 해보자고 해서 시작했어요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과는 달고 톡톡 씹히는 과일이죠.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과가 비싸서 처음엔 값을 더 받으려다가, 동네 어르신들 사가시라고 값을 낮춰 맞췄어요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "아침에 따끈한 차 옆에 한 입 베어 무는 모습을 그려 보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "궁금한 건 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "무화과 찹쌀떡 4500원 · 무화과 철 끝나는 11월 중순까지만 · 아침에 만들어서 다 팔리면 끝",
+      "fact_ids": [
+       "F4",
+       "F5",
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "팥찹쌀떡만 하던 떡집의 무화과 찹쌀떡",
+    "headline_fact_ids": [
+     "F1"
+    ]
+   }
+  }
+ },
+ {
+  "name": "반려돌 키트",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 18.2,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "이름 지어주는 반려돌 키트",
+    "price": ""
+   },
+   "headline": "눈 붙인 동글동글한 돌, 힘든 날의 웃음",
+   "body": [
+    "동글동글해서 눈 붙여서 책상에 뒀어요. 회사에서 힘들 때 쳐다보면 웃겨서 좀 나아져요.",
+    "돌이랑 눈스티커랑 이름표 넣어서 이름 지어주는 반려돌 키트로 팔아볼까 생각중이에요. 퇴근 전 모니터 옆에 눈 붙은 돌이 앉아 있으면, 이름을 뭐라고 지어줄까 고민하다 피식 웃게 될 거예요. 아직 판매는 안 하고 준비중이라, 궁금한 건 편하게 물어보세요.",
+    "이름 지어주는 반려돌 키트 (판매 준비 중) · 가격 미정"
+   ]
+  },
+  "stats": {
+   "rid": "f5bc5739",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 169,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 6371,
+     "in": 238,
+     "out": 984,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 11833,
+     "in": 1270,
+     "out": 1684,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 8,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {
+    "HEDGE": 1,
+    "SELLER_UNGROUNDED": 1
+   },
+   "signals": [
+    "NO_SCENE"
+   ],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "HEDGE": 1,
+     "SELLER_UNGROUNDED": 1
+    },
+    "rewrite_reasons": [
+     "NO_PRODUCT_BODY",
+     "DELETED"
+    ],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [
+     "product"
+    ],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 6,
+   "roles": {
+    "fact": 2,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 18212,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1508,
+   "out": 2668,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 46.5,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "이름 지어주는 반려돌 키트 (판매 준비 중)",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "가격 미정",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "아직 판매는 안하고 준비중임.",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "한탄강 갔을때",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "동글동글해서 눈 붙여서 책상에 뒀는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "회사에서 힘들때 쳐다보면 웃겨서 좀 나아짐.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "돌이랑 눈스티커랑 이름표 넣어서 키트로 팔아볼까 생각중.",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "돌은 직접 주워서 씻어서 넣을거",
+      "kind": "product",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "이름 지어주는 반려돌 키트",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "동글동글해서",
+      "fact_id": "F5"
+     },
+     {
+      "id": "D2",
+      "phrase": "반려돌",
+      "fact_id": "F1"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "동글동글한 돌에 눈을 붙여 두고 보면 웃음이 나서 힘든 날 좀 나아지는 것"
+    },
+    "common_knowledge": [
+     {
+      "about": "반려돌",
+      "note": "돌에 눈을 붙이고 이름을 지어 곁에 두는 것"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F4",
+      "F5",
+      "F6"
+     ],
+     "note": "한탄강에 갔을 때의 동글동글한 돌에 눈을 붙여 책상에 두고, 회사에서 힘들 때 쳐다보며 웃은 일"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F6",
+      "F7"
+     ],
+     "note": "책상 위 눈 붙인 돌이 힘든 날 웃음을 줘서 키트로 만들어 보려 함",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "회사 책상 위 눈 붙인 돌을 쳐다보며 웃는 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "promise",
+     "fact_ids": [
+      "F3"
+     ]
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "이름 지어주는 반려돌 키트",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "동글동글해서 눈 붙여서 책상에 뒀어요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "회사에서 힘들 때 쳐다보면 웃겨서 좀 나아져요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "돌이랑 눈스티커랑 이름표 넣어서 이름 지어주는 반려돌 키트로 팔아볼까 생각중이에요.",
+      "fact_ids": [
+       "F1",
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "퇴근 전 모니터 옆에 눈 붙은 돌이 앉아 있으면, 이름을 뭐라고 지어줄까 고민하다 피식 웃게 될 거예요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "아직 판매는 안 하고 준비중이라, 궁금한 건 편하게 물어보세요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "이름 지어주는 반려돌 키트 (판매 준비 중) · 가격 미정",
+      "fact_ids": [
+       "F1",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "눈 붙인 동글동글한 돌, 힘든 날의 웃음",
+    "headline_fact_ids": [
+     "F5",
+     "F6"
+    ]
+   }
+  }
+ },
+ {
+  "name": "유약 흘림 머그컵",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 13.2,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "유약 흘림 머그컵",
+    "price": "32,000원"
+   },
+   "headline": "망했다 싶었는데 물방울, 산 능선이 됐어요",
+   "body": [
+    "이번에 가마 새로 돌린 게 나왔는데요. 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었어요. 꺼내놓고 보니까 컵마다 흐른 모양이 다 달라요. 어떤 건 물방울 맺힌 거 같고, 어떤 건 산 능선 같고요.",
+    "원래는 다 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 거 같아서 그냥 이대로 팔기로 했어요. 유약 흘림 머그컵이에요. 손잡이는 좀 두껍게 만들었어요. 제가 손이 작아서 얇으면 불안하더라구요.",
+    "아침에 커피를 따르고 컵을 돌려 보며 오늘은 어느 쪽 흐름을 볼지 고르는 시간이 생길 거예요. 궁금한 건 편하게 물어보세요.",
+    "유약 흘림 머그컵 32,000원 · 용량은 350정도? · 전자렌지 식세기 되고요 · 주문하면 같은 모양은 절대 안나와요"
+   ]
+  },
+  "stats": {
+   "rid": "c1af2cef",
+   "model": "claude-sonnet-5-5",
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 380,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 7017,
+     "in": 480,
+     "out": 1209,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 6154,
+     "in": 1751,
+     "out": 1018,
+     "cache_w": 0,
+     "cache_r": 9467,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    }
+   ],
+   "facts": 12,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 11,
+   "roles": {
+    "fact": 6,
+    "charm": 2,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 13181,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 2231,
+   "out": 2227,
+   "cache_w": 0,
+   "cache_r": 17493
+  },
+  "krw": 42.3,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "콩이(공방고양이) 사진도 같이 올릴까 고민중.."
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "유약 흘림 머그컵",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "32,000원",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "이번에 가마 새로 돌린거 나왔는데요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "꺼내놓고 보니까 컵마다 흐른 모양이 다 달라요..",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "어떤건 물방울 맺힌거같고 어떤건 산 능선같고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "원래는 다 깔끔하게 떨어지게 하려던건데 이게 더 이쁜거같아서 그냥 이대로 팔기로 함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "용량은 350정도?",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "손잡이는 좀 두껍게 만들었어요",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F10",
+      "quote": "제가 손이 작아서 얇으면 불안하더라구요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F11",
+      "quote": "전자렌지 식세기 되고요",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F12",
+      "quote": "주문하면 같은 모양은 절대 안나와요",
+      "kind": "product",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "유약 흘림 머그컵",
+     "name_fact_id": "F1",
+     "price_fact_id": "F2"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "물방울 맺힌거같고",
+      "fact_id": "F6"
+     },
+     {
+      "id": "D2",
+      "phrase": "산 능선같고",
+      "fact_id": "F6"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "컵마다 유약이 흐른 모양이 달라 물방울 같기도 산 능선 같기도 함"
+    },
+    "common_knowledge": [
+     {
+      "about": "머그컵",
+      "note": "따뜻한 음료를 담아 마시는 손잡이 달린 컵"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F3",
+      "F4",
+      "F7"
+     ],
+     "note": "새로 돌린 가마에서 유약이 많이 흘러 망했다 싶었지만 꺼내 보니 더 예뻐 그대로 팔기로 한 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F7"
+     ],
+     "note": "의도와 달랐지만 컵마다 다른 흐름이 더 예뻐서 그대로 팔기로 함",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F3",
+      "F4",
+      "F7"
+     ],
+     "note": "가마에서 꺼낸 컵들을 보며 망했다 싶던 마음이 바뀌는 순간"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "유약 흘림 머그컵",
+     "price_display": "32,000원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "이번에 가마 새로 돌린 게 나왔는데요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었어요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "꺼내놓고 보니까 컵마다 흐른 모양이 다 달라요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "어떤 건 물방울 맺힌 거 같고, 어떤 건 산 능선 같고요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "원래는 다 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 거 같아서 그냥 이대로 팔기로 했어요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "유약 흘림 머그컵이에요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "손잡이는 좀 두껍게 만들었어요.",
+      "fact_ids": [
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "제가 손이 작아서 얇으면 불안하더라구요.",
+      "fact_ids": [
+       "F10"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 3,
+      "text": "아침에 커피를 따르고 컵을 돌려 보며 오늘은 어느 쪽 흐름을 볼지 고르는 시간이 생길 거예요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "궁금한 건 편하게 물어보세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "유약 흘림 머그컵 32,000원 · 용량은 350정도? · 전자렌지 식세기 되고요 · 주문하면 같은 모양은 절대 안나와요",
+      "fact_ids": [
+       "F2",
+       "F8",
+       "F11",
+       "F12"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "망했다 싶었는데 물방울, 산 능선이 됐어요",
+    "headline_fact_ids": [
+     "F4",
+     "F6"
+    ]
+   }
+  }
+ }
+]

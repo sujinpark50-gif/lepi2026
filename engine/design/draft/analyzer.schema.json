@@ -1,0 +1,139 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scenario_mode": {
+      "type": "string",
+      "enum": ["REAL_SELLER", "DEMO_SELLER"]
+    },
+    "meta_instructions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "quote": { "type": "string" },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "product",
+              "price",
+              "how_to_buy",
+              "seller_scene",
+              "seller_feeling",
+              "customer_fact",
+              "buyer_action"
+            ]
+          },
+          "convertible_to": { "type": ["string", "null"] }
+        },
+        "required": ["id", "quote", "kind", "convertible_to"]
+      }
+    },
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "name_fact_id": { "type": ["string", "null"] },
+        "price_fact_id": { "type": ["string", "null"] }
+      },
+      "required": ["name", "name_fact_id", "price_fact_id"]
+    },
+    "distinctive_phrases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "phrase": { "type": "string" },
+          "fact_id": { "type": "string" }
+        },
+        "required": ["id", "phrase", "fact_id"]
+      }
+    },
+    "seller_scene": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fact_ids": { "type": "array", "items": { "type": "string" } },
+            "note": { "type": "string" }
+          },
+          "required": ["fact_ids", "note"]
+        },
+        { "type": "null" }
+      ]
+    },
+    "why_this_one": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fact_ids": { "type": "array", "items": { "type": "string" } },
+        "note": { "type": ["string", "null"] },
+        "missing_reason": { "type": ["string", "null"] }
+      },
+      "required": ["fact_ids", "note", "missing_reason"]
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["seller", "product_state", "customer_imagined"]
+        },
+        "fact_ids": { "type": "array", "items": { "type": "string" } },
+        "note": { "type": "string" }
+      },
+      "required": ["kind", "fact_ids", "note"]
+    },
+    "mood": {
+      "type": "string",
+      "enum": ["담백", "다정", "유쾌", "설렘", "차분"]
+    },
+    "ending": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["promise", "greeting", "info", "invite", "fact"]
+        },
+        "fact_ids": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["type", "fact_ids"]
+    },
+    "sensory_hook": { "type": ["string", "null"] },
+    "story_readiness": {
+      "type": "string",
+      "enum": ["READY", "NEED_MORE_INFO", "NO_STORY_FOUND"]
+    },
+    "questions": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": [
+    "scenario_mode",
+    "meta_instructions",
+    "facts",
+    "product",
+    "distinctive_phrases",
+    "seller_scene",
+    "why_this_one",
+    "scene",
+    "mood",
+    "ending",
+    "sensory_hook",
+    "story_readiness",
+    "questions"
+  ]
+}

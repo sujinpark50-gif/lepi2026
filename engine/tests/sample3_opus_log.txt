@@ -1,0 +1,68 @@
+lepi_run {"rid": "4f8a7b30", "model": "claude-opus-5-5", "check_mode": "report", "effort": ["medium", "medium"], "mode": "REAL_SELLER", "memo_len": 155, "additions": 0, "calls": [{"name": "analyzer", "ms": 14788, "in": 226, "out": 1746, "cache_w": 0, "cache_r": 7578, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 17295, "in": 1235, "out": 1800, "cache_w": 0, "cache_r": 8573, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 6, "facts_dropped": 0, "charm": true, "season": false, "ck": 1, "ck_dropped": 0, "readiness": "READY", "deleted": {"UNGROUNDED": 1}, "signals": ["STEM_REPEAT"], "rewrite": false, "would": {"delete": {"UNGROUNDED": 1}, "rewrite_reasons": [], "ratio_over": false, "headline_fail": [], "product_gaps": [], "status": "READY", "price_card_fix": false}, "sentences": 7, "roles": {"fact": 4, "charm": 1, "scene": 1, "ending": 1, "info": 0}, "status": "READY", "ms": 32093, "over_prod": false}
+
+### 쥐꼬리 낚시대 · REAL_SELLER · READY · 32.1초 · 호출 2회 · 재작성 아니오
+  토큰 입력 1461 / 출력 3546 / 캐시쓰기 0 / 캐시읽기 16151 · 116.5원
+  1차 지운 문장: {'UNGROUNDED': 1} · 신호: ['STEM_REPEAT']
+  최종 지운 문장: {}
+  [report] 했을 삭제 {'UNGROUNDED': 1} · 재작성 사유 [] · 비율 초과 False · 제목 실패 [] · 상품 빈칸 [] · 결과 상태 READY
+  호출 ms [('analyzer', 14788), ('writer', 17295)] · 운영 시간 초과였을지 아니오
+  charm True · 상식 1(버림 0) · 계절 False · 역할 {'fact': 4, 'charm': 1, 'scene': 1, 'ending': 1, 'info': 0} · 고침 role 0/ending 0
+{
+ "status": "READY",
+ "product_card": {
+  "name": "쥐꼬리 낚시대",
+  "price": ""
+ },
+ "headline": "흔들면 우리집냥이가 흥분하는 쥐꼬리 낚시대",
+ "body": [
+  "우리집냥이가 제일 좋아하는 쥐꼬리 낚시대예요. 실리콘이라서 엄청 부드러워요. 진짜 쥐꼬리 같은지, 흔들면 우리집냥이가 흥분하면서 좋아하는 게 보이거든요.",
+  "고객님들 고양이들도 한번 보면 반할 거예요. 이걸 보면 고양이가 사냥한다는 게 무슨 의미인지 아시게 될걸요. 거실 바닥에서 살랑살랑 흔들어 주면, 몸을 납작 낮추고 엉덩이를 씰룩이는 모습이 그려지죠.",
+  "궁금한 점 물어보시면 바로 알려 드릴게요."
+ ]
+}
+lepi_run {"rid": "15ddf4b6", "model": "claude-opus-5-5", "check_mode": "report", "effort": ["medium", "medium"], "mode": "DEMO_SELLER", "memo_len": 121, "additions": 1, "calls": [{"name": "analyzer", "ms": 18246, "in": 234, "out": 2137, "cache_w": 0, "cache_r": 7578, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 8, "facts_dropped": 0, "charm": true, "season": false, "ck": 2, "ck_dropped": 0, "readiness": "NEED_MORE_INFO", "status": "NEED_MORE_INFO", "ms": 18249, "over_prod": false}
+
+### 잉어킹 · DEMO_SELLER · NEED_MORE_INFO · 18.2초 · 호출 1회 · 재작성 아니오
+  토큰 입력 234 / 출력 2137 / 캐시쓰기 0 / 캐시읽기 7578 · 65.4원
+  1차 지운 문장: {} · 신호: []
+  최종 지운 문장: {}
+  호출 ms [('analyzer', 18246)] · 운영 시간 초과였을지 아니오
+  charm True · 상식 2(버림 0) · 계절 False · 역할 {} · 고침 role 0/ending 0
+{
+ "status": "NEED_MORE_INFO",
+ "questions": [
+  "잉어킹 액막이를 뽑은 뒤 어디에 걸어 두거나 어떻게 곁에 두셨나요? 한 줄이면 충분해요."
+ ]
+}
+lepi_run {"rid": "034ea92e", "model": "claude-opus-5-5", "check_mode": "report", "effort": ["medium", "medium"], "mode": "REAL_SELLER", "memo_len": 162, "additions": 0, "calls": [{"name": "analyzer", "ms": 23012, "in": 223, "out": 2641, "cache_w": 0, "cache_r": 7578, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 29327, "over_prod": true, "in": 1257, "out": 2828, "cache_w": 0, "cache_r": 8573, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 9, "facts_dropped": 0, "charm": true, "season": true, "ck": 0, "ck_dropped": 1, "readiness": "READY", "deleted": {}, "signals": [], "rewrite": false, "would": {"delete": {}, "rewrite_reasons": [], "ratio_over": false, "headline_fail": [], "product_gaps": [], "status": "READY", "price_card_fix": false}, "sentences": 8, "roles": {"fact": 4, "charm": 1, "scene": 1, "ending": 1, "info": 1}, "status": "READY", "ms": 52347, "over_prod": true}
+
+### 무화과 찹쌀떡 · REAL_SELLER · READY · 52.3초 · 호출 2회 · 재작성 아니오
+  토큰 입력 1480 / 출력 5469 / 캐시쓰기 0 / 캐시읽기 16151 · 170.5원
+  1차 지운 문장: {} · 신호: []
+  최종 지운 문장: {}
+  [report] 했을 삭제 {} · 재작성 사유 [] · 비율 초과 False · 제목 실패 [] · 상품 빈칸 [] · 결과 상태 READY
+  호출 ms [('analyzer', 23012), ('writer', 29327)] · 운영 시간 초과였을지 예
+  charm True · 상식 0(버림 1) · 계절 True · 역할 {'fact': 4, 'charm': 1, 'scene': 1, 'ending': 1, 'info': 1} · 고침 role 0/ending 0
+{
+ "status": "READY",
+ "product_card": {
+  "name": "무화과 찹쌀떡",
+  "price": "4500원"
+ },
+ "headline": "팥찹쌀떡만 하던 떡집에 찾아온 무화과 철",
+ "body": [
+  "무화과 철이라 무화과 찹쌀떡을 만들어요. 원래 팥찹쌀떡만 했는데, 딸이 해보자고 해서 시작했어요. 떡은 아침에 만들어 두죠.",
+  "무화과가 비싸서 첨엔 더 받으려다가, 동네 어르신들 사가시라고 맞췄어요. 출출한 오후, 차 한 잔 옆에 하나 놓아두면 좋겠네요. 무화과 철 끝나는 11월 중순까지만 해요. 다 팔리면 끝이라, 오시면 있는 대로 챙겨 드릴게요.",
+  "무화과 찹쌀떡 4500원 · 11월 중순까지 · 아침에 만들어 다 팔리면 끝"
+ ]
+}
+
+## 변환 한 번당 평균 (claude-opus-5-5, 3개)
+  시간 34.2초 · 호출 1.67회 · 재작성 0/3
+  입력 1058 · 출력 3717 · 캐시쓰기 0 · 캐시읽기 13293 토큰
+  원가 117.5원 (1달러 1400원, 최대 170.5원)
+  상태 {'READY': 2, 'NEED_MORE_INFO': 1}
+  운영 기준(42초·호출 25초)이면 시간 초과였을 테스트 1/3
+  [report] 했을 삭제 합계 {'UNGROUNDED': 1} · 재작성됐을 글 0/2 · 사유별 {} · 제목 실패 0 · 비율 초과 0
+
+결과 저장: C:\Users\노랑털뭉치\Documents\GitHub\Lepi\engine\tests\sample3_opus.json

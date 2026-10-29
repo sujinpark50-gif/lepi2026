@@ -1,0 +1,136 @@
+lepi_run {"rid": "afdc3179", "model": "claude-opus-5-5", "mode": "DEMO_SELLER", "memo_len": 113, "additions": 0, "calls": [{"name": "analyzer", "ms": 7812, "in": 170, "out": 794, "cache_w": 6539, "cache_r": 0, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 5610, "in": 949, "out": 512, "cache_w": 7265, "cache_r": 0, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "rewrite", "ms": 7815, "in": 1577, "out": 870, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 6, "facts_dropped": 0, "readiness": "READY", "deleted": {}, "signals": ["NO_ADDRESS"], "rewrite": true, "rewrite_codes": ["HEADLINE", "NO_ADDRESS"], "deleted_2": {"UNGROUNDED": 1}, "signals_2": ["NO_ADDRESS"], "deleted_final": {"UNGROUNDED": 1}, "sentences": 5, "headline_fallback": false, "product_gaps": [], "status": "READY", "ms": 21248}
+
+### 밀짚모자 · DEMO_SELLER · READY · 21.2초 · 호출 3회 · 재작성 예
+  토큰 입력 2696 / 출력 2176 / 캐시쓰기 13804 / 캐시읽기 7265 · 176.7원
+  1차 지운 문장: {} · 신호: ['NO_ADDRESS']
+  재작성 사유: ['HEADLINE', 'NO_ADDRESS'] · 2차 지운 문장: {'UNGROUNDED': 1}
+  최종 지운 문장: {'UNGROUNDED': 1}
+{
+ "status": "READY",
+ "product_card": {
+  "name": "못생긴 밀짚모자",
+  "price": ""
+ },
+ "headline": "추억템이 된 못생긴 밀짚모자",
+ "body": [
+  "솔직히 말하면 못생긴 밀짚모자예요. 햇볕이 너무 뜨거운 날이라면 이 모자 하나가 반가우실 거예요.",
+  "저도 국내 여행 갈 때마다 필요할 때 들고 갔거든요. 그러다 보니 어느새 추억템이 됐어요.",
+  "철원 주상절리 입장료를 내면 한 사람당 5천원 상품권을 주는데요."
+ ]
+}
+lepi_run {"rid": "958f8d2a", "model": "claude-opus-5-5", "mode": "DEMO_SELLER", "memo_len": 121, "additions": 1, "calls": [{"name": "analyzer", "ms": 6759, "in": 234, "out": 845, "cache_w": 0, "cache_r": 6539, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 7, "facts_dropped": 0, "readiness": "NEED_MORE_INFO", "status": "NEED_MORE_INFO", "ms": 6761}
+
+### 잉어킹 · DEMO_SELLER · NEED_MORE_INFO · 6.8초 · 호출 1회 · 재작성 아니오
+  토큰 입력 234 / 출력 845 / 캐시쓰기 0 / 캐시읽기 6539 · 28.6원
+  1차 지운 문장: {} · 신호: []
+  최종 지운 문장: {}
+{
+ "status": "NEED_MORE_INFO",
+ "questions": [
+  "뽑은 잉어킹 액막이를 집에 가져와서 어디에 걸어 두거나 어떻게 두셨나요? 한 줄이면 충분해요."
+ ]
+}
+lepi_run {"rid": "6f079cf6", "model": "claude-opus-5-5", "mode": "REAL_SELLER", "memo_len": 96, "additions": 0, "calls": [{"name": "analyzer", "ms": 5899, "in": 146, "out": 663, "cache_w": 0, "cache_r": 6539, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 10378, "in": 834, "out": 1058, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 5, "facts_dropped": 0, "readiness": "READY", "deleted": {}, "signals": [], "rewrite": false, "deleted_final": {}, "sentences": 5, "headline_fallback": false, "product_gaps": [], "status": "READY", "ms": 16282}
+
+### 단풍 네일 · REAL_SELLER · READY · 16.3초 · 호출 2회 · 재작성 아니오
+  토큰 입력 980 / 출력 1721 / 캐시쓰기 0 / 캐시읽기 13804 · 61.4원
+  1차 지운 문장: {} · 신호: []
+  최종 지운 문장: {}
+{
+ "status": "READY",
+ "product_card": {
+  "name": "단풍 그라데이션 네일",
+  "price": ""
+ },
+ "headline": "손 볼 때마다 웃게 되는 단풍 그라데이션 네일",
+ "body": [
+  "저도 지금 단풍 그라데이션을 하고 있어요. 손 볼 때마다 기분이 좋더라고요.",
+  "이번 달 시즌 네일은 손톱 끝만 살짝 물들인 느낌의 단풍 그라데이션이에요. 그래서 회사 다니시는 분들도 부담 없이 많이 하세요.",
+  "선선한 바람 부는 날, 산책하기 좋은 하루 보내세요."
+ ]
+}
+lepi_run {"rid": "34f37b82", "model": "claude-opus-5-5", "mode": "DEMO_SELLER", "memo_len": 142, "additions": 0, "calls": [{"name": "analyzer", "ms": 7074, "in": 197, "out": 801, "cache_w": 0, "cache_r": 6539, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 4598, "in": 992, "out": 434, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "rewrite", "ms": 7772, "in": 1504, "out": 799, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 6, "facts_dropped": 0, "readiness": "READY", "deleted": {}, "signals": [], "rewrite": true, "rewrite_codes": ["HEADLINE"], "deleted_2": {}, "signals_2": [], "deleted_final": {}, "sentences": 5, "headline_fallback": false, "product_gaps": [], "status": "READY", "ms": 19451}
+
+### 선운사 소원의 종 · DEMO_SELLER · READY · 19.5초 · 호출 3회 · 재작성 예
+  토큰 입력 2693 / 출력 2034 / 캐시쓰기 0 / 캐시읽기 21069 · 83.8원
+  1차 지운 문장: {} · 신호: []
+  재작성 사유: ['HEADLINE'] · 2차 지운 문장: {}
+  최종 지운 문장: {}
+{
+ "status": "READY",
+ "product_card": {
+  "name": "선운사 종",
+  "price": "만원"
+ },
+ "headline": "풍경처럼 흔들리면서 촤르르 소리나는 선운사 종",
+ "body": [
+  "선운사 종은 만원이에요. 소원나무에 걸린 종은 대부분 가족의 건강과 성공을 기원하는 거더라고요.",
+  "저도 바람에 풍경처럼 흔들리면서 촤르르 소리나니까 마음이 평안해지던걸요. 꼭 소원이 이루어진 것 같았어요.",
+  "바람 선선한 날, 가족과 편안한 하루 보내세요."
+ ]
+}
+lepi_run {"rid": "3c69fc58", "model": "claude-opus-5-5", "mode": "REAL_SELLER", "memo_len": 162, "additions": 0, "calls": [{"name": "analyzer", "ms": 7798, "in": 223, "out": 911, "cache_w": 0, "cache_r": 6539, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 17555, "in": 1181, "out": 1698, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 9, "facts_dropped": 0, "readiness": "READY", "deleted": {"UNGROUNDED": 2}, "signals": [], "rewrite": false, "rewrite_codes": ["DELETED"], "rewrite_skipped": "time", "deleted_final": {"UNGROUNDED": 2}, "sentences": 4, "headline_fallback": false, "product_gaps": [], "status": "READY", "ms": 25357}
+
+### 무화과 찹쌀떡 · REAL_SELLER · READY · 25.4초 · 호출 2회 · 재작성 아니오(건너뜀: time)
+  토큰 입력 1404 / 출력 2609 / 캐시쓰기 0 / 캐시읽기 13804 · 88.6원
+  1차 지운 문장: {'UNGROUNDED': 2} · 신호: []
+  최종 지운 문장: {'UNGROUNDED': 2}
+{
+ "status": "READY",
+ "product_card": {
+  "name": "무화과 찹쌀떡",
+  "price": "4500원"
+ },
+ "headline": "딸이 해 보자고 해서 시작한 무화과 찹쌀떡",
+ "body": [
+  "저희 떡집은 원래 팥찹쌀떡만 했어요.",
+  "무화과가 비싸서 처음엔 값을 더 받으려고 했거든요. 그래도 동네 어르신들 사가시라고 4500원으로 맞췄어요. 줄 서서 사는 그런 데는 아니고요."
+ ]
+}
+lepi_run {"rid": "e2392392", "model": "claude-opus-5-5", "mode": "REAL_SELLER", "memo_len": 169, "additions": 0, "calls": [{"name": "analyzer", "ms": 8005, "in": 238, "out": 886, "cache_w": 0, "cache_r": 6539, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 5349, "in": 1166, "out": 582, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "rewrite", "ms": 12341, "in": 1907, "out": 1069, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 7, "facts_dropped": 0, "readiness": "READY", "deleted": {"SELLER_UNGROUNDED": 1, "UNGROUNDED": 1}, "signals": ["NO_ADDRESS"], "rewrite": true, "rewrite_codes": ["DELETED", "NO_ADDRESS"], "deleted_2": {"UNGROUNDED": 1}, "signals_2": [], "deleted_final": {"UNGROUNDED": 1}, "sentences": 5, "headline_fallback": false, "product_gaps": [], "status": "READY", "ms": 25703}
+
+### 반려돌 키트 · REAL_SELLER · READY · 25.7초 · 호출 3회 · 재작성 예
+  토큰 입력 3311 / 출력 2537 / 캐시쓰기 0 / 캐시읽기 21069 · 101.4원
+  1차 지운 문장: {'SELLER_UNGROUNDED': 1, 'UNGROUNDED': 1} · 신호: ['NO_ADDRESS']
+  재작성 사유: ['DELETED', 'NO_ADDRESS'] · 2차 지운 문장: {'UNGROUNDED': 1}
+  최종 지운 문장: {'UNGROUNDED': 1}
+{
+ "status": "READY",
+ "product_card": {
+  "name": "이름 지어주는 반려돌 키트",
+  "price": ""
+ },
+ "headline": "강가에서 데려온 돌에 눈을 붙였더니 생긴 반려돌",
+ "body": [
+  "한탄강에 갔을 때 주운 돌이 동글동글해서, 눈을 붙여 책상에 뒀어요. 회사에서 힘들 때 쳐다보면 웃겨서 좀 나아지더라고요.",
+  "그래서 돌이랑 눈스티커, 이름표를 넣은 이름 지어주는 반려돌 키트로 팔아 볼까 생각 중이에요. 책상 위에 웃을 거리가 필요하셨다면, 이름부터 미리 떠올려 두셔도 좋아요.",
+  "아직 판매는 안 하고 준비 중이고, 가격도 미정이에요."
+ ]
+}
+lepi_run {"rid": "4efa2286", "model": "claude-opus-5-5", "mode": "REAL_SELLER", "memo_len": 380, "additions": 0, "calls": [{"name": "analyzer", "ms": 10313, "in": 480, "out": 1253, "cache_w": 0, "cache_r": 6539, "stop": "end_turn", "served": "claude-opus-5-5"}, {"name": "writer", "ms": 8927, "in": 1803, "out": 948, "cache_w": 0, "cache_r": 7265, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 13, "facts_dropped": 0, "readiness": "READY", "deleted": {}, "signals": ["ENDING_INVITE"], "rewrite": false, "deleted_final": {}, "sentences": 11, "headline_fallback": false, "product_gaps": [], "status": "READY", "ms": 19249}
+
+### 유약 흘림 머그컵 · REAL_SELLER · READY · 19.2초 · 호출 2회 · 재작성 아니오
+  토큰 입력 2283 / 출력 2201 / 캐시쓰기 0 / 캐시읽기 13804 · 82.1원
+  1차 지운 문장: {} · 신호: ['ENDING_INVITE']
+  최종 지운 문장: {}
+{
+ "status": "READY",
+ "product_card": {
+  "name": "유약 흘림 머그컵",
+  "price": "32,000원"
+ },
+ "headline": "첨엔 망했다 싶었는데, 가마 문을 여니 산 능선같고",
+ "body": [
+  "이번에 가마를 새로 돌린 게 나왔는데요, 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었는데 말이죠. 꺼내 놓고 보니까 컵마다 흐른 모양이 다 달라요. 어떤 건 물방울 맺힌거같고, 어떤 건 산 능선같고요. 원래는 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 것 같아서 그냥 이대로 팔기로 했어요.",
+  "손잡이는 좀 두껍게 만들었어요. 제가 손이 작아서 얇으면 불안하더라고요. 용량은 350 정도고, 전자레인지랑 식세기 다 돼요.",
+  "아침마다 오늘은 어느 쪽 모양이 보이나 돌려 보는 재미도 있겠죠. 유약 흘림 머그컵은 32,000원이에요. 주문하시면 같은 모양은 절대 안 나오니, 그건 감안해 주세요. 궁금한 모양이 있으면 물어보세요, 사진으로 알려 드릴게요."
+ ]
+}
+
+## 변환 한 번당 평균 (claude-opus-5-5, 7개)
+  시간 19.2초 · 호출 2.29회 · 재작성 3/7
+  입력 1943 · 출력 2018 · 캐시쓰기 1972 · 캐시읽기 13908 토큰
+  원가 88.9원 (1달러 1400원, 최대 176.7원)
+  상태 {'READY': 6, 'NEED_MORE_INFO': 1}
+
+결과 저장: C:\Users\노랑털뭉치\Documents\GitHub\Lepi\engine\tests\rerun1_opus.json

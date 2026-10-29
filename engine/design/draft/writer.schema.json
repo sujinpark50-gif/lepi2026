@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "product_card": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "price_display": { "type": ["string", "null"] }
+      },
+      "required": ["name", "price_display"]
+    },
+    "sentences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "paragraph": { "type": "integer" },
+          "text": { "type": "string" },
+          "fact_ids": { "type": "array", "items": { "type": "string" } },
+          "interpretation": { "type": "boolean" },
+          "is_ending": { "type": "boolean" }
+        },
+        "required": ["paragraph", "text", "fact_ids", "interpretation", "is_ending"]
+      }
+    },
+    "headline": { "type": "string" },
+    "headline_fact_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["product_card", "sentences", "headline", "headline_fact_ids"]
+}

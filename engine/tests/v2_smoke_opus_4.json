@@ -1,0 +1,708 @@
+[
+ {
+  "name": "무화과 찹쌀떡",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 42.5,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "무화과 찹쌀떡",
+    "price": "4500원"
+   },
+   "headline": "무화과 철에만 만드는 찹쌀떡, 다 팔리면 끝",
+   "body": [
+    "저희 떡집은 원래 팥찹쌀떡만 했어요. 딸이 해 보자고 해서 무화과 과일찹쌀떡을 시작했죠.",
+    "무화과가 비싸서 처음엔 더 받으려고 했어요. 그래도 동네 어르신들 사가시라고 값을 맞췄네요. 아침에 만들어서 무화과 철 끝나는 11월 중순까지만 해요.",
+    "차 한 잔 옆에 하나 두면 가을 오후가 잠깐 느긋해질 거예요. 선선한 가을날 잘 보내세요.",
+    "무화과 찹쌀떡 4500원 · 11월 중순까지 · 아침에 만들어 다 팔리면 끝"
+   ]
+  },
+  "stats": {
+   "rid": "352db3da",
+   "model": "claude-opus-5-5",
+   "check_mode": "report",
+   "effort": [
+    "medium",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 162,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 18607,
+     "in": 223,
+     "out": 2087,
+     "cache_w": 7578,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 23875,
+     "in": 1266,
+     "out": 2241,
+     "cache_w": 8573,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 9,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": true,
+   "ck": 0,
+   "ck_dropped": 2,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 8,
+   "roles": {
+    "fact": 4,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 42494,
+   "over_prod": true
+  },
+  "tokens": {
+   "in": 1489,
+   "out": 4328,
+   "cache_w": 16151,
+   "cache_r": 0
+  },
+  "krw": 242.6,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리 떡집은 원래 팥찹쌀떡만 했는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "과일찹쌀떡",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "해보자고 해서 시작함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "무화과가 비싸서 첨엔 6천원 받으려다가",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "동네 어르신들 사가시라고",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "4500원으로 맞췄음",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "무화과 철 끝나는 11월 중순까지만 함",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "그냥 아침에 만들어서",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "다 팔리면 끝",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "무화과 찹쌀떡",
+     "name_fact_id": "F2",
+     "price_fact_id": "F6"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "다 팔리면 끝",
+      "fact_id": "F9"
+     },
+     {
+      "id": "D2",
+      "phrase": "동네 어르신들",
+      "fact_id": "F5"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F8",
+      "F7"
+     ],
+     "note": "무화과 철에만, 아침마다 그날 만드는 찹쌀떡"
+    },
+    "common_knowledge": [],
+    "season": {
+     "fact_id": "F7",
+     "note": "무화과 철, 11월 중순까지만"
+    },
+    "seller_scene": {
+     "fact_ids": [
+      "F1",
+      "F3",
+      "F4",
+      "F5",
+      "F8"
+     ],
+     "note": "팥찹쌀떡만 하던 떡집이 무화과떡을 시작하고, 6천원 받으려다 동네 어르신들 위해 4500원으로 맞춘 결정"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F6",
+      "F7"
+     ],
+     "note": "동네 어르신들도 사 가기 좋게 맞춘 값, 무화과 철에만 나오는 떡",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4",
+      "F5",
+      "F8"
+     ],
+     "note": "비싼 무화과 값을 두고 고민하다 동네 어르신들 생각해 값을 낮추고, 아침마다 떡을 만드는 장면"
+    },
+    "mood": "담백",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "무화과 찹쌀떡",
+     "price_display": "4500원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "저희 떡집은 원래 팥찹쌀떡만 했어요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "딸이 해 보자고 해서 무화과 과일찹쌀떡을 시작했죠.",
+      "fact_ids": [
+       "F3",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과가 비싸서 처음엔 더 받으려고 했어요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "그래도 동네 어르신들 사가시라고 값을 맞췄네요.",
+      "fact_ids": [
+       "F5",
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "아침에 만들어서 무화과 철 끝나는 11월 중순까지만 해요.",
+      "fact_ids": [
+       "F8",
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 3,
+      "text": "차 한 잔 옆에 하나 두면 가을 오후가 잠깐 느긋해질 거예요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "선선한 가을날 잘 보내세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "무화과 찹쌀떡 4500원 · 11월 중순까지 · 아침에 만들어 다 팔리면 끝",
+      "fact_ids": [
+       "F2",
+       "F6",
+       "F7",
+       "F8",
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "무화과 철에만 만드는 찹쌀떡, 다 팔리면 끝",
+    "headline_fact_ids": [
+     "F7",
+     "F8",
+     "F9",
+     "F2"
+    ]
+   }
+  }
+ },
+ {
+  "name": "유약 흘림 머그컵",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 37.5,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "유약 흘림 머그컵",
+    "price": "32,000원"
+   },
+   "headline": "망했다 싶었는데, 물방울 맺힌 거 같은 머그컵",
+   "body": [
+    "이번에 가마 새로 돌린 게 나왔는데요, 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었어요. 그런데 꺼내 놓고 보니까 컵마다 흐른 모양이 다 달라요. 어떤 건 물방울 맺힌 거 같고, 어떤 건 산 능선 같고요.",
+    "원래는 다 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 거 같아서 그냥 이대로 팔기로 했죠. 그렇게 나온 유약 흘림 머그컵이고, 용량은 350 정도예요. 손잡이는 좀 두껍게 만들었어요, 제가 손이 작아서 얇으면 불안하더라고요. 전자렌지랑 식세기도 되고요.",
+    "아침 커피를 담아 두고, 내 컵엔 어떤 모양이 흘렀나 한참 들여다보게 될 거예요. 주문하시면 같은 모양은 절대 안 나와요, 그건 감안해 주세요!",
+    "유약 흘림 머그컵 32,000원"
+   ]
+  },
+  "stats": {
+   "rid": "0c7152af",
+   "model": "claude-opus-5-5",
+   "check_mode": "report",
+   "effort": [
+    "medium",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 380,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 19999,
+     "in": 480,
+     "out": 2539,
+     "cache_w": 0,
+     "cache_r": 7578,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 17529,
+     "in": 2050,
+     "out": 2060,
+     "cache_w": 0,
+     "cache_r": 8573,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 15,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 1,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 10,
+   "roles": {
+    "fact": 6,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 37541,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 2530,
+   "out": 4599,
+   "cache_w": 0,
+   "cache_r": 16151
+  },
+  "krw": 152.0,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "콩이(공방고양이) 사진도 같이 올릴까 고민중.."
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "유약 흘림 머그컵",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "32,000원",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "이번에 가마 새로 돌린거 나왔는데요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "꺼내놓고 보니까 컵마다 흐른 모양이 다 달라요..",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "어떤건 물방울 맺힌거같고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "어떤건 산 능선같고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "원래는 다 깔끔하게 떨어지게 하려던건데 이게 더 이쁜거같아서 그냥 이대로 팔기로 함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "용량은 350정도?",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F10",
+      "quote": "손잡이는 좀 두껍게 만들었어요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F11",
+      "quote": "제가 손이 작아서 얇으면 불안하더라구요",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F12",
+      "quote": "지난주에 단골분이 하나 미리 가져가셨는데",
+      "kind": "customer_fact",
+      "convertible_to": null
+     },
+     {
+      "id": "F13",
+      "quote": "이거에 커피마시면 맛이 다른거 같다고 하셔서 웃었어요 ㅋㅋ 그럴리가요..",
+      "kind": "customer_fact",
+      "convertible_to": null
+     },
+     {
+      "id": "F14",
+      "quote": "전자렌지 식세기 되고요",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F15",
+      "quote": "주문하면 같은 모양은 절대 안나와요",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "유약 흘림 머그컵",
+     "name_fact_id": "F1",
+     "price_fact_id": "F2"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "물방울 맺힌거같고",
+      "fact_id": "F6"
+     },
+     {
+      "id": "D2",
+      "phrase": "산 능선같고",
+      "fact_id": "F7"
+     },
+     {
+      "id": "D3",
+      "phrase": "망했다 싶었는데",
+      "fact_id": "F4"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6",
+      "F7",
+      "F15"
+     ],
+     "note": "유약이 흐른 모양이 컵마다 달라 세상에 하나뿐인 컵"
+    },
+    "common_knowledge": [
+     {
+      "about": "머그컵",
+      "note": "손잡이가 달린 큼직한 컵으로 커피나 차를 마실 때 흔히 쓴다"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F3",
+      "F4",
+      "F5",
+      "F8",
+      "F10"
+     ],
+     "note": "가마에서 꺼내 망했다 싶었다가 흐른 모양이 더 예뻐 이대로 팔기로 한 결정, 손이 작아 손잡이를 두껍게 만든 선택"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F8",
+      "F10",
+      "F11",
+      "F14"
+     ],
+     "note": "컵마다 다른 흐름 무늬, 손에 안정감 있는 두꺼운 손잡이, 전자렌지·식세기 사용 가능",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F3",
+      "F4",
+      "F5",
+      "F8"
+     ],
+     "note": "새로 돌린 가마에서 컵을 꺼내 놓고 흐른 모양을 하나씩 보는 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F2",
+      "F15"
+     ]
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "유약 흘림 머그컵",
+     "price_display": "32,000원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "이번에 가마 새로 돌린 게 나왔는데요, 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었어요.",
+      "fact_ids": [
+       "F3",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "그런데 꺼내 놓고 보니까 컵마다 흐른 모양이 다 달라요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "어떤 건 물방울 맺힌 거 같고, 어떤 건 산 능선 같고요.",
+      "fact_ids": [
+       "F6",
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "원래는 다 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 거 같아서 그냥 이대로 팔기로 했죠.",
+      "fact_ids": [
+       "F8"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "그렇게 나온 유약 흘림 머그컵이고, 용량은 350 정도예요.",
+      "fact_ids": [
+       "F1",
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "손잡이는 좀 두껍게 만들었어요, 제가 손이 작아서 얇으면 불안하더라고요.",
+      "fact_ids": [
+       "F10",
+       "F11"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "전자렌지랑 식세기도 되고요.",
+      "fact_ids": [
+       "F14"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 3,
+      "text": "아침 커피를 담아 두고, 내 컵엔 어떤 모양이 흘렀나 한참 들여다보게 될 거예요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "주문하시면 같은 모양은 절대 안 나와요, 그건 감안해 주세요!",
+      "fact_ids": [
+       "F15"
+      ],
+      "interpretation": false,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "유약 흘림 머그컵 32,000원",
+      "fact_ids": [
+       "F1",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "망했다 싶었는데, 물방울 맺힌 거 같은 머그컵",
+    "headline_fact_ids": [
+     "F4",
+     "F6",
+     "F1"
+    ]
+   }
+  }
+ }
+]

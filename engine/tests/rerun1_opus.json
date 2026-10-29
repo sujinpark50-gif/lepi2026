@@ -1,0 +1,1883 @@
+[
+ {
+  "name": "밀짚모자",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 21.2,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "못생긴 밀짚모자",
+    "price": ""
+   },
+   "headline": "추억템이 된 못생긴 밀짚모자",
+   "body": [
+    "솔직히 말하면 못생긴 밀짚모자예요. 햇볕이 너무 뜨거운 날이라면 이 모자 하나가 반가우실 거예요.",
+    "저도 국내 여행 갈 때마다 필요할 때 들고 갔거든요. 그러다 보니 어느새 추억템이 됐어요.",
+    "철원 주상절리 입장료를 내면 한 사람당 5천원 상품권을 주는데요."
+   ]
+  },
+  "stats": {
+   "rid": "afdc3179",
+   "model": "claude-opus-5-5",
+   "mode": "DEMO_SELLER",
+   "memo_len": 113,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 7812,
+     "in": 170,
+     "out": 794,
+     "cache_w": 6539,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 5610,
+     "in": 949,
+     "out": 512,
+     "cache_w": 7265,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "rewrite",
+     "ms": 7815,
+     "in": 1577,
+     "out": 870,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [
+    "NO_ADDRESS"
+   ],
+   "rewrite": true,
+   "rewrite_codes": [
+    "HEADLINE",
+    "NO_ADDRESS"
+   ],
+   "deleted_2": {
+    "UNGROUNDED": 1
+   },
+   "signals_2": [
+    "NO_ADDRESS"
+   ],
+   "deleted_final": {
+    "UNGROUNDED": 1
+   },
+   "sentences": 5,
+   "headline_fallback": false,
+   "product_gaps": [],
+   "status": "READY",
+   "ms": 21248
+  },
+  "tokens": {
+   "in": 2696,
+   "out": 2176,
+   "cache_w": 13804,
+   "cache_r": 7265
+  },
+  "krw": 176.7,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "못생긴 밀짚모자인데",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "철원 주상절리입장료내면 한사람당 5천원 상품권주는데",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "그걸 이용하면 주변상점에서 살수 있거든",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "너무 햇볕이 뜨거워서 어쩔수 없이 샀는데",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "국내 여행갈때마다 필요할때 들고갔더니",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "추억템이 됐어",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "못생긴 밀짚모자",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "못생긴 밀짚모자인데",
+      "fact_id": "F1"
+     },
+     {
+      "id": "D2",
+      "phrase": "추억템이 됐어",
+      "fact_id": "F6"
+     }
+    ],
+    "seller_scene": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "국내 여행 갈 때마다 챙겨 들고 다니다 보니 추억이 담긴 모자가 된 일"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F4",
+      "F2",
+      "F3"
+     ],
+     "note": "뜨거운 햇볕을 가려 주고, 주상절리 입장 때 받은 상품권으로 주변 상점에서 살 수 있음",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "여행마다 들고 다닌 투박한 밀짚모자"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F2",
+      "F3"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "못생긴 밀짚모자",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "솔직히 말하면 못생긴 밀짚모자예요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "햇볕이 너무 뜨거운 날이라면 이 모자 하나가 반가우실 거예요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": true,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "저도 국내 여행 갈 때마다 필요할 때 들고 갔거든요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "그러다 보니 어느새 추억템이 됐어요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "철원 주상절리 입장료를 내면 한 사람당 5천원 상품권을 주는데요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "그 상품권으로 주변 상점에서 사실 수 있어요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": true
+     }
+    ],
+    "headline": "철원 땡볕 아래서 얻은 못생긴 밀짚모자",
+    "headline_fact_ids": [
+     "F1",
+     "F2",
+     "F4"
+    ]
+   },
+   "rewrite": {
+    "product_card": {
+     "name": "못생긴 밀짚모자",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "솔직히 말하면 못생긴 밀짚모자예요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "햇볕이 너무 뜨거운 날이라면 이 모자 하나가 반가우실 거예요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": true,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "저도 국내 여행 갈 때마다 필요할 때 들고 갔거든요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "그러다 보니 어느새 추억템이 됐어요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "철원 주상절리 입장료를 내면 한 사람당 5천원 상품권을 주는데요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "주상절리에 들르셨다면 그 상품권으로 주변 상점에서 사시면 돼요.",
+      "fact_ids": [
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": true
+     }
+    ],
+    "headline": "추억템이 된 못생긴 밀짚모자",
+    "headline_fact_ids": [
+     "F1",
+     "F6"
+    ]
+   }
+  }
+ },
+ {
+  "name": "잉어킹",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 6.8,
+  "result": {
+   "status": "NEED_MORE_INFO",
+   "questions": [
+    "뽑은 잉어킹 액막이를 집에 가져와서 어디에 걸어 두거나 어떻게 두셨나요? 한 줄이면 충분해요."
+   ]
+  },
+  "stats": {
+   "rid": "958f8d2a",
+   "model": "claude-opus-5-5",
+   "mode": "DEMO_SELLER",
+   "memo_len": 121,
+   "additions": 1,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 6759,
+     "in": 234,
+     "out": 845,
+     "cache_w": 0,
+     "cache_r": 6539,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 7,
+   "facts_dropped": 0,
+   "readiness": "NEED_MORE_INFO",
+   "status": "NEED_MORE_INFO",
+   "ms": 6761
+  },
+  "tokens": {
+   "in": 234,
+   "out": 845,
+   "cache_w": 0,
+   "cache_r": 6539
+  },
+  "krw": 28.6,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [
+     "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이 이런 글귀도 있으면 좋지"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "남편이랑 포켓몬팝업이 있다고 해서 놀러갔더니",
+      "kind": "buyer_action",
+      "convertible_to": "포켓몬 팝업에서 만나실 수 있어요"
+     },
+     {
+      "id": "F2",
+      "quote": "잉어킹액막이가 있더라고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "가챠로밖에 안팔아서",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "만원이라는 큰 금액이어도",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "한번 도전해봤더니 성공해서 한번에 뽑았어",
+      "kind": "buyer_action",
+      "convertible_to": "한 번 도전해 보셔도 좋아요"
+     },
+     {
+      "id": "F6",
+      "quote": "몇달뒤에 이사 예정이어서 가지고 싶었는데",
+      "kind": "buyer_action",
+      "convertible_to": "이사를 앞두고 있다면"
+     },
+     {
+      "id": "F7",
+      "quote": "좋은 추억이었어",
+      "kind": "buyer_action",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "잉어킹액막이",
+     "name_fact_id": "F2",
+     "price_fact_id": "F4"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "잉어킹액막이",
+      "fact_id": "F2"
+     },
+     {
+      "id": "D2",
+      "phrase": "한번에 뽑았어",
+      "fact_id": "F5"
+     }
+    ],
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [
+      "F6"
+     ],
+     "note": "이사를 앞두고 갖고 싶었던 액막이",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [
+      "F6"
+     ],
+     "note": "새 집에 잉어킹 액막이를 걸어 두는 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "NEED_MORE_INFO",
+    "questions": [
+     "뽑은 잉어킹 액막이를 집에 가져와서 어디에 걸어 두거나 어떻게 두셨나요? 한 줄이면 충분해요."
+    ]
+   }
+  }
+ },
+ {
+  "name": "단풍 네일",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 16.3,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "단풍 그라데이션 네일",
+    "price": ""
+   },
+   "headline": "손 볼 때마다 웃게 되는 단풍 그라데이션 네일",
+   "body": [
+    "저도 지금 단풍 그라데이션을 하고 있어요. 손 볼 때마다 기분이 좋더라고요.",
+    "이번 달 시즌 네일은 손톱 끝만 살짝 물들인 느낌의 단풍 그라데이션이에요. 그래서 회사 다니시는 분들도 부담 없이 많이 하세요.",
+    "선선한 바람 부는 날, 산책하기 좋은 하루 보내세요."
+   ]
+  },
+  "stats": {
+   "rid": "6f079cf6",
+   "model": "claude-opus-5-5",
+   "mode": "REAL_SELLER",
+   "memo_len": 96,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 5899,
+     "in": 146,
+     "out": 663,
+     "cache_w": 0,
+     "cache_r": 6539,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 10378,
+     "in": 834,
+     "out": 1058,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 5,
+   "facts_dropped": 0,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "deleted_final": {},
+   "sentences": 5,
+   "headline_fallback": false,
+   "product_gaps": [],
+   "status": "READY",
+   "ms": 16282
+  },
+  "tokens": {
+   "in": 980,
+   "out": 1721,
+   "cache_w": 0,
+   "cache_r": 13804
+  },
+  "krw": 61.4,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "이번 달 시즌 네일은 단풍 그라데이션이에요.",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "손톱 끝만 살짝 물들인 느낌이라",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "회사 다니시는 분들도 부담 없이 많이 하세요.",
+      "kind": "customer_fact",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "저도 지금 하고 있는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "손 볼 때마다 기분 좋아요",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "단풍 그라데이션 네일",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "살짝 물들인 느낌",
+      "fact_id": "F2"
+     },
+     {
+      "id": "D2",
+      "phrase": "손 볼 때마다",
+      "fact_id": "F5"
+     }
+    ],
+    "seller_scene": {
+     "fact_ids": [
+      "F4",
+      "F5"
+     ],
+     "note": "사장님도 지금 단풍 그라데이션을 하고 있고 손을 볼 때마다 기분 좋음"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F2",
+      "F3"
+     ],
+     "note": "손톱 끝만 물들인 느낌이라 회사 다니는 분도 부담 없음",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4",
+      "F5"
+     ],
+     "note": "사장님이 자기 손톱을 보며 기분 좋아하는 순간"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "단풍 그라데이션 네일",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "저도 지금 단풍 그라데이션을 하고 있어요.",
+      "fact_ids": [
+       "F4",
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "손 볼 때마다 기분이 좋더라고요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "이번 달 시즌 네일은 손톱 끝만 살짝 물들인 느낌의 단풍 그라데이션이에요.",
+      "fact_ids": [
+       "F1",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "그래서 회사 다니시는 분들도 부담 없이 많이 하세요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "선선한 바람 부는 날, 산책하기 좋은 하루 보내세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true
+     }
+    ],
+    "headline": "손 볼 때마다 웃게 되는 단풍 그라데이션 네일",
+    "headline_fact_ids": [
+     "F5",
+     "F1"
+    ]
+   }
+  }
+ },
+ {
+  "name": "선운사 소원의 종",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 19.5,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "선운사 종",
+    "price": "만원"
+   },
+   "headline": "풍경처럼 흔들리면서 촤르르 소리나는 선운사 종",
+   "body": [
+    "선운사 종은 만원이에요. 소원나무에 걸린 종은 대부분 가족의 건강과 성공을 기원하는 거더라고요.",
+    "저도 바람에 풍경처럼 흔들리면서 촤르르 소리나니까 마음이 평안해지던걸요. 꼭 소원이 이루어진 것 같았어요.",
+    "바람 선선한 날, 가족과 편안한 하루 보내세요."
+   ]
+  },
+  "stats": {
+   "rid": "34f37b82",
+   "model": "claude-opus-5-5",
+   "mode": "DEMO_SELLER",
+   "memo_len": 142,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 7074,
+     "in": 197,
+     "out": 801,
+     "cache_w": 0,
+     "cache_r": 6539,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 4598,
+     "in": 992,
+     "out": 434,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "rewrite",
+     "ms": 7772,
+     "in": 1504,
+     "out": 799,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [],
+   "rewrite": true,
+   "rewrite_codes": [
+    "HEADLINE"
+   ],
+   "deleted_2": {},
+   "signals_2": [],
+   "deleted_final": {},
+   "sentences": 5,
+   "headline_fallback": false,
+   "product_gaps": [],
+   "status": "READY",
+   "ms": 19451
+  },
+  "tokens": {
+   "in": 2693,
+   "out": 2034,
+   "cache_w": 0,
+   "cache_r": 21069
+  },
+  "krw": 83.8,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "선운사 종은 만원인데",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "소원나무에 저렇게 대부분 가족의 건강과 성공을 기원하는 거라",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "나도 시댁어른이랑 남편이랑 간 김에 구매했어.",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "바람에 풍경처럼 흔들리면서 촤르르 소리나니까",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "마음이 평안해지면서",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "꼭 소원이 이루어진것 같더라",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "선운사 종",
+     "name_fact_id": "F1",
+     "price_fact_id": "F1"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "촤르르 소리나니까",
+      "fact_id": "F4"
+     },
+     {
+      "id": "D2",
+      "phrase": "풍경처럼 흔들리면서",
+      "fact_id": "F4"
+     }
+    ],
+    "seller_scene": {
+     "fact_ids": [
+      "F4",
+      "F5"
+     ],
+     "note": "소원나무에 걸린 종이 바람에 풍경처럼 흔들리며 촤르르 소리를 내고, 그 소리에 마음이 평안해진 순간"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F2",
+      "F5"
+     ],
+     "note": "가족의 건강과 성공을 바라는 마음을 담아 걸고, 흔들리는 소리에 마음이 평안해짐",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4",
+      "F5"
+     ],
+     "note": "바람에 흔들리며 촤르르 소리 나는 종들 앞에 선 장면"
+    },
+    "mood": "차분",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "선운사 종",
+     "price_display": "만원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "선운사 종은 만원이에요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "소원나무에 걸린 종은 대부분 가족의 건강과 성공을 기원하는 거더라고요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "저도 바람에 풍경처럼 흔들리면서 촤르르 소리나니까 마음이 평안해지던걸요.",
+      "fact_ids": [
+       "F4",
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "꼭 소원이 이루어진 것 같았어요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "바람 선선한 날, 가족과 편안한 하루 보내세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true
+     }
+    ],
+    "headline": "촤르르 소리나니까 이미 이뤄진 듯한 소원",
+    "headline_fact_ids": [
+     "F4",
+     "F6"
+    ]
+   },
+   "rewrite": {
+    "product_card": {
+     "name": "선운사 종",
+     "price_display": "만원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "선운사 종은 만원이에요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "소원나무에 걸린 종은 대부분 가족의 건강과 성공을 기원하는 거더라고요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "저도 바람에 풍경처럼 흔들리면서 촤르르 소리나니까 마음이 평안해지던걸요.",
+      "fact_ids": [
+       "F4",
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "꼭 소원이 이루어진 것 같았어요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "바람 선선한 날, 가족과 편안한 하루 보내세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true
+     }
+    ],
+    "headline": "풍경처럼 흔들리면서 촤르르 소리나는 선운사 종",
+    "headline_fact_ids": [
+     "F4",
+     "F1"
+    ]
+   }
+  }
+ },
+ {
+  "name": "무화과 찹쌀떡",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 25.4,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "무화과 찹쌀떡",
+    "price": "4500원"
+   },
+   "headline": "딸이 해 보자고 해서 시작한 무화과 찹쌀떡",
+   "body": [
+    "저희 떡집은 원래 팥찹쌀떡만 했어요.",
+    "무화과가 비싸서 처음엔 값을 더 받으려고 했거든요. 그래도 동네 어르신들 사가시라고 4500원으로 맞췄어요. 줄 서서 사는 그런 데는 아니고요."
+   ]
+  },
+  "stats": {
+   "rid": "3c69fc58",
+   "model": "claude-opus-5-5",
+   "mode": "REAL_SELLER",
+   "memo_len": 162,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 7798,
+     "in": 223,
+     "out": 911,
+     "cache_w": 0,
+     "cache_r": 6539,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 17555,
+     "in": 1181,
+     "out": 1698,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 9,
+   "facts_dropped": 0,
+   "readiness": "READY",
+   "deleted": {
+    "UNGROUNDED": 2
+   },
+   "signals": [],
+   "rewrite": false,
+   "rewrite_codes": [
+    "DELETED"
+   ],
+   "rewrite_skipped": "time",
+   "deleted_final": {
+    "UNGROUNDED": 2
+   },
+   "sentences": 4,
+   "headline_fallback": false,
+   "product_gaps": [],
+   "status": "READY",
+   "ms": 25357
+  },
+  "tokens": {
+   "in": 1404,
+   "out": 2609,
+   "cache_w": 0,
+   "cache_r": 13804
+  },
+  "krw": 88.6,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리 떡집은 원래 팥찹쌀떡만 했는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "해보자고 해서 시작함.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "무화과가 비싸서 첨엔 6천원 받으려다가",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "동네 어르신들 사가시라고 4500원으로 맞췄음.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "4500원으로",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "무화과 철 끝나는 11월 중순까지만 함.",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "줄 서서 사는 그런 데 아니고",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "그냥 아침에 만들어서 다 팔리면 끝",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "과일찹쌀떡",
+      "kind": "product",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "무화과 찹쌀떡",
+     "name_fact_id": "F9",
+     "price_fact_id": "F5"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "다 팔리면 끝",
+      "fact_id": "F8"
+     },
+     {
+      "id": "D2",
+      "phrase": "동네 어르신들 사가시라고",
+      "fact_id": "F4"
+     }
+    ],
+    "seller_scene": {
+     "fact_ids": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ],
+     "note": "팥찹쌀떡만 하던 떡집이 딸과 무화과찹쌀떡을 시작하고, 비싼 무화과에도 동네 어르신들 위해 값을 6천원에서 4500원으로 내린 결정"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F4",
+      "F6",
+      "F8"
+     ],
+     "note": "동네 어르신도 부담 없게 맞춘 값, 무화과 철에만 아침마다 만드는 떡",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F3",
+      "F4"
+     ],
+     "note": "값을 정하며 동네 어르신을 떠올린 장면"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F6",
+      "F8"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "무화과 찹쌀떡",
+     "price_display": "4500원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "저희 떡집은 원래 팥찹쌀떡만 했어요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "그러다 과일찹쌀떡으로 무화과를 넣어 보게 됐죠.",
+      "fact_ids": [
+       "F2",
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과가 비싸서 처음엔 값을 더 받으려고 했거든요.",
+      "fact_ids": [
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "그래도 동네 어르신들 사가시라고 4500원으로 맞췄어요.",
+      "fact_ids": [
+       "F4",
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "줄 서서 사는 그런 데는 아니고요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "무화과 철 끝나는 11월 중순까지만 하고, 아침에 만들어서 다 팔리면 끝이니 일찍 들러 주세요.",
+      "fact_ids": [
+       "F6",
+       "F8"
+      ],
+      "interpretation": false,
+      "is_ending": true
+     }
+    ],
+    "headline": "딸이 해 보자고 해서 시작한 무화과 찹쌀떡",
+    "headline_fact_ids": [
+     "F2",
+     "F9"
+    ]
+   }
+  }
+ },
+ {
+  "name": "반려돌 키트",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 25.7,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "이름 지어주는 반려돌 키트",
+    "price": ""
+   },
+   "headline": "강가에서 데려온 돌에 눈을 붙였더니 생긴 반려돌",
+   "body": [
+    "한탄강에 갔을 때 주운 돌이 동글동글해서, 눈을 붙여 책상에 뒀어요. 회사에서 힘들 때 쳐다보면 웃겨서 좀 나아지더라고요.",
+    "그래서 돌이랑 눈스티커, 이름표를 넣은 이름 지어주는 반려돌 키트로 팔아 볼까 생각 중이에요. 책상 위에 웃을 거리가 필요하셨다면, 이름부터 미리 떠올려 두셔도 좋아요.",
+    "아직 판매는 안 하고 준비 중이고, 가격도 미정이에요."
+   ]
+  },
+  "stats": {
+   "rid": "e2392392",
+   "model": "claude-opus-5-5",
+   "mode": "REAL_SELLER",
+   "memo_len": 169,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 8005,
+     "in": 238,
+     "out": 886,
+     "cache_w": 0,
+     "cache_r": 6539,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 5349,
+     "in": 1166,
+     "out": 582,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "rewrite",
+     "ms": 12341,
+     "in": 1907,
+     "out": 1069,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 7,
+   "facts_dropped": 0,
+   "readiness": "READY",
+   "deleted": {
+    "SELLER_UNGROUNDED": 1,
+    "UNGROUNDED": 1
+   },
+   "signals": [
+    "NO_ADDRESS"
+   ],
+   "rewrite": true,
+   "rewrite_codes": [
+    "DELETED",
+    "NO_ADDRESS"
+   ],
+   "deleted_2": {
+    "UNGROUNDED": 1
+   },
+   "signals_2": [],
+   "deleted_final": {
+    "UNGROUNDED": 1
+   },
+   "sentences": 5,
+   "headline_fallback": false,
+   "product_gaps": [],
+   "status": "READY",
+   "ms": 25703
+  },
+  "tokens": {
+   "in": 3311,
+   "out": 2537,
+   "cache_w": 0,
+   "cache_r": 21069
+  },
+  "krw": 101.4,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "이름 지어주는 반려돌 키트",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "(판매 준비 중)",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "가격 미정",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "아직 판매는 안하고 준비중임.",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "한탄강 갔을때 주운 돌이 동글동글해서 눈 붙여서 책상에 뒀는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "회사에서 힘들때 쳐다보면 웃겨서 좀 나아짐.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "돌이랑 눈스티커랑 이름표 넣어서 키트로 팔아볼까 생각중.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "이름 지어주는 반려돌 키트",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "동글동글해서",
+      "fact_id": "F5"
+     },
+     {
+      "id": "D2",
+      "phrase": "반려돌",
+      "fact_id": "F1"
+     },
+     {
+      "id": "D3",
+      "phrase": "쳐다보면 웃겨서",
+      "fact_id": "F6"
+     }
+    ],
+    "seller_scene": {
+     "fact_ids": [
+      "F5",
+      "F6",
+      "F7"
+     ],
+     "note": "강가에서 만난 동글동글한 돌에 눈을 붙여 책상에 두고, 회사에서 힘들 때 쳐다보며 웃다가 키트로 만들어 보기로 한 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F6",
+      "F7"
+     ],
+     "note": "힘들 때 쳐다보면 웃음이 나는 작은 책상 친구를 돌·눈스티커·이름표 키트로 직접 만들어 볼 수 있음",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "회사 책상 위 눈 붙인 동글동글한 돌을 보며 피식 웃는 순간"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "promise",
+     "fact_ids": [
+      "F4"
+     ]
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "이름 지어주는 반려돌 키트",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "한탄강에 갔을 때 주운 돌이 동글동글해서, 눈을 붙여 책상에 뒀어요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "회사에서 힘들 때 쳐다보면 웃겨서 좀 나아지더라고요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "그래서 돌이랑 눈스티커, 이름표를 넣은 이름 지어주는 반려돌 키트로 팔아 볼까 생각 중이에요.",
+      "fact_ids": [
+       "F7",
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "어떤 이름을 붙여 줄지 고민하는 시간도 꽤 재밌을 거예요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": true,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "아직 판매는 안 하고 준비 중이고, 가격도 미정이에요.",
+      "fact_ids": [
+       "F4",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "준비가 끝나면 여기서 먼저 알려 드릴게요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": true
+     }
+    ],
+    "headline": "강가에서 데려온 돌에 눈을 붙였더니 생긴 반려돌",
+    "headline_fact_ids": [
+     "F5",
+     "F1"
+    ]
+   },
+   "rewrite": {
+    "product_card": {
+     "name": "이름 지어주는 반려돌 키트",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "한탄강에 갔을 때 주운 돌이 동글동글해서, 눈을 붙여 책상에 뒀어요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "회사에서 힘들 때 쳐다보면 웃겨서 좀 나아지더라고요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "그래서 돌이랑 눈스티커, 이름표를 넣은 이름 지어주는 반려돌 키트로 팔아 볼까 생각 중이에요.",
+      "fact_ids": [
+       "F7",
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "책상 위에 웃을 거리가 필요하셨다면, 이름부터 미리 떠올려 두셔도 좋아요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": true,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "아직 판매는 안 하고 준비 중이고, 가격도 미정이에요.",
+      "fact_ids": [
+       "F4",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "준비가 되면 알려 드릴게요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": true
+     }
+    ],
+    "headline": "강가에서 데려온 돌에 눈을 붙였더니 생긴 반려돌",
+    "headline_fact_ids": [
+     "F5",
+     "F1"
+    ]
+   }
+  }
+ },
+ {
+  "name": "유약 흘림 머그컵",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 19.2,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "유약 흘림 머그컵",
+    "price": "32,000원"
+   },
+   "headline": "첨엔 망했다 싶었는데, 가마 문을 여니 산 능선같고",
+   "body": [
+    "이번에 가마를 새로 돌린 게 나왔는데요, 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었는데 말이죠. 꺼내 놓고 보니까 컵마다 흐른 모양이 다 달라요. 어떤 건 물방울 맺힌거같고, 어떤 건 산 능선같고요. 원래는 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 것 같아서 그냥 이대로 팔기로 했어요.",
+    "손잡이는 좀 두껍게 만들었어요. 제가 손이 작아서 얇으면 불안하더라고요. 용량은 350 정도고, 전자레인지랑 식세기 다 돼요.",
+    "아침마다 오늘은 어느 쪽 모양이 보이나 돌려 보는 재미도 있겠죠. 유약 흘림 머그컵은 32,000원이에요. 주문하시면 같은 모양은 절대 안 나오니, 그건 감안해 주세요. 궁금한 모양이 있으면 물어보세요, 사진으로 알려 드릴게요."
+   ]
+  },
+  "stats": {
+   "rid": "4efa2286",
+   "model": "claude-opus-5-5",
+   "mode": "REAL_SELLER",
+   "memo_len": 380,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 10313,
+     "in": 480,
+     "out": 1253,
+     "cache_w": 0,
+     "cache_r": 6539,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 8927,
+     "in": 1803,
+     "out": 948,
+     "cache_w": 0,
+     "cache_r": 7265,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 13,
+   "facts_dropped": 0,
+   "readiness": "READY",
+   "deleted": {},
+   "signals": [
+    "ENDING_INVITE"
+   ],
+   "rewrite": false,
+   "deleted_final": {},
+   "sentences": 11,
+   "headline_fallback": false,
+   "product_gaps": [],
+   "status": "READY",
+   "ms": 19249
+  },
+  "tokens": {
+   "in": 2283,
+   "out": 2201,
+   "cache_w": 0,
+   "cache_r": 13804
+  },
+  "krw": 82.1,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "콩이(공방고양이) 사진도 같이 올릴까 고민중.."
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "유약 흘림 머그컵",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "32,000원",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "이번에 가마 새로 돌린거 나왔는데요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "꺼내놓고 보니까 컵마다 흐른 모양이 다 달라요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "어떤건 물방울 맺힌거같고 어떤건 산 능선같고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "원래는 다 깔끔하게 떨어지게 하려던건데 이게 더 이쁜거같아서 그냥 이대로 팔기로 함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "용량은 350정도?",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "손잡이는 좀 두껍게 만들었어요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F10",
+      "quote": "제가 손이 작아서 얇으면 불안하더라구요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F11",
+      "quote": "지난주에 단골분이 하나 미리 가져가셨는데",
+      "kind": "customer_fact",
+      "convertible_to": null
+     },
+     {
+      "id": "F12",
+      "quote": "전자렌지 식세기 되고요",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F13",
+      "quote": "주문하면 같은 모양은 절대 안나와요 그건 감안해주세요!!",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "유약 흘림 머그컵",
+     "name_fact_id": "F1",
+     "price_fact_id": "F2"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "물방울 맺힌거같고",
+      "fact_id": "F6"
+     },
+     {
+      "id": "D2",
+      "phrase": "산 능선같고",
+      "fact_id": "F6"
+     },
+     {
+      "id": "D3",
+      "phrase": "첨엔 망했다 싶었는데",
+      "fact_id": "F4"
+     }
+    ],
+    "seller_scene": {
+     "fact_ids": [
+      "F3",
+      "F4",
+      "F5",
+      "F7",
+      "F9",
+      "F10"
+     ],
+     "note": "가마에서 유약이 많이 흘러 망했다 싶었다가, 꺼내 보니 컵마다 모양이 달라 이대로 팔기로 한 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F6",
+      "F9",
+      "F10",
+      "F13"
+     ],
+     "note": "컵마다 흐른 모양이 다 달라 하나뿐이고, 손이 작은 사장님이 손잡이를 두껍게 만들어 잡기 편함",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F3",
+      "F4",
+      "F5",
+      "F7"
+     ],
+     "note": "가마에서 꺼낸 컵들을 보며 망한 줄 알았다가 더 예쁘다고 결정하는 순간"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "promise",
+     "fact_ids": []
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "유약 흘림 머그컵",
+     "price_display": "32,000원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "이번에 가마를 새로 돌린 게 나왔는데요, 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었는데 말이죠.",
+      "fact_ids": [
+       "F3",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "꺼내 놓고 보니까 컵마다 흐른 모양이 다 달라요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "어떤 건 물방울 맺힌거같고, 어떤 건 산 능선같고요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 1,
+      "text": "원래는 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 것 같아서 그냥 이대로 팔기로 했어요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "손잡이는 좀 두껍게 만들었어요.",
+      "fact_ids": [
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "제가 손이 작아서 얇으면 불안하더라고요.",
+      "fact_ids": [
+       "F10"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 2,
+      "text": "용량은 350 정도고, 전자레인지랑 식세기 다 돼요.",
+      "fact_ids": [
+       "F8",
+       "F12"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "아침마다 오늘은 어느 쪽 모양이 보이나 돌려 보는 재미도 있겠죠.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": true,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "유약 흘림 머그컵은 32,000원이에요.",
+      "fact_ids": [
+       "F1",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "주문하시면 같은 모양은 절대 안 나오니, 그건 감안해 주세요.",
+      "fact_ids": [
+       "F13"
+      ],
+      "interpretation": false,
+      "is_ending": false
+     },
+     {
+      "paragraph": 3,
+      "text": "궁금한 모양이 있으면 물어보세요, 사진으로 알려 드릴게요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true
+     }
+    ],
+    "headline": "첨엔 망했다 싶었는데, 가마 문을 여니 산 능선같고",
+    "headline_fact_ids": [
+     "F4",
+     "F6",
+     "F3"
+    ]
+   }
+  }
+ }
+]

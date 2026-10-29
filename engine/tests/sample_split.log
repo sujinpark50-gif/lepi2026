@@ -1,0 +1,55 @@
+lepi_run {"rid": "00f323bb", "model": ["claude-sonnet-5-5", "claude-opus-5-5"], "check_mode": "report", "effort": ["low", "medium"], "mode": "DEMO_SELLER", "memo_len": 121, "additions": 1, "calls": [{"name": "analyzer", "ms": 12449, "in": 234, "out": 1938, "cache_w": 8026, "cache_r": 0, "stop": "end_turn", "served": "claude-sonnet-5-5"}, {"name": "writer", "ms": 23374, "in": 1165, "out": 2290, "cache_w": 9502, "cache_r": 0, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 8, "facts_dropped": 0, "charm": true, "season": false, "ck": 1, "ck_dropped": 0, "readiness": "READY", "gate": "story_buy", "deleted": {"PROPER": 1}, "signals": [], "rewrite": false, "would": {"delete": {"PROPER": 1}, "rewrite_reasons": [], "ratio_over": true, "headline_fail": [], "product_gaps": [], "status": "READY", "price_card_fix": false}, "sentences": 7, "roles": {"fact": 1, "charm": 3, "scene": 1, "ending": 1, "info": 1}, "status": "READY", "ms": 35831, "over_prod": false}
+
+### 잉어킹 · DEMO_SELLER · READY · 35.8초 · 호출 2회 · 재작성 아니오
+  토큰 입력 1399 / 출력 4228 / 캐시쓰기 17528 / 캐시읽기 0 · 193.0원
+  1차 지운 문장: {'PROPER': 1} · 신호: []
+  최종 지운 문장: {}
+  [report] 했을 삭제 {'PROPER': 1} · 재작성 사유 [] · 비율 초과 True · 제목 실패 [] · 상품 빈칸 [] · 결과 상태 READY
+  호출 ms [('analyzer', 12449), ('writer', 23374)] · 운영 시간 초과였을지 아니오
+  charm True · 상식 1(버림 0) · 계절 False · 역할 {'fact': 1, 'charm': 3, 'scene': 1, 'ending': 1, 'info': 1} · 고침 role 0/ending 0
+{
+ "status": "READY",
+ "product_card": {
+  "name": "잉어킹액막이",
+  "price": "만원"
+ },
+ "headline": "힘없어 보여도 든든한 잉어킹액막이",
+ "body": [
+  "잉어킹액막이예요. 별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이죠. 잉어킹은 퍼덕이기만 하는 것 같아도 버티다 보면 아주 센 캐릭터가 되거든요. 보고 있으면 괜히 웃음이 나는 얼굴이에요.",
+  "현관 옆에 걸어 두면, 문을 나서는 아침마다 잉어킹과 눈이 마주칠 거예요. 오늘도 무탈한 하루 보내세요.",
+  "잉어킹액막이 만원 · 포켓몬팝업 가챠로만"
+ ]
+}
+lepi_run {"rid": "c7b51f91", "model": ["claude-sonnet-5-5", "claude-opus-5-5"], "check_mode": "report", "effort": ["low", "medium"], "mode": "REAL_SELLER", "memo_len": 162, "additions": 0, "calls": [{"name": "analyzer", "ms": 6129, "in": 223, "out": 865, "cache_w": 0, "cache_r": 8026, "stop": "end_turn", "served": "claude-sonnet-5-5"}, {"name": "writer", "ms": 22540, "in": 1079, "out": 2343, "cache_w": 0, "cache_r": 9502, "stop": "end_turn", "served": "claude-opus-5-5"}], "facts": 8, "facts_dropped": 0, "charm": false, "season": true, "ck": 0, "ck_dropped": 1, "readiness": "READY", "gate": "scene", "deleted": {}, "signals": [], "rewrite": false, "would": {"delete": {}, "rewrite_reasons": [], "ratio_over": false, "headline_fail": [], "product_gaps": [], "status": "READY", "price_card_fix": false}, "sentences": 9, "roles": {"fact": 5, "charm": 1, "scene": 1, "ending": 1, "info": 1}, "status": "READY", "ms": 28676, "over_prod": false}
+
+### 무화과 찹쌀떡 · REAL_SELLER · READY · 28.7초 · 호출 2회 · 재작성 아니오
+  토큰 입력 1302 / 출력 3208 / 캐시쓰기 0 / 캐시읽기 17528 · 91.9원
+  1차 지운 문장: {} · 신호: []
+  최종 지운 문장: {}
+  [report] 했을 삭제 {} · 재작성 사유 [] · 비율 초과 False · 제목 실패 [] · 상품 빈칸 [] · 결과 상태 READY
+  호출 ms [('analyzer', 6129), ('writer', 22540)] · 운영 시간 초과였을지 아니오
+  charm False · 상식 0(버림 1) · 계절 True · 역할 {'fact': 5, 'charm': 1, 'scene': 1, 'ending': 1, 'info': 1} · 고침 role 0/ending 0
+{
+ "status": "READY",
+ "product_card": {
+  "name": "무화과 찹쌀떡",
+  "price": "4500원"
+ },
+ "headline": "팥찹쌀떡만 하던 떡집의 무화과 찹쌀떡",
+ "body": [
+  "무화과 철이라 무화과 찹쌀떡을 시작했어요. 저희 떡집은 원래 팥찹쌀떡만 했거든요. 딸이 해 보자고 해서 시작하게 됐죠.",
+  "무화과가 비싸서 처음엔 더 받으려고 했어요. 그러다 동네에서 사 가시라고 값을 맞췄네요. 무화과 하나를 품은 동그란 떡, 보기만 해도 웃음이 나요.",
+  "선선한 아침, 떡 하나 사 들고 들어가 따뜻한 차 한 잔 곁에 두고 천천히 드세요. 아침에 만들어서 다 팔리면 끝이에요.",
+  "무화과 찹쌀떡 4500원 · 무화과 철 끝나는 11월 중순까지"
+ ]
+}
+
+## 변환 한 번당 평균 (claude-sonnet-5-5 + claude-opus-5-5, 2개)
+  시간 32.2초 · 호출 2.00회 · 재작성 0/2
+  입력 1350 · 출력 3718 · 캐시쓰기 8764 · 캐시읽기 8764 토큰
+  원가 142.4원 (1달러 1400원, 최대 193.0원)
+  상태 {'READY': 2}
+  운영 기준(42초·호출 25초)이면 시간 초과였을 테스트 0/2
+  [report] 했을 삭제 합계 {'PROPER': 1} · 재작성됐을 글 0/2 · 사유별 {} · 제목 실패 0 · 비율 초과 1
+
+결과 저장: C:\Users\노랑털뭉치\Documents\GitHub\Lepi\engine\tests\sample_split.json

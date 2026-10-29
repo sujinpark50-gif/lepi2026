@@ -1,0 +1,642 @@
+[
+ {
+  "name": "밀짚모자",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 29.4,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "밀짚모자",
+    "price": ""
+   },
+   "headline": "여행 갈 때마다 들고 간 밀짚모자, 추억템이 됐어요",
+   "body": [
+    "뜨거운 여름 햇볕 아래, 모자 하나가 머리 위 작은 그늘이 되어 주죠. 오늘은 이 밀짚모자 이야기예요. 저도 국내 여행 갈 때마다 필요할 때 들고 갔더니, 추억템이 됐어요.",
+    "여름 산길에서 모자를 툭 눌러쓰고 찍은 사진 한 장, 나중에 꺼내 보면 웃음이 나겠죠. 가방 위에 얹어만 둬도 벌써 여행 가는 기분이 나요. 철원 주상절리에 가신다면, 입장료를 내면 한 사람당 주는 상품권으로 주변 상점에서 살 수 있어요.",
+    "철원 주상절리 입장료 내면 한 사람당 5천원 상품권 · 주변 상점에서 상품권 이용"
+   ]
+  },
+  "stats": {
+   "rid": "017610f2",
+   "model": [
+    "claude-sonnet-5-5",
+    "claude-opus-5-5"
+   ],
+   "check_mode": "light",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "DEMO_SELLER",
+   "memo_len": 113,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 5738,
+     "in": 170,
+     "out": 784,
+     "cache_w": 8026,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 23664,
+     "in": 946,
+     "out": 2309,
+     "cache_w": 9688,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 6,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [
+    "STEM_REPEAT",
+    "NO_ADDRESS"
+   ],
+   "rewrite": false,
+   "light_deleted": {},
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [
+     "NO_ADDRESS"
+    ],
+    "ratio_over": true,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 7,
+   "roles": {
+    "fact": 1,
+    "charm": 1,
+    "scene": 3,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 29413,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1116,
+   "out": 3093,
+   "cache_w": 17714,
+   "cache_r": 0
+  },
+  "krw": 177.3,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "밀짚모자인데",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "철원 주상절리입장료내면 한사람당 5천원 상품권주는데",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "그걸 이용하면 주변상점에서 살수 있거든",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "너무 햇볕이 뜨거워서 어쩔수 없이 샀는데",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "국내 여행갈때마다 필요할때 들고갔더니",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "추억템이 됐어",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "밀짚모자",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "추억템",
+      "fact_id": "F6"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "여행 때마다 들고 다니며 추억템이 되는 모자"
+    },
+    "common_knowledge": [
+     {
+      "about": "밀짚모자",
+      "note": "햇볕을 가려 주는 여름 모자"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F5"
+     ],
+     "note": "국내 여행 갈 때마다 필요할 때 들고 간 모습"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F4"
+     ],
+     "note": "뜨거운 햇볕을 가리려고 마련한 모자",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F5"
+     ],
+     "note": "여행길마다 밀짚모자를 들고 다니며 햇볕을 가리는 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F2",
+      "F3"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "밀짚모자",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "뜨거운 여름 햇볕 아래, 모자 하나가 머리 위 작은 그늘이 되어 주죠.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 1,
+      "text": "오늘은 이 밀짚모자 이야기예요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "저도 국내 여행 갈 때마다 필요할 때 들고 갔더니, 추억템이 됐어요.",
+      "fact_ids": [
+       "F5",
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "여름 산길에서 모자를 툭 눌러쓰고 찍은 사진 한 장, 나중에 꺼내 보면 웃음이 나겠죠.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "가방 위에 얹어만 둬도 벌써 여행 가는 기분이 나요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "철원 주상절리에 가신다면, 입장료를 내면 한 사람당 주는 상품권으로 주변 상점에서 살 수 있어요.",
+      "fact_ids": [
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 2,
+      "text": "철원 주상절리 입장료 내면 한 사람당 5천원 상품권 · 주변 상점에서 상품권 이용",
+      "fact_ids": [
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "여행 갈 때마다 들고 간 밀짚모자, 추억템이 됐어요",
+    "headline_fact_ids": [
+     "F1",
+     "F5",
+     "F6"
+    ]
+   }
+  }
+ },
+ {
+  "name": "유약 흘림 머그컵",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 30.1,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "유약 흘림 머그컵",
+    "price": "32,000원"
+   },
+   "headline": "컵마다 흐른 모양이 다 달라요, 물방울도 산 능선도",
+   "body": [
+    "이번에 가마 새로 돌린 거 나왔는데요, 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었어요. 그런데 꺼내 놓고 보니까 컵마다 흐른 모양이 다 달라요. 어떤 건 물방울 맺힌거같고 어떤 건 산 능선같고요.",
+    "원래는 다 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 거 같아서 그냥 이대로 팔기로 했어요. 그렇게 나온 유약 흘림 머그컵이에요. 손잡이는 좀 두껍게 만들었어요, 제가 손이 작아서 얇으면 불안하더라고요. 전자렌지랑 식세기도 다 돼요.",
+    "아침에 커피를 따르고 두 손으로 감싸 쥐면, 내 컵에는 어떤 모양이 흘렀는지 한참 들여다보게 될 거예요. 주문하시면 같은 모양은 절대 안 나와요, 그건 감안해 주세요.",
+    "유약 흘림 머그컵 32,000원 · 용량 350정도"
+   ]
+  },
+  "stats": {
+   "rid": "3bf1d4c8",
+   "model": [
+    "claude-sonnet-5-5",
+    "claude-opus-5-5"
+   ],
+   "check_mode": "light",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 380,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 7505,
+     "in": 480,
+     "out": 1208,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 22582,
+     "in": 1748,
+     "out": 2600,
+     "cache_w": 0,
+     "cache_r": 9688,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 11,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "light_deleted": {},
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 10,
+   "roles": {
+    "fact": 5,
+    "charm": 2,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 30098,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 2228,
+   "out": 3808,
+   "cache_w": 0,
+   "cache_r": 17714
+  },
+  "krw": 108.5,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [
+     "콩이(공방고양이) 사진도 같이 올릴까 고민중.."
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "유약 흘림 머그컵",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "32,000원",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "이번에 가마 새로 돌린거 나왔는데요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "꺼내놓고 보니까 컵마다 흐른 모양이 다 달라요..",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "어떤건 물방울 맺힌거같고 어떤건 산 능선같고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "원래는 다 깔끔하게 떨어지게 하려던건데 이게 더 이쁜거같아서 그냥 이대로 팔기로 함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "용량은 350정도?",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F9",
+      "quote": "손잡이는 좀 두껍게 만들었어요 제가 손이 작아서 얇으면 불안하더라구요",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F10",
+      "quote": "전자렌지 식세기 되고요",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F11",
+      "quote": "주문하면 같은 모양은 절대 안나와요",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "유약 흘림 머그컵",
+     "name_fact_id": "F1",
+     "price_fact_id": "F2"
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "물방울 맺힌거같고",
+      "fact_id": "F6"
+     },
+     {
+      "id": "D2",
+      "phrase": "산 능선같고",
+      "fact_id": "F6"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "컵마다 유약이 흐른 모양이 달라 물방울이나 산 능선처럼 보이는 것"
+    },
+    "common_knowledge": [
+     {
+      "about": "머그컵",
+      "note": "따뜻한 음료를 담아 마시는 손잡이 달린 컵"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F3",
+      "F4",
+      "F7",
+      "F9"
+     ],
+     "note": "새로 돌린 가마에서 유약이 흘러 망했다 싶었지만 꺼내 보니 더 예뻐서 그대로 팔기로 한 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F7"
+     ],
+     "note": "유약이 흘러 컵마다 모양이 달라졌고, 판매자가 더 예쁘다고 보고 그대로 팔기로 함",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4",
+      "F7"
+     ],
+     "note": "가마에서 꺼낸 컵을 보고 망했다 싶다가 더 예쁘다고 마음을 바꾸는 순간"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F11"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "유약 흘림 머그컵",
+     "price_display": "32,000원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "이번에 가마 새로 돌린 거 나왔는데요, 유약이 생각보다 많이 흘러내려서 첨엔 망했다 싶었어요.",
+      "fact_ids": [
+       "F3",
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "그런데 꺼내 놓고 보니까 컵마다 흐른 모양이 다 달라요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "어떤 건 물방울 맺힌거같고 어떤 건 산 능선같고요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "원래는 다 깔끔하게 떨어지게 하려던 건데, 이게 더 이쁜 거 같아서 그냥 이대로 팔기로 했어요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "그렇게 나온 유약 흘림 머그컵이에요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "손잡이는 좀 두껍게 만들었어요, 제가 손이 작아서 얇으면 불안하더라고요.",
+      "fact_ids": [
+       "F9"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "전자렌지랑 식세기도 다 돼요.",
+      "fact_ids": [
+       "F10"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 3,
+      "text": "아침에 커피를 따르고 두 손으로 감싸 쥐면, 내 컵에는 어떤 모양이 흘렀는지 한참 들여다보게 될 거예요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "주문하시면 같은 모양은 절대 안 나와요, 그건 감안해 주세요.",
+      "fact_ids": [
+       "F11"
+      ],
+      "interpretation": false,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "유약 흘림 머그컵 32,000원 · 용량 350정도",
+      "fact_ids": [
+       "F1",
+       "F2",
+       "F8"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "컵마다 흐른 모양이 다 달라요, 물방울도 산 능선도",
+    "headline_fact_ids": [
+     "F5",
+     "F6"
+    ]
+   }
+  }
+ }
+]

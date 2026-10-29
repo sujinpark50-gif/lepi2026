@@ -1,0 +1,588 @@
+[
+ {
+  "name": "잉어킹",
+  "scenario_mode": "DEMO_SELLER",
+  "seconds": 35.8,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "잉어킹액막이",
+    "price": "만원"
+   },
+   "headline": "힘없어 보여도 든든한 잉어킹액막이",
+   "body": [
+    "잉어킹액막이예요. 별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이죠. 잉어킹은 퍼덕이기만 하는 것 같아도 버티다 보면 아주 센 캐릭터가 되거든요. 보고 있으면 괜히 웃음이 나는 얼굴이에요.",
+    "현관 옆에 걸어 두면, 문을 나서는 아침마다 잉어킹과 눈이 마주칠 거예요. 오늘도 무탈한 하루 보내세요.",
+    "잉어킹액막이 만원 · 포켓몬팝업 가챠로만"
+   ]
+  },
+  "stats": {
+   "rid": "00f323bb",
+   "model": [
+    "claude-sonnet-5-5",
+    "claude-opus-5-5"
+   ],
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "DEMO_SELLER",
+   "memo_len": 121,
+   "additions": 1,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 12449,
+     "in": 234,
+     "out": 1938,
+     "cache_w": 8026,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 23374,
+     "in": 1165,
+     "out": 2290,
+     "cache_w": 9502,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 8,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "story_buy",
+   "deleted": {
+    "PROPER": 1
+   },
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {
+     "PROPER": 1
+    },
+    "rewrite_reasons": [],
+    "ratio_over": true,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 7,
+   "roles": {
+    "fact": 1,
+    "charm": 3,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 35831,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1399,
+   "out": 4228,
+   "cache_w": 17528,
+   "cache_r": 0
+  },
+  "krw": 193.0,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "DEMO_SELLER",
+    "meta_instructions": [
+     "이런 글귀도 있으면 좋지"
+    ],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "포켓몬팝업이 있다고 해서 놀러갔더니",
+      "kind": "buyer_action",
+      "convertible_to": "포켓몬 팝업에서 만나볼 수 있어요"
+     },
+     {
+      "id": "F2",
+      "quote": "잉어킹액막이가 있더라고",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "가챠로밖에 안팔아서",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "만원이라는",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "한번 도전해봤더니 성공해서 한번에 뽑았어",
+      "kind": "buyer_action",
+      "convertible_to": "한 번 도전해 보셔도 좋아요"
+     },
+     {
+      "id": "F6",
+      "quote": "몇달뒤에 이사 예정이어서 가지고 싶었는데",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "좋은 추억이었어",
+      "kind": "buyer_action",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이",
+      "kind": "seller_feeling",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "잉어킹액막이",
+     "name_fact_id": "F2",
+     "price_fact_id": "F4"
+    },
+    "distinctive_phrases": [],
+    "charm": {
+     "fact_ids": [
+      "F2",
+      "F8"
+     ],
+     "note": "별일 없이 잘 지나가길 바라는 마음을 걸어두는 작은 잉어킹 액막이"
+    },
+    "common_knowledge": [
+     {
+      "about": "잉어킹",
+      "note": "잉어킹은 힘없는 캐릭터지만 버티다 보면 아주 센 캐릭터가 된다"
+     }
+    ],
+    "season": null,
+    "seller_scene": null,
+    "why_this_one": {
+     "fact_ids": [
+      "F6",
+      "F8"
+     ],
+     "note": "이사를 앞두고 별일 없이 잘 지나가길 바라는 마음을 걸어두기 좋음",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "customer_imagined",
+     "fact_ids": [
+      "F6"
+     ],
+     "note": "이사를 앞둔 손님이 잉어킹액막이를 곁에 걸어두고 별일 없이 지나가길 바라는 순간"
+    },
+    "mood": "다정",
+    "ending": {
+     "type": "greeting",
+     "fact_ids": []
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "잉어킹액막이",
+     "price_display": "만원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "잉어킹액막이예요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "별일 없이 잘 지나가자는 마음을 걸어두는 작은 액막이죠.",
+      "fact_ids": [
+       "F8",
+       "F2"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "잉어킹은 퍼덕이기만 하는 것 같아도 버티다 보면 아주 센 캐릭터가 되거든요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "보고 있으면 괜히 웃음이 나는 얼굴이에요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "현관 옆에 걸어 두면, 문을 나서는 아침마다 잉어킹과 눈이 마주칠 거예요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 2,
+      "text": "오늘도 무탈한 하루 보내세요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 2,
+      "text": "잉어킹액막이 만원 · 포켓몬팝업 가챠로만",
+      "fact_ids": [
+       "F2",
+       "F4",
+       "F1",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "힘없어 보여도 든든한 잉어킹액막이",
+    "headline_fact_ids": [
+     "F2",
+     "F8"
+    ]
+   }
+  }
+ },
+ {
+  "name": "무화과 찹쌀떡",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 28.7,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "무화과 찹쌀떡",
+    "price": "4500원"
+   },
+   "headline": "팥찹쌀떡만 하던 떡집의 무화과 찹쌀떡",
+   "body": [
+    "무화과 철이라 무화과 찹쌀떡을 시작했어요. 저희 떡집은 원래 팥찹쌀떡만 했거든요. 딸이 해 보자고 해서 시작하게 됐죠.",
+    "무화과가 비싸서 처음엔 더 받으려고 했어요. 그러다 동네에서 사 가시라고 값을 맞췄네요. 무화과 하나를 품은 동그란 떡, 보기만 해도 웃음이 나요.",
+    "선선한 아침, 떡 하나 사 들고 들어가 따뜻한 차 한 잔 곁에 두고 천천히 드세요. 아침에 만들어서 다 팔리면 끝이에요.",
+    "무화과 찹쌀떡 4500원 · 무화과 철 끝나는 11월 중순까지"
+   ]
+  },
+  "stats": {
+   "rid": "c7b51f91",
+   "model": [
+    "claude-sonnet-5-5",
+    "claude-opus-5-5"
+   ],
+   "check_mode": "report",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 162,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 6129,
+     "in": 223,
+     "out": 865,
+     "cache_w": 0,
+     "cache_r": 8026,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 22540,
+     "in": 1079,
+     "out": 2343,
+     "cache_w": 0,
+     "cache_r": 9502,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 8,
+   "facts_dropped": 0,
+   "charm": false,
+   "season": true,
+   "ck": 0,
+   "ck_dropped": 1,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {},
+   "signals": [],
+   "rewrite": false,
+   "would": {
+    "delete": {},
+    "rewrite_reasons": [],
+    "ratio_over": false,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 9,
+   "roles": {
+    "fact": 5,
+    "charm": 1,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 28676,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1302,
+   "out": 3208,
+   "cache_w": 0,
+   "cache_r": 17528
+  },
+  "krw": 91.9,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "우리 떡집은 원래 팥찹쌀떡만 했는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "딸이 요즘",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "해보자고 해서 시작함",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "무화과가 비싸서 첨엔 6천원 받으려다가",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "동네 어르신들 사가시라고 4500원으로 맞췄음",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "4500원",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "무화과 철 끝나는 11월 중순까지만 함",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "아침에 만들어서 다 팔리면 끝",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "무화과 찹쌀떡",
+     "name_fact_id": null,
+     "price_fact_id": "F6"
+    },
+    "distinctive_phrases": [],
+    "charm": null,
+    "common_knowledge": [],
+    "season": {
+     "fact_id": "F7",
+     "note": "무화과 철, 11월 중순까지"
+    },
+    "seller_scene": {
+     "fact_ids": [
+      "F1",
+      "F3",
+      "F5"
+     ],
+     "note": "팥찹쌀떡만 하던 떡집에서 과일찹쌀떡을 시작하고, 동네 어르신들이 사가시라고 가격을 4500원으로 맞춘 결정"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5"
+     ],
+     "note": "동네 어르신들이 부담 없이 사가시도록 가격을 맞춤",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F4",
+      "F5"
+     ],
+     "note": "무화과가 비싸 6천원을 생각했다가 어르신들을 떠올리며 4500원으로 정한 장면"
+    },
+    "mood": "담백",
+    "ending": {
+     "type": "info",
+     "fact_ids": [
+      "F7",
+      "F8"
+     ]
+    },
+    "sensory_hook": null,
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "무화과 찹쌀떡",
+     "price_display": "4500원"
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "무화과 철이라 무화과 찹쌀떡을 시작했어요.",
+      "fact_ids": [
+       "F7",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "저희 떡집은 원래 팥찹쌀떡만 했거든요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 1,
+      "text": "딸이 해 보자고 해서 시작하게 됐죠.",
+      "fact_ids": [
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과가 비싸서 처음엔 더 받으려고 했어요.",
+      "fact_ids": [
+       "F4"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "그러다 동네에서 사 가시라고 값을 맞췄네요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "무화과 하나를 품은 동그란 떡, 보기만 해도 웃음이 나요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 3,
+      "text": "선선한 아침, 떡 하나 사 들고 들어가 따뜻한 차 한 잔 곁에 두고 천천히 드세요.",
+      "fact_ids": [
+       "F8"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "아침에 만들어서 다 팔리면 끝이에요.",
+      "fact_ids": [
+       "F8"
+      ],
+      "interpretation": false,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "무화과 찹쌀떡 4500원 · 무화과 철 끝나는 11월 중순까지",
+      "fact_ids": [
+       "F6",
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "팥찹쌀떡만 하던 떡집의 무화과 찹쌀떡",
+    "headline_fact_ids": [
+     "F1",
+     "F7"
+    ]
+   }
+  }
+ }
+]

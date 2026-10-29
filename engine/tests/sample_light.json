@@ -1,0 +1,317 @@
+[
+ {
+  "name": "반려돌 키트",
+  "scenario_mode": "REAL_SELLER",
+  "seconds": 22.3,
+  "result": {
+   "status": "READY",
+   "product_card": {
+    "name": "이름 지어주는 반려돌 키트",
+    "price": ""
+   },
+   "headline": "눈 붙인 동글동글한 돌, 쳐다보면 웃겨서 좀 나아져요",
+   "body": [
+    "동글동글한 돌에 눈을 붙여서 책상에 뒀어요. 회사에서 힘들 때 쳐다보면 웃겨서 좀 나아지더라고요.",
+    "그래서 돌이랑 눈스티커랑 이름표를 넣어서 키트로 팔아볼까 생각 중이에요. 이름하여 이름 지어주는 반려돌 키트죠. 반려돌은 돌에 이름을 붙여 곁에 두고 아끼는 거라, 이름표에 어떤 이름을 적을지 고르는 재미가 있어요.",
+    "일이 꼬인 오후, 모니터 옆 돌과 눈이 마주치면 피식 웃음이 새어 나올지도 몰라요. 판매를 시작하게 되면 알려 드릴게요.",
+    "이름 지어주는 반려돌 키트 · 판매 준비 중 · 가격 미정"
+   ]
+  },
+  "stats": {
+   "rid": "ee823f7d",
+   "model": [
+    "claude-sonnet-5-5",
+    "claude-opus-5-5"
+   ],
+   "check_mode": "light",
+   "effort": [
+    "low",
+    "medium"
+   ],
+   "mode": "REAL_SELLER",
+   "memo_len": 169,
+   "additions": 0,
+   "calls": [
+    {
+     "name": "analyzer",
+     "ms": 6706,
+     "in": 238,
+     "out": 977,
+     "cache_w": 8026,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-sonnet-5-5"
+    },
+    {
+     "name": "writer",
+     "ms": 15584,
+     "in": 1262,
+     "out": 1627,
+     "cache_w": 9502,
+     "cache_r": 0,
+     "stop": "end_turn",
+     "served": "claude-opus-5-5"
+    }
+   ],
+   "facts": 8,
+   "facts_dropped": 0,
+   "charm": true,
+   "season": false,
+   "ck": 1,
+   "ck_dropped": 0,
+   "readiness": "READY",
+   "gate": "scene",
+   "deleted": {
+    "PROPER": 1
+   },
+   "signals": [
+    "LIST3"
+   ],
+   "rewrite": false,
+   "light_deleted": {},
+   "would": {
+    "delete": {
+     "PROPER": 1
+    },
+    "rewrite_reasons": [],
+    "ratio_over": true,
+    "headline_fail": [],
+    "product_gaps": [],
+    "status": "READY",
+    "price_card_fix": false
+   },
+   "sentences": 8,
+   "roles": {
+    "fact": 2,
+    "charm": 3,
+    "scene": 1,
+    "ending": 1,
+    "info": 1
+   },
+   "status": "READY",
+   "ms": 22303,
+   "over_prod": false
+  },
+  "tokens": {
+   "in": 1500,
+   "out": 2604,
+   "cache_w": 17528,
+   "cache_r": 0
+  },
+  "krw": 161.6,
+  "outputs": {
+   "analyzer": {
+    "scenario_mode": "REAL_SELLER",
+    "meta_instructions": [],
+    "facts": [
+     {
+      "id": "F1",
+      "quote": "이름 지어주는 반려돌 키트",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F2",
+      "quote": "판매 준비 중",
+      "kind": "how_to_buy",
+      "convertible_to": null
+     },
+     {
+      "id": "F3",
+      "quote": "가격 미정",
+      "kind": "price",
+      "convertible_to": null
+     },
+     {
+      "id": "F4",
+      "quote": "한탄강 갔을때",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F5",
+      "quote": "동글동글해서 눈 붙여서 책상에 뒀는데",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F6",
+      "quote": "회사에서 힘들때 쳐다보면 웃겨서 좀 나아짐.",
+      "kind": "seller_scene",
+      "convertible_to": null
+     },
+     {
+      "id": "F7",
+      "quote": "돌이랑 눈스티커랑 이름표 넣어서 키트로 팔아볼까 생각중.",
+      "kind": "product",
+      "convertible_to": null
+     },
+     {
+      "id": "F8",
+      "quote": "돌은 직접 주워서 씻어서 넣을거",
+      "kind": "product",
+      "convertible_to": null
+     }
+    ],
+    "product": {
+     "name": "이름 지어주는 반려돌 키트",
+     "name_fact_id": "F1",
+     "price_fact_id": null
+    },
+    "distinctive_phrases": [
+     {
+      "id": "D1",
+      "phrase": "동글동글해서",
+      "fact_id": "F5"
+     },
+     {
+      "id": "D2",
+      "phrase": "웃겨서 좀 나아짐",
+      "fact_id": "F6"
+     }
+    ],
+    "charm": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "동글동글한 돌에 눈을 붙이면 보기만 해도 웃음이 나서 힘든 날 좀 나아지는 것"
+    },
+    "common_knowledge": [
+     {
+      "about": "반려돌",
+      "note": "돌에 이름을 붙여 곁에 두고 아끼는 것"
+     }
+    ],
+    "season": null,
+    "seller_scene": {
+     "fact_ids": [
+      "F4",
+      "F5",
+      "F6"
+     ],
+     "note": "한탄강에서 가져온 동글동글한 돌에 눈을 붙여 책상에 두고, 회사에서 힘들 때 쳐다보며 웃은 장면"
+    },
+    "why_this_one": {
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "판매자가 직접 책상에 두고 힘든 때 웃음을 얻은 경험에서 키트로 만들어 볼 생각을 함",
+     "missing_reason": null
+    },
+    "scene": {
+     "kind": "seller",
+     "fact_ids": [
+      "F5",
+      "F6"
+     ],
+     "note": "책상 위 눈 붙은 돌을 쳐다보며 웃는 회사 장면"
+    },
+    "mood": "유쾌",
+    "ending": {
+     "type": "promise",
+     "fact_ids": [
+      "F2"
+     ]
+    },
+    "sensory_hook": "D1",
+    "story_readiness": "READY",
+    "questions": []
+   },
+   "writer": {
+    "product_card": {
+     "name": "이름 지어주는 반려돌 키트",
+     "price_display": null
+    },
+    "sentences": [
+     {
+      "paragraph": 1,
+      "text": "동글동글한 돌에 눈을 붙여서 책상에 뒀어요.",
+      "fact_ids": [
+       "F5"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 1,
+      "text": "회사에서 힘들 때 쳐다보면 웃겨서 좀 나아지더라고요.",
+      "fact_ids": [
+       "F6"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 2,
+      "text": "그래서 돌이랑 눈스티커랑 이름표를 넣어서 키트로 팔아볼까 생각 중이에요.",
+      "fact_ids": [
+       "F7"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "이름하여 이름 지어주는 반려돌 키트죠.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "fact"
+     },
+     {
+      "paragraph": 2,
+      "text": "반려돌은 돌에 이름을 붙여 곁에 두고 아끼는 거라, 이름표에 어떤 이름을 적을지 고르는 재미가 있어요.",
+      "fact_ids": [
+       "F1"
+      ],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "charm"
+     },
+     {
+      "paragraph": 3,
+      "text": "일이 꼬인 오후, 모니터 옆 돌과 눈이 마주치면 피식 웃음이 새어 나올지도 몰라요.",
+      "fact_ids": [],
+      "interpretation": true,
+      "is_ending": false,
+      "role": "scene"
+     },
+     {
+      "paragraph": 3,
+      "text": "판매를 시작하게 되면 알려 드릴게요.",
+      "fact_ids": [
+       "F2"
+      ],
+      "interpretation": true,
+      "is_ending": true,
+      "role": "ending"
+     },
+     {
+      "paragraph": 3,
+      "text": "이름 지어주는 반려돌 키트 · 판매 준비 중 · 가격 미정",
+      "fact_ids": [
+       "F1",
+       "F2",
+       "F3"
+      ],
+      "interpretation": false,
+      "is_ending": false,
+      "role": "info"
+     }
+    ],
+    "headline": "눈 붙인 동글동글한 돌, 쳐다보면 웃겨서 좀 나아져요",
+    "headline_fact_ids": [
+     "F5",
+     "F6"
+    ]
+   }
+  }
+ }
+]
