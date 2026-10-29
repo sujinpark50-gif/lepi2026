@@ -23,11 +23,12 @@ MAX_BODY_BYTES = 8 * 1024
 
 TOO_LONG_MESSAGE = "메모가 너무 깁니다. 500자 이내로 줄여 주세요."
 
-# 사용자 결정(2026-10-29): 이야기 찾기(Analyzer)는 Sonnet 5.5, 글쓰기(Writer)는 Opus 5.5.
+# 사용자 결정(2026-10-29): 이야기 찾기(Analyzer)·글쓰기(Writer) 모두 Sonnet 5.5.
+# 같은 메모 6개 비교에서 Writer Opus와 판정 점수가 같고(22.5 vs 22.7) 원가는 93원 → 38원, 시간은 18초 → 5초였다.
 # LEPI_MODEL을 주면 두 단계 모두 그 모델을 쓴다(테스트 비교용).
 MODEL = os.environ.get("LEPI_MODEL")
 ANALYZER_MODEL = os.environ.get("LEPI_ANALYZER_MODEL") or MODEL or "claude-sonnet-5-5"
-WRITER_MODEL = os.environ.get("LEPI_WRITER_MODEL") or MODEL or "claude-opus-5-5"
+WRITER_MODEL = os.environ.get("LEPI_WRITER_MODEL") or MODEL or "claude-sonnet-5-5"
 
 # thinking을 끌 수 없어서 effort로만 조절한다. 모델마다 기본값이 달라 늘 명시한다.
 # 사용자 결정(2026-10-28): 품질 우선으로 두 단계 모두 medium. 시간은 나중에 맞춘다.
