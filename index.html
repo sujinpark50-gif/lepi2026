@@ -145,6 +145,7 @@ img.ov{z-index:1}
 .pd-menu{position:absolute;z-index:6;min-width:210px;background:var(--card);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 26px rgba(40,54,24,.16);padding:4px 0;font-size:13px;opacity:0;transform:scale(.97);transform-origin:0 0;pointer-events:none;transition:opacity 180ms ease,transform 180ms ease}
 .pd-cursor{position:absolute;left:0;top:0;z-index:8;pointer-events:none;opacity:0;transition-property:transform,opacity;transition-timing-function:cubic-bezier(.45,.05,.25,1);will-change:transform}
 .pd-cursor.pd-show{opacity:1}
+.pd-browser.pd-auto,.pd-browser.pd-auto *{cursor:none!important}
 .pd-cursor svg{display:block;filter:drop-shadow(0 2px 3px rgba(40,54,24,.25));transition:transform 120ms ease;transform-origin:4px 2px}
 .pd-cursor.pd-press svg{transform:scale(.8)}
 .pd-menu.pd-show{opacity:1;transform:none;pointer-events:auto}
@@ -340,7 +341,8 @@ function initPD(){
   const spot = (el, fx, fy) => { const b = browser.getBoundingClientRect(), r = el.getBoundingClientRect(); return [r.left - b.left + r.width * fx, r.top - b.top + r.height * fy]; };
   const moveTo = (xy, ms) => { cursor.style.transitionDuration = ms + 'ms'; cursor.style.transform = 'translate(' + xy[0] + 'px,' + xy[1] + 'px)'; return wait(ms + 80); };
   const press = async () => { cursor.classList.add('pd-press'); await wait(170); cursor.classList.remove('pd-press'); await wait(140); };
-  const hideCursor = () => { cursor.style.transitionDuration = '300ms'; cursor.classList.remove('pd-show'); };
+  // 자동 진행 중에는 실제 마우스 커서를 숨겨 커서가 하나만 보이게 한다.
+  const hideCursor = () => { cursor.style.transitionDuration = '300ms'; cursor.classList.remove('pd-show'); browser.classList.remove('pd-auto'); };
   function stopAuto(){ runId++; autoT.forEach(clearTimeout); autoT = []; hideCursor(); }
 
   async function autoplay(){
@@ -349,7 +351,7 @@ function initPD(){
     const b = browser.getBoundingClientRect();
     cursor.style.transitionDuration = '0ms';
     cursor.style.transform = 'translate(' + b.width * 0.6 + 'px,' + b.height * 0.9 + 'px)';
-    cursor.classList.add('pd-show');
+    cursor.classList.add('pd-show'); browser.classList.add('pd-auto');
     await wait(350); if (!alive()) return;
     // 1. 메모를 드래그해 고르고 오른쪽 클릭
     await moveTo(spot(cap, 0.03, 0.12), 750); if (!alive()) return;
