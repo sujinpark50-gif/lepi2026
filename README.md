@@ -217,7 +217,7 @@ API 키가 GitHub 저장소, README, 스크린샷 등에 노출되지 않도록 
 
 배포 URL
 
-<https://ia-codyssey-two.vercel.app/>
+<https://lepi2026.vercel.app/>
 
 ## 10. 반응형 확인
 
