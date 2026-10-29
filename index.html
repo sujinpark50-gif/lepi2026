@@ -785,7 +785,7 @@ ${(cs.paras).map((p) => html`
 <span style="font-size: 13px; color: #606C38">횟수 제한 없이 써볼 수 있어요.</span>
 <button type="button" class="btn btn-solid" onClick=${tryIt} disabled=${tryOut.busy} aria-busy=${tryOut.busy ? 'true' : 'false'}>이야기 입히기</button>
 </div>
-<p style="margin: 0; font-size: 13px; line-height: 1.7; color: #606C38">레피는 AI로 글을 써요. 적은 메모는 글을 만드는 데만 쓰고 따로 저장하지 않아요. 이름이나 전화번호 같은 개인정보는 넣지 말아 주세요. 메모를 처리하는 AI 서비스는 해외에 있어요. 자세한 내용은 <a href="/privacy" style="color: #606C38; text-underline-offset: 3px">개인정보처리방침</a>에 있어요.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.7; color: #606C38">이름이나 전화번호 같은 민감한 개인정보는 넣지 말아 주세요.</p>
 <div aria-live="polite">
 ${(tryOut.busy) ? html`<p style=${tryOut.noteStyle}>${tryOut.waitText}</p>` : null}
 ${(tryOut.error) ? html`<p style=${tryOut.noteStyle + ' color: #BC6C25;'}>${tryOut.error}</p>` : null}
@@ -881,7 +881,7 @@ ${(faqs).map((f) => html`
 
 <footer class="wrap" style="padding-top: 48px; padding-bottom: 56px; display: flex; flex-wrap: wrap; gap: 16px 48px; justify-content: space-between">
 <div style="font-family: 'Noto Serif KR', serif; font-size: 22px">lepi<span style="color: #BC6C25">.</span></div>
-<p style="flex: 1 1 480px; max-width: 640px; margin: 0; font-size: 13px; line-height: 1.8; color: #606C38">레피는 사장님이 적은 메모를 바탕으로 AI가 상품 글을 정리하는 서비스예요. 가격·일정·조건 같은 사실 정보와 최종 게시 여부는 사장님이 직접 확인해주세요. 문의 sujinpark50@gmail.com · <a href="/privacy" style="color: #606C38; text-underline-offset: 3px">개인정보처리방침</a></p>
+<p style="flex: 1 1 480px; max-width: 640px; margin: 0; font-size: 13px; line-height: 1.8; color: #606C38">레피는 사장님이 적은 메모를 바탕으로 AI가 상품 글을 정리하는 서비스예요. 적은 메모는 글을 만드는 데만 쓰고 따로 저장하지 않으며, 메모를 처리하는 AI 서비스는 해외에 있어요. 가격·일정·조건 같은 사실 정보와 최종 게시 여부는 사장님이 직접 확인해주세요. 문의 sujinpark50@gmail.com · <a href="/privacy" style="color: #606C38; text-underline-offset: 3px">개인정보처리방침</a></p>
 </footer>
 </div>`;
   }

@@ -145,3 +145,5 @@ textarea:focus { outline: 2px solid var(--ink); outline-offset: 1px; }
 .sheet-body li { margin-bottom: 6px; }
 .sheet-actions { display: flex; gap: 8px; }
 .sheet-actions .btn { flex: 1; }
+
+.foot { margin-top: 32px; font-size: 12px; line-height: 1.7; color: var(--muted); }
