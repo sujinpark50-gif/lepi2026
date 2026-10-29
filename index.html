@@ -781,11 +781,10 @@ ${(cs.paras).map((p) => html`
 <label for="memo">상품 메모</label>
 <textarea id="memo" rows="6" placeholder="예: 못생긴 밀짚모자인데, 햇볕이 너무 뜨거워서 어쩔 수 없이 샀어요. 그 뒤로 여행 갈 때마다 들고 다녔더니 추억템이 됐어요." style="resize: vertical; line-height: 1.8"></textarea>
 </div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
-<span style="font-size: 13px; color: #606C38">횟수 제한 없이 써볼 수 있어요.</span>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px">
 <button type="button" class="btn btn-solid" onClick=${tryIt} disabled=${tryOut.busy} aria-busy=${tryOut.busy ? 'true' : 'false'}>이야기 입히기</button>
 </div>
-<p style="margin: 0; font-size: 13px; line-height: 1.7; color: #606C38">이름이나 전화번호 같은 민감한 개인정보는 넣지 말아 주세요.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.7; color: #606C38">개인정보는 저장하지 않아요. 이름이나 전화번호 같은 민감한 개인정보는 넣지 말아 주세요.</p>
 <div aria-live="polite">
 ${(tryOut.busy) ? html`<p style=${tryOut.noteStyle}>${tryOut.waitText}</p>` : null}
 ${(tryOut.error) ? html`<p style=${tryOut.noteStyle + ' color: #BC6C25;'}>${tryOut.error}</p>` : null}
