@@ -4,7 +4,7 @@ import { Clipboard, Storage, openURL } from '@apps-in-toss/web-framework';
 // 개발 중(npm run dev)에는 vite 프록시가 /api를 로컬 엔진으로 넘긴다.
 const SERVER = (import.meta.env.VITE_LEPI_API_ORIGIN || '').replace(/\/$/, '');
 const API_URL = import.meta.env.DEV ? '/api' : `${SERVER}/api`;
-const PRIVACY_URL = `${SERVER || 'https://lepi.vercel.app'}/privacy`;
+const PRIVACY_URL = `${SERVER || 'https://lepi2026.vercel.app'}/privacy`;
 const NOTICE_KEY = 'lepi.aiNoticeSeen';
 const TIMEOUT_MS = 45000;
 
