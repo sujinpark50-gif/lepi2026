@@ -784,7 +784,7 @@ ${(cs.paras).map((p) => html`
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px">
 <button type="button" class="btn btn-solid" onClick=${tryIt} disabled=${tryOut.busy} aria-busy=${tryOut.busy ? 'true' : 'false'}>이야기 입히기</button>
 </div>
-<p style="margin: 0; font-size: 13px; line-height: 1.7; color: #606C38">이름이나 전화번호 같은 민감한 개인정보는 넣지 말아 주세요.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.7; color: #606C38">개인정보는 저장하지 않아요. 이름이나 전화번호 같은 민감한 개인정보는 넣지 말아 주세요.</p>
 <div aria-live="polite">
 ${(tryOut.busy) ? html`<p style=${tryOut.noteStyle}>${tryOut.waitText}</p>` : null}
 ${(tryOut.error) ? html`<p style=${tryOut.noteStyle + ' color: #BC6C25;'}>${tryOut.error}</p>` : null}
