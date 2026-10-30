@@ -31,7 +31,7 @@ ANALYZER_MODEL = os.environ.get("LEPI_ANALYZER_MODEL") or MODEL or "claude-sonne
 WRITER_MODEL = os.environ.get("LEPI_WRITER_MODEL") or MODEL or "claude-sonnet-5-5"
 
 # thinking을 끌 수 없어서 effort로만 조절한다. 모델마다 기본값이 달라 늘 명시한다.
-# 사용자 결정(2026-10-28): 품질 우선으로 두 단계 모두 medium. 시간은 나중에 맞춘다.
+# 기본값은 Analyzer low, Writer medium. Writer는 품질 우선으로 medium(사용자 결정 2026-10-28).
 ANALYZER_EFFORT = os.environ.get("LEPI_ANALYZER_EFFORT", "low")
 WRITER_EFFORT = os.environ.get("LEPI_WRITER_EFFORT", "medium")
 
